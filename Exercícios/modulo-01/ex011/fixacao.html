@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+
+<body>
+    <h1>Imagem dinâmica</h1>
+
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu
+        navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/philo-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/philo-m.png" type="image/png">
+        <img src="imagens/philo-g.png" alt="Imagem flexivel" title="Exemplo de imagem flexivel">
+    </picture>
+
+    <!-- Fixação da Aula 03 do capítulo 11 - 15/11/2023 -->
+
+    <h1>Reproduzindo áudios em HTML5</h1>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/eu-beijo-garotas-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/eu-beijo-garotas-m.png" type="image/png">
+        <img src="imagens/eu-beijo-garotas-g.png" alt="Imagem flexivel" title="Capa da musica">
+    </picture> <br>
+
+    <audio src="midia/ooes-eu-beijo-garotas.mp3" preload="metadata" controls loop></audio>
+
+</body>
+
+</html>

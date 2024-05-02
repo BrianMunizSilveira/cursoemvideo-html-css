@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,300&display=swap');
+
+@font-face {
+    font-family: 'Supernatural';
+    src: url('fonts/Supernatural_Knight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;  
+    
+}
+
+@font-face {
+    font-family: 'FairyDust';
+    src: url('fonts/FairyDustB.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;  
+    
+}
+
+
+@media only screen and (max-width: 500px) {
+    /* Adicione estilos para telas menores aqui */
+    body {
+        font-size: 25px;
+        padding: 0px;
+        margin: 0px; 
+    }
+
+    main {
+        background-color: rgba(255, 255, 255, 0.233);
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px  #447688d5;
+        width: 100%;
+        height: 100%;
+        padding: 1px;
+        margin: auto;
+    }
+
+    h1,h2 {
+        font-family: 'Rubik Mono One', monospace;
+
+        text-align: center;
+    }
+    
+    p {
+        text-align: center;
+        font-size: larger;
+    }
+}
+
+
+* {
+    padding: 0;
+    margin: 10;
+    box-sizing: border-box;
+}
+
+/* 
+
+Paleta de cor - #002D8A / #034AA6 / #18A2D9 / #27CDF2 / #0D0D0D 
+
+*/
+
+body {
+    background-image: linear-gradient(to right, #27262B, #3F6A8A, #2a93bd, #18abe0);
+}
+
+  main {
+    background-color: rgba(250, 250, 250, 0.842);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px ;
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+} 
+
+h1 {
+    font-family: 'Supernatural';
+    color: #034AA6;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Grandiflora One', cursive;
+    color: #042763;
+}
+
+h3 {
+    font-family: 'FairyDust';
+    font-style: normal;
+    font-weight: normal;
+}
+
+p {
+    font-family: 'Zilla Slab', serif;
+    text-align: justify;
+    margin: 8px;
+}

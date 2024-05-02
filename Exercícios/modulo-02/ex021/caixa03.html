@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brian Muniz / Aluno do Curso Em Vídeo">
+    <title> Borda Personalizada</title>
+    <style>
+        h1 {
+            border: 20px solid black;
+            padding: 10px;
+            border-image: url('borda.png') 20 repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Teste de Borda</h1>
+</body>
+
+</html>
+
+<!-- 
+
+    Capítulo 16 Aula 7 – Bordas decoradas - 17/04/2024
+
+    Nesta aula foi visto as propriedades:
+    border-image-source, border-image-slice e bordei-image-repeat
+
+    border-image-source = Imagem que vai ser utilizada na borda
+    border-image-slice = é o corte das imagens (ou até memso podemos chamar de espaçamento)
+    border-image-repeat = usado para repetir a imagem afim de melhorar a aparência
+
+    Simplificação
+
+    Sem Shorthand:
+
+    border-image-source: url('borda.png');
+    border-image-slice: 20;
+    border-image-repeat: repeat;
+
+    Com Shorthand:
+
+    border-image: url('borda.png') 20 repeat;
+
+    Podemos usar o GIMP para desenhar a borda, como foi feito neste exercício, ou pegar a imagem na internet
+
+ -->

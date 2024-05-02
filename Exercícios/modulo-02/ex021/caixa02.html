@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brian Muniz Silveira">
+    <meta name="description" content="Capítulo 16 Aula 4/Aula 05/Aula 06">
+    <title>Grouping Tag</title>
+
+    <style> /*Formatações da página*/
+        body {
+            font-family: monospace;
+            background-color: gray;
+        }
+
+        header {
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: rgb(100, 100, 100);
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315); /*É possível criar esta mesma sombra utilizando o DevTools (F12). Mas antes para que funcione a declaração já deve estar feita.*/
+        }
+
+        nav > a{
+            text-align: left;
+            color: #fff;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px;
+            box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.384);
+        }
+
+        article {
+            background-color: lightgray;
+            padding: 5px;
+        }
+
+        article > aside {
+            background-color: rgb(126, 126, 126);
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        div#bola{
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link - 1</a>
+            <a href="#">Link - 2</a>
+            <a href="#">Link - 3</a>
+            <a href="#">Link - 4</a>
+            <a href="#">Link - 5</a>
+        </nav>
+    </header>   
+
+    <main>
+        <section id="assuntos">
+            <p>Esporte Política Técnologia</p>
+        </section>
+
+        <section id="noticias">
+
+            <article>
+                <h2>Noticia do Brasil</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsum excepturi omnis ducimus illum. Id, obcaecati eligendi numquam cumque accusamus provident pariatur architecto fugiat inventore nihil. Aliquid odio quo sunt aut corporis. Harum accusantium officia in suscipit esse velit debitis ipsam facilis, iste pariatur exercitationem necessitatibus quasi repellat, hic voluptatibus.</p>
+                <aside>
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+
+            <article>
+                <!--
+                        11/04/2024 - 9:55
+
+                     As Groupings Tags, podem ser utilizadas de formas diversificadas, neste exemplo temos um 'article' e junto com um 'aside', mas podemos ter um um 'artcile' + 'aside' + 'article, ou 'section' + 'main' + 'header' + 'article'. Há uma certa diversidade de utilização das Grouping Tags 
+                -->
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido pelo CursoemVideo</p>
+    </footer>
+
+    <div id="bola">
+
+    </divid>
+</body>
+
+</html>
+
+<!-- 
+
+    Capítulo 16 Aula 5 – Sombra nas Caixas - 13/04/2024 - 07:52
+
+    -Tomar cuidado com a utilização de sombras, não precisa deixar explícito que há sombras em tal elemento. 
+
+    -A declaração '1px 1px 1px black' tem o seguinte significado, o primeiro '1px' é o pixel na direção horizontal, o segundo '1px' é na vertical e o terceiro '1px' é o espalhamento da sombra, e a ultima declaração é a cor, neste caso, cor preta, #000 ou black. 
+
+    -Tomar cuiadado com a questão das cores, sempre manter a sombra na cor preta por padrão e aplicar o efeito de transparência a ela.
+
+    -Utilizando o DevTools, temos também como criar nossas sombras de forma extremamente facil, formantando como queremos que ela fique e só copiar e colar na declaração 'box-shadow'.
+
+ -->
+
+ <!-- 
+
+    Capítulo 16 Aula 6 – Caixas com vértices arredondados - 13/04/2024 - 08:21
+
+    -A declaração 'border-radius' assim como a 'box-shadow', ela já vem com um shorhand por padrão, por exemplo, 'box-radius: 33px;', porém, há as formataçõs individuais dela, que são, com base na 'box-radius:33px;': 
+    
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;.
+
+    -Existe alguns modos de se aplicar o 'border-radius':
+    1° main {border radius: 10px;}
+    2° main {border radius: 10px 10px;}
+    3° main {border radius: 10px 10px 10px 10px;}
+    =
+    1° Os 10px é aplicado para cada um dos quatro cantos
+    2° Assim como pode ser usado esse shorthand na 'margin' no 'box-radius' também.
+    3° Cada canta da borda é formatada de maneira independente
+    
+    
+  -->

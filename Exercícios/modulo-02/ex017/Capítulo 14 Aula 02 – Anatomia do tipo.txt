@@ -1,0 +1,51 @@
+Módulo 02, Capítulo 14, aula 02
+
+    Estudo básico de tipografia Pt.2
+
+    Anatomia do tipo:
+
+    *Altura-x*: ela é baseada na altura de todas as letras, todas as letras minúsculas de uma fonte são baseadas no tamanho da letra x:
+
+    *Altura das maiúsculas*: Assim como existe a altura das letras minúsculas, proporcionamente é criada a altura das letras maiúsculas:
+
+    *Ascendente e Descendente*: é o vazamento das letras (consultar o material para melhor compreensão visual). Como exemplo temos a letra g, j e q, elas possuem uma pequena curva representada na área de descendente, que é nomeada como cauda.;
+
+    *Altura do corpo*: é a junção de todos os elementos anteriores, Altura-x, Altura das maiúsculas, Ascendentes e Descendentes, todos eles formam a altura do corpo, que é justamente ele que alteramos dentro das CSS;
+
+    *Importancia da serifa*: a serifa inconscientemente nos guia visualmente atravez de pequenos traços das letras, formando um alinhamento imaginario automatico. Seu proposito é justamente este alinhamento visual para melhorar a leitura;
+
+    *Anatomia Geometrica*: Temos os seguintes componentes: Haste, Filete, Arco, Esporão, Vértice, Terminal. Consultar: C:\Users\brian\Documents\Estudo\Curso em Vídeo\Exercícios\ex017\anatomia-geometrica.png;
+
+    *Anatomia Humanizada*: também são caracteristicas das letras assim como a anatomia geometrica, consultar: Curso em Vídeo/Exercícios/ex017/anatomia-geometrica.png;
+
+    *Glifos*: Glifos são letras, e as letras compõem uma fonte;
+
+    *Familia tipográfica*: uma familia tipografica é a variação daquela mesma fonte, onde há mudança no peso da fonte, dando uma aparencia diferente á ela, mas não deixa de ser da mesma familia;
+
+    *Categorias de fontes*: Temos cinco tipos, categorias de fontes, que são: 
+    
+    >- Serifadas;
+    >- Sans-serif (Do Francês, sem serifa);
+    >- Monoespaçadas;
+    >- Handwrite;
+    >- Display (Ou fontes decorativas) 
+
+    1° - O que vimos até aqui
+    2° - Anatomia do tipo
+    3° - Altura X
+    4° - Altura das maiúsculas
+    5° - Ascendente e descendente
+    6° - Altura do corpo
+    7° - A importância da serifa
+    8° - Experiência de leitura
+    9° - Anatomias geométricas
+    10° - Anatomias humanizadas
+    11° - O que é um glifo
+    12° - O que é uma fonte
+    13° - Família tipográfica
+    14° - Categorias de fontes
+    15° - Fontes serifadas e sem sérias
+    16° - Recomendações de uso de fontes
+    17° - Fontes monoespaçadas
+    18° - Fontes handwrite e comemorativas
+    19° - Vamos aplicar tudo na prática

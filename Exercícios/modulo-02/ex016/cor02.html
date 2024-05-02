@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style>
+
+        * { /* Configurações globais em CSS. Utilizar o seletor " * " */
+            height: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(to right, #3198E2, #6D59C0, #B93590, #E33F5F, #FDD579);
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Testando gradientes</h1>
+</body>
+
+</html>
+
+<!-- 
+    
+    Módulo 02, Capítulo 13, aula 06 - 13/12/2023 - Criação do documento: 20:30. Término: 21:04
+
+    Inserindo gradientes com CSS. Exemplo:
+        <style>
+            body {
+                background-image: linear-gradient(to right, white, blue);
+                }
+        </style>
+
+        Podemos alterar a direção do gradiente, utilizando os valores: to right (Para a direita), to left (Para a esquerda), to top (Par cima), to bottom (Para baixo). 
+
+        Vimos como aplicar o degrade utlizando o parâmetro background-image: linear-gradient, como por exemplo: background-image: linear-gradient(to right, white, blue); .
+        
+        Como configurar para ele preencher a tela por completo utilizando configurações globais das CSS:
+        
+        * { /* Configurações globais em CSS. Utilizar o seletor " * " */
+            height: 100%;
+        }.
+        
+        E um adendo é tomar cuidado com a quantidade de cores utilizadas no degrade, sempre respeitando a mesma regra da peleta de cores, no minimo 3 cores, no máximo, 5 cores. Abaixo de 3 cores complica a utilização e harmonia das cores assim como acima de 5 cores acontece o mesmo. há casos onde, designers utilizando duas cores por exemplo, mas neste caso, não é o nosso caso, pois somos desenvolvedores vendo o básico de harmonia de cores para ter boas práticas quando for utlizar em sites profissionais.
+
+        Foi visto nesta aula: 
+
+        1° - Módulo 02, Capítulo 13, aula 06
+        2° - Aprendemos muito sobre cores
+        3° - Criando um novo exercício
+        4° - Mudando a cor do fundo da página
+        5° - Usando o background-image para degradê
+        6° - Usando o linear-gradient em CSS
+        7° - Configurações globais das CSS
+        8° - Fazendo um degradê mais harmônico
+        9° - Deixando o fundo em degradê fixo na tela
+        10° - Copiando o degradê do Instagram
+        11° - Mudando o ângulo do degradê em graus
+        12° - Usando um radial-gradient
+        13° - Personalizando ainda mais o degradê
+        14° - Cuidado com o exagero
+        15° - Vamos começar a montar sites harmônicos
+
+
+-->

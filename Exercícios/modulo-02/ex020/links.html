@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brian Muniz Silveira">
+    <meta name="description" content="Capítulo 15 Aula 04 – Pseudo-elementos em CSS">
+    <title>Capítulo 15 Aula 04 – Pseudo-elementos em CSS - Links</title>
+    <style>
+
+        /*
+            SELETORES PERSONALIZADOS
+
+            #   = id
+
+            .   = class
+
+            :   = pseudo-class
+
+            ::  = pseudo-elemente
+
+            >   = children
+        
+        */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        .especial{
+            background-color: brown;
+        }
+
+        .especial::before {
+            content: ' ✓';
+        }
+
+        .especial::after {
+            content: '  ✓';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+
+    </style>
+
+<!--
+     Pseudo classes, são estados dos elementos dentro da HTML, assim como o estado Hover, que quando se passa o mouse por cima ele ocorre uma interatividade. 
+    
+    Já o pseudo elemento, ele mexe nom conteudo em si do elemento, assim como o After
+
+-->
+</head>
+
+<body>
+
+    <h1>Personalizando Links</h1>
+
+    <ul>
+        <a href="https://gustavoguanabara.github.io" target="_blank"><li>Repositório GitHub</li></a>
+
+        <a href="https://youtube.com/cursoemvideo/" target="_blank" class="especial"><li class="especial">Canal do Youtube</li></a>
+
+        <a href="https://www.cursoemvideo.com" target="_blank"><li>Site do CursoemVídeo</li></a>
+    </ul>
+
+</body>
+
+</html>
+
+<!-- Capítulo 15 Aula 04 – Pseudo-elementos em CSS - 19/01/2024
+
+1° – O que aprendemos até aqui
+2° ​– Criando um novo exercício
+3° – Criando uma lista com links
+4° – Criando os estilos
+5° – Pseudo-classe visited
+6° – Retirando sublinhado dos links
+7° – Pseudo-classe active
+8° – Pseudo-elementos
+9° ​– Adicionando conteúdos extras
+10° ​– Links especiais com formatação por classe
+11° ​– Uma breve revisão
+​12° – No próximo capítulo
+
+-->

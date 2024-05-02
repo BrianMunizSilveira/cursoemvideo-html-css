@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos Externos</title>
+    <link rel="stylesheet" href="style.css">
+
+<!-- 
+    
+    É possível utilizar dois Links CSS dentro do Head, um consegue somar o outro, caso queria ter algum estilo diferente pode ser adicionado também. 
+    
+    Exemplo: 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+
+    Está correto. É possível e se for necessário esta utilização pode ser realizada sem problema algum.
+
+-->
+
+<!-- 
+    Também é permitida a utilização dos três métodos: Inline, Local e Externo. Por padrão, o método que sempre vai ser priozado é o Inline, seguido do Local / Interno e por fim o Externo.
+
+    Sempre esta ordem vai prevalecer: 
+    1° Inline;
+    2° Local ;
+    3° Externo.
+
+    Pórem quando o assunto é utilizdade e produtividade o "Rank" e inverso, ou seja: 
+    1° Externo;
+    2° Local;
+    3° Inline.
+
+    **Sempre dar preferência ao Método CSS Externo!**.
+ -->
+
+ <!-- 
+    Qual é a melhor técnica?
+    
+    Evitar o máximo a utilização do Inline;
+    Local, apenas para casos isolados, como pequenas alterações ou quando o seu código ainda está com pouco estilo.
+    Externo, Usar sem moderação, usar sempre em geral. Pois é uma forma bem eficiente de utilizar as CSSs.
+
+    Não se esquecer que se caso for preciso, esta liberado utilizar as três técnicas na mesma página, apenas deve-se recordar do "Rank hierarquío das CSSs"
+  -->
+</head>
+
+<!-- 
+    
+    Não utilizar o CSS de forma errada; que seria como ERA usado no HTML4, como por exemplo <body bgcolor="red" ou <p><font color="white">Oi!</p>, a utilização desta forma se tornou obsoleto graças a chegada do HTML5. Não utilizar assim. 
+
+-->
+
+<body >
+    <h1>Capítulo 1</h1>
+    <h2>Capítulo 1.1</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eum, provident necessitatibus quis unde animi hic
+        maiores, suscipit accusamus corrupti quasi minus temporibus? Provident ipsa qui nobis aliquid itaque optio.
+    </p>
+    <h2>Capítulo 1.2</h2>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum ducimus rerum, quisquam, modi cumque
+        architecto incidunt non pariatur aperiam nobis, in quod dolor porro provident. Magnam quis dolor eligendi sunt?
+    </p>
+    <h1>Capítulo 2</h1>
+    <h2>Capítulo 2.1</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error labore dicta, aliquam maxime distinctio
+        asperiores ea reiciendis omnis doloribus aliquid quo ad. Ab dolorem reiciendis sapiente id eum autem architecto?
+    </p>
+    <p><a href="pagina02.html" target="_self">Ir para a página 2</a></p>
+</body>
+
+</html>
+
+<!-- 
+    Capítulo 12, aula 01
+
+    A utilização das CSS Inline não são incorretas, pórem, representam desvantagem quando o assunto é organização, otimização e código limpo, além do mais, se for preciso efetuar alguma mudança em uma cor de um título e há muitos do mesmo, até mudar todos os Títulos pora aquela mesma cor vai demandar muito tempo e muito trabalho que poderia ser evitado se a CSS estivesse Externa por exemplo.
+    
+    Mas o método Inline é útil apenas em casos pontuais e bem específicos, já no dia a dia ela não será muito vantagosa, ainda mais se for ver pelo ponto de produtividade. 
+
+    Nesta aula foi visto:
+
+    Capítulo 12, aula 01 - Estilos CSS Inline
+
+        1°  Introdução aos estilos CSS
+        2° Cursos grátis e com certificado
+        3° O que são as CSS?
+        4° Criando um exercício com estilo
+        5° Não faça do jeito errado
+        6° Fazendo do jeito certo
+        7° Modificando cores com CSS
+        8° Modificando fonte com CSS
+        9° A diferença entre HTML e CSS
+        10° Tudo vai ficando confuso
+        11° Desvantagens dos CSS inline.
+-->
+
+
+<!--  
+    Capítulo 12, aula 02 - Estilos CSS Internos / Local
+
+    A CSS Local é uma ótima opção para quando se precisa estilizar apenas um documento HTMl, deixando bem mais orgnizado e de fácil leitura o código. 
+
+    Entretanto, aprensenta um contra, a produtividade, pois se for preciso usar este mesmo estilo em mais de um documento HTML será preciso copiar ele e colar em cada um dos documentos. Imagine que você tem apenas 30 páginas, imagina o trabalho de ter que ir em cada uma delas e ficar colando o mesmo códigos trinta vezes. Fazer isso, além de cansativo é improdutivo.
+
+    Da para contornar esta situação usando a CSS Externa, que será vista nas próximas aulas.
+
+    Nesta aula foi visto:
+
+    1° Separando conteúdo e estilo
+    2° Estilo inline fica muito confuso
+    3° Criando uma cópia do exercício
+    4° Removendo o estilo anterior
+    5° Criando um estilo local
+    6° Criando um seletor CSS
+    7° Vantagens do estilo isolado
+    8° Tudo ficou mais organizado
+    9° Desvantagens dos estilos internos
+-->
+
+<!-- 
+
+
+
+    Capítulo 12, aula 03 - Estilos Externos
+
+    A utilização das CSSs Externas é a mais recomendada, poís traz três principais vantagens: Código limpo, Organização e Produtividade. Todos estes temas abordados em aulas anteriores e bastante comentado durante as aulas.
+    
+    Nesta aula foi visto:
+
+        1° A maneira mais versátil de inserir estilos
+        2° Curso de fundamentos de programação
+        3° Duplicando o exercício anterior
+        4° O que é um estilo externo?
+        5° Site com múltiplas páginas
+        6° Ajuda para criar novos documentos
+        7° Aplicando o mesmo estilo em várias páginas
+        8° O problema de duplicar estilos
+        9° Como usar estilo CSS externo
+        10° A regra charset em CSS externo
+        11° Aplicando estilo externo em várias páginas
+        12° Recomendações para o uso de estilos CSS
+        13° Siga a gente nas redes sociais
+        14° Misturando múltiplas declarações CSS
+        15° Compare os exercícios anteriores
+        16° Qual é a melhor técnica?
+ -->
+
+ 

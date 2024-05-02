@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+
+<body>
+    <h1>Imagem dinâmica</h1>
+
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+    <!-- Sempre tomar cuidado com a ordem de utilização da tag Source, a maior imagem SEMPRE deve vir abaixo das menores. Logo:
+
+            <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+            <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+            <img src="imagens/foto-g.png" alt="Imagem flexivel">
+    -->
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexivel">
+    </picture>
+
+    <!-- 15/11/2023 - Aula sobre áudios -->
+
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+
+        <!-- Não utilizar o arquivo WAV -->
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reporduzir áudio.<a href="midia/guanacast-33.mp3">Clique aqui para baixar o arquivo</a> </p>
+    </audio>
+    <!-- MP3 WAV OGG -->
+
+    <!-- Nesta aula foi visto: 
+    1° Como inserir um áudio no site;
+    2° Onde conseguir áudios grátis;
+    3° Os devidos cuidados com os áudios;
+    4° A criação do HTML para áudio;
+    5° Os múltiplos formatos de áudio disponível (MP3, OGG, WAV);
+    6° Devidos cuidados com a compatibilidade;
+    7° Preload de áudio;
+    8° Outros parâmetros que podem ser utilizados;
+    9° Áudio em looping;
+    10° Tomar cuidado com os áudios em WAV;
+    11° Outros tipos de mídia.  -->
+
+
+</body>
+
+</html>

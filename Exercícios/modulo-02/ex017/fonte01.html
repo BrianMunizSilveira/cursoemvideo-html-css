@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body {
+            
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* 
+
+            Medidas Absoluta: cm, mm, in (Polegada), px, pt, pc
+
+
+            Medidas Relativas: em, ex, rem, vw, vh, %
+
+            */
+
+            /*Sempre levar em consideração a recomendação da própria W3C, que é de sempre se usar PX e EM*/
+
+            /*Geralmente 1em são 16px*/
+
+            font-size: 1em ;
+
+            /*
+
+            font-weight: ; - é o peso da fonte em si
+
+            font-style: italic; - o font style, serve para deixar a fonte como italico
+
+            text-decoration: underline; - Adiciona um sublinhado no texto
+
+            Vale resaltar que a sua familia de fonte deve suportar todas essas configurações
+
+            */
+
+            /*
+
+            O shorthand font é um simplificação de código, ao inves de utilizar: 
+
+            font-family: 'work Sans', sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic;
+
+            podemos simplificar aplicando a seguinte formula - font-style -> font-weight -> font-size -> font-family. Tomando como exemplo temos este código: font: italic bolder 3em 'work sans', sans-serif;
+
+            A mesma estilização sera aplicada, pórem de uma forma mais compacta de ser escrita e vizualizada. 
+
+            */
+
+            /*
+
+            Outro exemplo de simplificação: 
+
+            h2 {
+                font: bold 2em 'work Sans';
+            }
+
+            Sempre respeitar a ordem: font-style -> font-weight -> font-size -> font-family. 
+
+            */
+        }
+    </style>
+    <title>Fontes em CSS</title>
+</head>
+
+<body>
+    <h1>Trabalhando com fontes</h1>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum optio quia ab nisi aliquid magnam eius quisquam animi sint quod expedita libero aspernatur sit excepturi delectus, ipsum similique? Maiores, sunt?</p>
+
+    <h2>Subtítulo do exercicio</h2>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad quod, minima doloremque odit consectetur dolore doloribus ab facere ipsam magnam necessitatibus in quo quos dolorum deserunt harum! Consequuntur, voluptatibus iure.</p>
+
+    <h2 class="test">Teste de Fontes</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nisi aliquid sed beatae dolore tempore quidem accusamus necessitatibus fugit quae, aperiam vero reiciendis incidunt odit molestias modi ab ex. Atque quod eveniet molestiae ipsa quas asperiores ex corporis. Corrupti maiores nesciunt facere veritatis reiciendis suscipit ipsam commodi sint, odio asperiores! Sint deserunt quam culpa! Nemo culpa ducimus quis, consequatur eveniet aperiam adipisci, ea cum voluptates rem libero reiciendis laborum qui corporis facere officia odit deserunt. Repellat doloremque dolore quia illo ea nulla exercitationem molestias voluptate esse corporis ab aliquam magnam, repellendus sint ipsam expedita sed, maiores reiciendis voluptas sapiente numquam.</p>
+</body>
+
+</html>
+
+<!-- 
+            Breve revisão 
+                    Peso (negrito):	
+
+                    - fonte mais cheia (negrito) ou fina
+                    - não serve para fontes simples (arial, verdana, times,...)
+                    - serve pra fontes como Work Sans (import google)
+
+                    font-weight: nome ou número;	    
+
+                    nome:	- lighter		número:	- 100   - 500   - 900
+                            - normal				- 200   - 600
+                            - bold				    - 300   - 700
+                            - bolder				- 400   - 800
+
+
+                    Estilo (itálico): font-style: valor;		valor:  - normal - italic
+
+                    Decoração (sublinhado): text-decoration: underline;
+
+
+                    Shorthand font: simplificando fontes.
+
+                    Ex:	font-family: 'Work Sans', sans-serif;
+                        font-weight: bolder;
+                        font-size: 3em;
+                        font-style: italic;
+
+                    Simplificando:
+
+                    font:  italic  bolder  3em  'Work Sans', sans-serif;
+
+                    - A sequência deve ser:	
+
+                    font-style   ->   font-weight   ->   font-size   ->   font-family;
+
+                    - Não precisa ter todas as propriedades, mas a sequência deve ser seguida;
+
+                    Ex: font:  bold  2em  'Work Sans';
+ -->

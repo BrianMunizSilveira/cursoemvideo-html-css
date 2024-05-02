@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Vídeos em HTML5</title>
+</head>
+
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor</p>
+    <video width="560" poster="imagens/trilha.jpg" controls>
+        <source src="midia/trilha.mp4" type="video/mp4">
+        <source src="midia/meu-video.m4v" type="video/mp4">
+        <source src="midia/meu-video.webm" type="video/webm">
+        <source src="midia/trilha.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+
+    <ul>
+        <li>Thumb: Foto de Lauri Poldre: <a href="https://www.pexels.com/pt-br/foto/cor-pigmento-conifera-alvorecer-18076978/">https://www.pexels.com/pt-br/foto/cor-pigmento-conifera-alvorecer-18076978/</a>
+        </li>
+        <li>Vídeo: Vídeo de Karma Rayshar: <a href="https://www.pexels.com/pt-br/video/aventura-facanha-mochileiro-lindo-19162663/">https://www.pexels.com/pt-br/video/aventura-facanha-mochileiro-lindo-19162663/</a>
+        </li>
+    </ul>
+
+    <h1>Inserindo vídeos do Youtube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cPzhNzqt9LA?si=1RLcsmz3EYOiIVHo" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+    </iframe>
+    <sub>Uma bela música.</sub>
+
+    <h1>Inserindo vídeos do Vimeo</h1>
+    <iframe src="https://player.vimeo.com/video/200569572?h=19407bb221&color=ff9933&portrait=0" 
+    width="560" 
+    height="299" 
+    frameborder="0" 
+    allow="autoplay; fullscreen; picture-in-picture" 
+    allowfullscreen>
+    </iframe>
+    <p><a href="https://vimeo.com/200569572">Character Animation reel 2016</a> from <a href="https://vimeo.com/user7753467">Jose Mas</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+</body>
+
+</html>

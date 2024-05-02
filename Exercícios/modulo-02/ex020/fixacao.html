@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brian Muniz Silveira">
+    <meta name="description" content="Exercícios para praticar o uso de pseudo-classes e pseudo-elementos em CSS">
+
+    <style>
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #FA824C;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        background-color: #141B41;
+        padding: 20px;
+    }
+
+    h1 {
+        color:  white;
+    }
+
+    li {
+        width: 100px;
+        transition: background-color 0.3s ease;
+    }
+
+    li:hover {
+        background-color: #5e5e5ed8;
+    }
+
+    li:last-child {
+        background-color: #815b5b;
+        color: rgb(127, 255, 155);
+    }
+
+    article {
+        background-color: #3C91E6;
+        width: 750px;
+    }
+
+    .ex02::before {
+        content: '✓ ';
+    }
+
+    .ex02::after {
+        content: ' ✓';
+    }
+
+    .ex02 {
+        font-family: monospace;
+        text-align: justify;
+        color: white;
+        padding: 17px;
+    }
+
+    .especial:nth-child(3) {
+        color: #FA824C;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+    }
+
+    .icone::before {
+        content: '(◕‿◕) ';
+    }
+
+    .lofi::first-letter {
+        font-size: 20px;
+        font-weight: bold;
+        color: #FA824C;
+    }
+
+    .lofi::first-line {
+        text-align: justify;
+        font-family: monospace;
+        font-size: 19px;
+
+    }
+
+    .lofi {
+        margin: 0;
+        padding: 17px;
+        color: white;
+    }
+    </style>
+
+    <title>Exercícios</title>
+</head>
+
+<body>
+
+    <main>
+        
+        <header>
+            <h1>Exercícios para praticar o uso de pseudo-classes e pseudo-elementos em CSS</h1>
+        </header>
+
+        <hr>
+
+        <article>
+            <h2>Exercício 1: Pseudo-classes</h2>
+            <ul>
+                <li>Elemento 01</li>
+                <li>Elemento 02</li>
+                <li>Elemento 03</li>
+                <li>Elemento 04</li>
+                <li>Elemento 05</li>
+            </ul>
+
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>Exercício 2: Pseudo-elementos</h2>
+
+            <p class="ex02">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ab nesciunt qui eaque possimus reiciendis quibusdam autem impedit, minima necessitatibus excepturi dolores consequuntur expedita. Reprehenderit numquam repellendus asperiores, distinctio voluptatibus neque laborum ipsa aut deserunt, beatae vero hic voluptas magnam eos vitae quas iure maiores reiciendis. Incidunt veniam quasi autem, aliquid quos atque culpa necessitatibus distinctio magnam labore aspernatur sequi tenetur sapiente eligendi ut dolores perspiciatis?</p>
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>Exercício 3: Combinação de Pseudo-classes e Pseudo-elementos</h2>
+
+            <ol>
+                <li class="icone">Elemento 1</li>
+                <li class="icone">Elemento 2</li>
+                <li class="especial icone">Elemento 3</li>
+                <li class="icone">Elemento 4</li>
+                <li class="icone">Elemento 5</li>
+                <li class="icone">Elemento 6</li>
+                <li class="icone">Elemento 7</li>
+                <li class="icone">Elemento 8</li>
+            </ol>
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>Exercício 4: Estilização de Texto</h2>
+
+            <p class="lofi">
+                O estilo Lo-Fi, uma abreviação de "low fidelity" (baixa fidelidade), refere-se a um tipo de produção musical que incorpora características de gravação de qualidade inferior, muitas vezes com o intuito de criar uma atmosfera mais relaxada e nostálgica. Esse gênero é conhecido por suas texturas sonoras suaves, amostras de áudio granuladas, batidas simples e uma estética geralmente despojada.
+
+                As músicas Lo-Fi muitas vezes apresentam ruídos de fundo, como chiados e estalos, que são deliberadamente incluídos para evocar uma sensação de autenticidade e simplicidade. Esse estilo ganhou popularidade, especialmente nas plataformas de streaming, como uma trilha sonora ideal para relaxamento, estudo ou criação de atmosferas acolhedoras. A natureza descontraída e ambiental do Lo-Fi cria uma experiência auditiva que se destaca pela sua acessibilidade e capacidade de induzir um estado de espírito tranquilo.
+            </p>
+        </article>
+    </main>
+
+</body>
+
+</html>

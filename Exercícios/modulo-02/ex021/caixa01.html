@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brian Muniz Silveira">
+    <meta name="description" content="Capítulo 16 Aula 02 – Modelo de Caixas na prática (pt.1)/(pt.2)">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 { /* box-level */
+            background-color: lightgrey;
+
+            height: 300px;
+            width: 300px;
+
+            border: 10px solid darkslategray;
+
+            padding: 10px 20px;
+
+            margin: 10px auto 40px auto;
+
+            outline: 5px dashed salmon;
+        }
+
+        a { /* inline-level */
+
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">Links são exemplos de inline-level</a> vamos ver como isso funciona</p>
+</body>
+
+</html>
+
+<!-- 
+    Todo momento em que abrir o DevTools (F12) e encontrar o nome "user agent stylesheet" é a exibição padrão do navegador. 
+
+    Esta foi uma aula para ter uma vizualização dos conceitos visto na aula anterior,
+-->

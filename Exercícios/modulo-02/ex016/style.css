@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    /*height: 100%;*/
+}
+
+body {
+    background-image: linear-gradient(to right, #F1D8C9, #F2C3A7);
+}
+
+/*Dentro do Main foi criado este fundo branco bonitinho :)*/
+main {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(136, 93, 0,616);
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+}
+
+h1 {
+    color: #F39209;
+    text-align: center;
+    text-shadow: 1px 1px 2px  #a56306b2;
+}
+
+h2 {
+    color: #125189;
+}
+
+p {
+    text-align: justify;
+}
+
