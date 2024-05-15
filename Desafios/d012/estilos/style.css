@@ -1,23 +1,23 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 
 :root {
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
-    --fonte2: "Poetsen One", sans-serif;
-    --fonte3: "Satisfy", cursive;
+    --fonte2: "Russo One", sans-serif;
+    --fonte3: "Caveat", cursive;
 }
 
 * {
     margin: 0px; 
     padding: 0px; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
 }
 
 html, body {
     min-height: 100vh;
-    background-color: darkgray;
     font-family: var(--fonte1);
 }
 
@@ -44,17 +44,18 @@ header a, footer a {
     font-weight: bolder;
 }
 
-header a:hover, footer a:hover {
+header a:hover {
     text-decoration: underline;
 }
 
 section {
+    background-color: antiquewhite;
     padding-top: 10vh;
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
     font-family: var(--fonte3);
-    font-size: 3.5vw;
+    font-size: 4vw;
 }
 
 section > p {
@@ -63,15 +64,23 @@ section > p {
 
 section#img01 {
     background-image: url('../imagens/background001.jpg');
-    background-position: right center;
+    background-position: center center;
 }
 
 section#img02 {
     background-image: url('../imagens/background002.jpg');
+    background-position: center top;
+}
+
+header#img03 {
+    background-image: url('../imagens/background003.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section.normal {
-    background-color: #fff;
     color: #000;
 }
 
@@ -94,6 +103,17 @@ footer {
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+}
+
+footer a:hover {
+    color: #F27405;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px){
+    section {
+        font-size: 4vh;
+    }
 }
 
