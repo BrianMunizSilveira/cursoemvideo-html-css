@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Brian Muniz Silveira - DevDecfalter">
-    <meta name="description" content="Página inicial contendo todo o material práticado por mim durante o curso de HTML5+CSS3">
+    <meta name="description"
+        content="Página inicial contendo todo o material práticado por mim durante o curso de HTML5+CSS3">
     <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
 
     <style>
@@ -14,16 +15,17 @@
             font-size: 1.2rem;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            background-color: #cdcdcd;
         }
 
         main {
             max-width: 800px;
+            min-width: 100px;
             margin: 40px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #ffffffdb;
             box-shadow: 18px 20px 18px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
+            border-radius: 15px;
         }
 
         header {
@@ -74,6 +76,11 @@
             border-bottom: 1px dotted #0056b3;
         }
 
+        @media (max-width: 600px) {
+            main {
+                padding: 20px;
+            }
+        }
     </style>
 
     <title>Curso em Vídeo HTML5 + CSS3</title>
@@ -89,14 +96,16 @@
         <section>
             <header>
                 <h2><a href="Exercícios/exercicios.html" rel="next">Exercícios</a></h2>
-                <p>Nesta página, você encontrará todos os exercícios práticos realizados por mim ao longo das aulas do curso.</p>
+                <p>Nesta página, você encontrará todos os exercícios práticos realizados por mim ao longo das aulas do
+                    curso.</p>
             </header>
         </section>
         <hr>
         <section>
             <header>
                 <h2><a href="Desafios/d000/index.html" rel="next">Desafios</a></h2>
-                <p>Nesta página, você encontrará todos os desafios práticos realizados por mim ao longo das aulas do curso.</p>
+                <p>Nesta página, você encontrará todos os desafios práticos realizados por mim ao longo das aulas do
+                    curso.</p>
             </header>
         </section>
 
