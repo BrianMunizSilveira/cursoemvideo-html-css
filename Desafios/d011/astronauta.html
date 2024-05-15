@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="B.M.S">
+    <meta name="description" content="Desafio 011 do curso de HTML e CSS do Cursoemvideo">
+    <title>D011 | Astronauta</title>
+    <link rel="shortcut icon" href="../d000/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+             background: black url('imagens/espaco.jpg');
+             background-size: cover;
+        }
+
+        div.astronauta {
+            background-image: url('imagens/astronauta.png');
+            /*background-size: cover;*/
+            background-position: center center;
+            width: 500px;
+            height: 508px;
+            margin: auto;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                background: black url('imagens/espaco-p.jpg');
+                background-size: cover;
+                
+            }
+
+            div.astronauta {
+                background-image: url('imagens/astronauta-p.png');
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="astronauta"></div>
+</body>
+
+</html>
