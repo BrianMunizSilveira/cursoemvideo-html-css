@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="B.M.S">
+    <meta name="description" content="Fixando Conhecimento">
+    <title>Fixando Conhecimento</title>
+    <link rel="shortcut icon" href="../../src/favicon.ico" type="image/x-icon">
+    <style>
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            margin: 20px;
+        }
+        
+        h1{
+            color: #34495e;
+            margin: 10px;
+        }
+
+        table {
+            width: 100%;
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #f2f2f2;
+        }
+
+        th {
+            background-color: #85c1e9;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        article {
+            background-color: #34495e;
+            color: #fff;
+            padding: 12px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+
+        ul li {
+            list-style: inside;
+        }
+
+        footer {
+            margin-top: 15px;
+            text-align: center;
+            background-color: #85c1e9;
+            padding: 15px;
+            font-family: monospace;
+            font-size: 1.5em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ff0000;
+        }
+        
+        a:hover {   
+            text-decoration: underline;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Exercício 01 - Lista de Contatos</h1>
+            <article>
+                <h2>Instruções</h2>
+                    <p>Crie uma tabela simples que contenha uma lista de contatos. A tabela deve ter as seguintes colunas: <br></p>
+                    <ul>
+                        <li>Nome</li>
+                        <li>Telefone</li>
+                        <li>E-mail</li>
+                    </ul>
+            </article>
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                </tr>
+                <tr>
+                    <td>João Silva</td>
+                    <td>(11) 1234-5678</td>
+                    <td>joao.silva@example.com</td>
+                </tr>
+                <tr>
+                    <td>Maria Oliveira</td>
+                    <td>(21) 8765-4321</td>
+                    <td>maria.oliveira@example.com</td>
+                </tr>
+                <tr>
+                    <td>Carlos Souza</td>
+                    <td>(31) 1122-3344</td>
+                    <td>carlos.souza@example.com</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 02 - Tabela de Horários de Aulas</h1>
+            <article>
+                <h2>Instruções</h2>
+                <p>Faça uma tabela que mostre o horário das suas aulas durante a semana. A tabela deve ter:<br></p>
+                <ul>
+                    <li>Colunas para cada dia da semana (Segunda a Sexta)</li>
+                    <li>Linhas para cada horário de aula (ex: 8h-9h, 9h-10h, etc.)</li>
+                </ul>
+            </article>
+            <table>
+                <tr>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                </tr>
+                <tr>
+                    <td>8h ás 9h</td>
+                    <td>7h ás 10h</td>
+                    <td>7h ás 10:30h</td>
+                    <td>7h ás 10:30h</td>
+                    <td>8h ás 9h</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 03 - Tabela de Preços de Produtos</h1>
+            <article>
+                <h2>Instruções</h2>
+                <p>Crie uma tabela para mostrar uma lista de produtos com seus respectivos preços e descrições. A tabela deve incluir:<br></p>
+                <ul>
+                    <li>Nome do Produto</li>
+                    <li>Descrição</li>
+                    <li>Preço</li>
+                </ul>
+            </article>
+            <table>
+                <tr>
+                    <th>Copo</th>
+                    <th>Prato</th>
+                    <th>Garfo</th>
+                    <th>Colher</th>
+                </tr>
+                <tr>
+                    <td>Resistente e Clássico</td>
+                    <td>Resistente e Clássico</td>
+                    <td>Não entorna</td>
+                    <td>Não entorna</td>
+                </tr>
+                <tr>
+                    <td>R$ 45,99</td>
+                    <td>R$ 66,99</td>
+                    <td>R$ 28,99</td>
+                    <td>R$ 15,99</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 04 - Tabela de Resultados de Exames</h1>
+            <article>
+                <h2>Instruções</h2>
+                <p>Crie uma tabela para exibir os resultados de exames de uma classe de alunos. A tabela deve conter:<br></p>
+                <ul>
+                    <li>Nome do Aluno</li>
+                    <li>Matéria</li>
+                    <li>Nota</li>
+                </ul>
+            </article>
+            <table>
+                <tr>
+                    <th>Português</th>
+                    <th>Matemática</th>
+                    <th>Ciências</th>
+                    <th>Biologia</th>
+                </tr>
+                <tr>
+                    <td>Vladimir: 10</td>
+                    <td>Vladimir: 8</td>
+                    <td>Vladimir: 6</td>
+                    <td>Vladimir: 9</td>
+                </tr>
+                <tr>
+                    <td>Astrid: 6</td>
+                    <td>Astrid: 10</td>
+                    <td>Astrid: 10</td>
+                    <td>Astrid: 8</td>
+                </tr>
+                <tr>
+                    <td>Gato A Jato: 10</td>
+                    <td>Gato A Jato: 10</td>
+                    <td>Gato A Jato: 10</td>
+                    <td>Gato A Jato: 10</td>
+                </tr>
+                <tr>
+                    <td>Irelia: 6</td>
+                    <td>Irelia: 4</td>
+                    <td>Irelia: 9</td>
+                    <td>Irelia: 7</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 05 - Tabela de Pontuação de Jogo</h1>
+            <article>
+                <h2>Instruções</h2>
+                <p>Desenvolva uma tabela que exiba a pontuação de jogadores em um jogo. A tabela deve ter:<br></p>
+                <ul>
+                    <li>Nome do Jogador</li>
+                    <li>Pontuação</li>
+                    <li>Nível do Jogo</li>
+                </ul>
+            </article>
+            <table>
+                <tr>
+                    <th>Nick</th>
+                    <th>Pontuação</th>
+                    <th>Nível</th>
+                </tr>
+                <tr>
+                    <td>Noinsia</td>
+                    <td>100</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Gaiteas</td>
+                    <td>64</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Naizoir</td>
+                    <td>84</td>
+                    <td>97</td>
+                </tr>
+                <tr>
+                    <td>Onkiume</td>
+                    <td>10</td>
+                    <td>3</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 06 - Tabela de Informações de Filmes</h1>
+            <article>
+                <h2>Instruções</h2>
+                <p>Crie uma tabela para exibir informações sobre filmes. A tabela deve incluir:<br></p>
+                <ul>
+                    <li>Título do Filme</li>
+                    <li>Diretor</li>
+                    <li>Ano de Lançamento</li>
+                    <li>Gênero</li>
+                </ul>
+            </article>
+            <table>
+                <tr>
+                    <th>Título do Filme</th>
+                    <th>Diretor</th>
+                    <th>Ano de Lançamento</th>
+                    <th>Gênero</th>
+                </tr>
+                <tr>
+                    <td>O Poderoso Chefão</td>
+                    <td>Francis Ford Coppola</td>
+                    <td>1972</td>
+                    <td>Crime, Drama</td>
+                </tr>
+                <tr>
+                    <td>Star Wars: Episódio IV - Uma Nova Esperança</td>
+                    <td>George Lucas</td>
+                    <td>1977</td>
+                    <td>Ficção Científica, Aventura</td>
+                </tr>
+                <tr>
+                    <td>Forrest Gump</td>
+                    <td>Robert Zemeckis</td>
+                    <td>1994</td>
+                    <td>Drama, Romance</td>
+                </tr>
+                <tr>
+                    <td>Matrix</td>
+                    <td>Lana Wachowski, Lilly Wachowski</td>
+                    <td>1999</td>
+                    <td>Ficção Científica, Ação</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 07 - Tabela de Registros de Alunos</h1>
+            <article>
+                <h2>Instruções</h2>
+                <p>Crie uma tabela para listar os registros dos alunos. A tabela deve ter as seguintes colunas:<br></p>
+                <ul>
+                    <li>Número de Matrícula</li>
+                    <li>Nome do Aluno</li>
+                    <li>Curso</li>
+                    <li>Ano de Ingresso
+                    </li>
+                </ul>
+            </article>
+            <table>
+                <tr>
+                    <th>Número de Matrícula</th>
+                    <th>Nome do Aluno</th>
+                    <th>Curso</th>
+                    <th>Ano de Ingresso</th>
+                </tr>
+                <tr>
+                    <td>2021001</td>
+                    <td>Ana Souza</td>
+                    <td>Engenharia</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>2021002</td>
+                    <td>Pedro Lima</td>
+                    <td>Medicina</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>2021003</td>
+                    <td>Carla Oliveira</td>
+                    <td>Direito</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>2021004</td>
+                    <td>Daniel Costa</td>
+                    <td>Arquitetura</td>
+                    <td>2021</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 08 - Tabela de Estatísticas de Vendas</h1>
+            <article>
+                <p>Desenvolva uma tabela que mostre as estatísticas de vendas de uma loja. A tabela deve conter:<br></p>
+                <ul>
+                    <li>Produto</li>
+                    <li>Quantidade Vendida</li>
+                    <li>Receita Gerada</li>
+                </ul>
+            </article>
+            <table>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade Vendida</th>
+                    <th>Receita Gerada</th>
+                </tr>
+                <tr>
+                    <td>Mochila</td>
+                    <td>40</td>
+                    <td>R$ 1.200,00</td>
+                </tr>
+                <tr>
+                    <td>Caderno</td>
+                    <td>75</td>
+                    <td>R$ 375,00</td>
+                </tr>
+                <tr>
+                    <td>Caneta</td>
+                    <td>150</td>
+                    <td>R$ 300,00</td>
+                </tr>
+                <tr>
+                    <td>Lapís</td>
+                    <td>200</td>
+                    <td>R$ 200,00</td>
+                </tr>
+                <tr>
+                    <td>Borracha</td>
+                    <td>100</td>
+                    <td>R$ 50,00</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 09 - Tabela de Comparação de Planos de Internet</h1>
+            <article>
+                <h2>Instruções</h2>
+                <p>Faça uma tabela que compare diferentes planos de internet oferecidos por provedores. A tabela deve incluir:<br></p>
+                <ul>
+                    <li>Nome do Provedor</li>
+                    <li>Velocidade de Download</li>
+                    <li>Velocidade de Upload</li>
+                    <li>Preço Mensal</li>
+                </ul>
+            </article>
+            <table>
+                <tr>
+                    <th>Nome do Provedor</th>
+                    <th>Velocidade de Dowloand</th>
+                    <th>Velicidade de Upload</th>
+                    <th>Preço Mensal</th>
+                </tr>
+                <tr>
+                    <td>Provedor A</td>
+                    <td>100 Mbps</td>
+                    <td>50 Mbps</td>
+                    <td>R$ 99,90</td>
+                </tr>
+                <tr>
+                    <td>Provedor B</td>
+                    <td>200 Mbps</td>
+                    <td>100 Mbps</td>
+                    <td>R$ 149,90</td>
+                </tr>
+                <tr>
+                    <td>Provedor C</td>
+                    <td>300 Mbps</td>
+                    <td>150 Mbps</td>
+                    <td>R$ 199,90</td>
+                </tr>
+                <tr>
+                    <td>Provedor D</td>
+                    <td>500 Mbps</td>
+                    <td>250 Mbps</td>
+                    <td>R$ 249,90</td>
+                </tr>
+                <tr>
+                    <td>Provedor E</td>
+                    <td>1000 Mbps (1 Gbps)</td>
+                    <td>500 Mbps</td>
+                    <td>R$ 399,90</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 10 - Tabela de Agenda de Eventos</h1>
+            <article>
+                <h2>Instruções</h2>
+                <p>Crie uma tabela para exibir uma agenda de eventos. A tabela deve ter:<br></p>
+                <ul>
+                    <li>Data do Evento</li>
+                    <li>Hora do Evento</li>
+                    <li>Descrição do Evento</li>
+                </ul>
+            </article>
+            <table>
+                <tr>
+                    <th>Data Do Evento</th>
+                    <th>Hora do Evento</th>
+                    <th>Descrição do Evento</th>
+                </tr>
+                <tr>
+                    <td>15/06/2024</td>
+                    <td>10:00</td>
+                    <td>Palestra sobre Sustentabilidade</td>
+                </tr>
+                <tr>
+                    <td>20/06/2024</td>
+                    <td>14:00</td>
+                    <td>Workshop de Programação</td>
+                </tr>
+                <tr>
+                    <td>25/06/2024</td>
+                    <td>09:00</td>
+                    <td>Conferência de Tecnologia</td>
+                </tr>
+                <tr>
+                    <td>30/06/2024</td>
+                    <td>16:00</td>
+                    <td>Encontro de Networking</td>
+                </tr>
+                <tr>
+                    <td>05/07/2024</td>
+                    <td>18:00</td>
+                    <td>Sessão de Cinema ao Ar Livre</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>Desenvolvido por <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="external">Brian Muniz Silveira</a></footer>
+</body>
+
+</html>
