@@ -14,7 +14,7 @@
         }
 
         table {
-            width: 400px;
+            width: 500px;
             border-collapse: collapse;
         }
 
@@ -23,8 +23,15 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: #fff;
         }
 
@@ -47,10 +54,11 @@
                 TR, TD, TH
      -->
      <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
 
@@ -167,7 +175,7 @@
 
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>203 078 389</strong></td>
             </tr>
         </tfoot>
