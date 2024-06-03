@@ -30,11 +30,17 @@
         }
 
         table {
+            position: relative;
             width: 100%;
             border: 2px solid black;
             border-collapse: collapse;
             margin-top: 20px;
             background-color: #f2f2f2;
+        }
+
+        tr > th {
+            position: sticky;
+            top: -1px;
         }
 
         th {
@@ -505,8 +511,272 @@
                 </tr>
             </table>
         </section>
+        <section>
+            <h1>Exercício 11 - Tabela de registro de livros</h1>
+            <article>
+                <p>Crie uma tabela para registrar informações sobre livros em uma biblioteca. A tabela deve incluir:<br></p>
+                <ul>
+                    <li>Título do Livro</li>
+                    <li>Autor</li>
+                    <li>Ano de Publicação</li>
+                    <li>Gênero</li>
+                </ul>
+            </article>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título do Livro</th>
+                        <th>Autor</th>
+                        <th>Ano de Publicação
+                        </th>
+                        <th>Gênero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A Metamorfose</td>
+                        <td>Franz Kafka</td>
+                        <td>1915</td>
+                        <td>Ficção</td>
+                    </tr>
+                    <tr>
+                        <td>1984</td>
+                        <td>George Orwell
+                        </td>
+                        <td>1949</td>
+                        <td>Distopia</td>
+                    </tr>
+                    <tr>
+                        <td>Dom Quixote</td>
+                        <td>Miguel de Cervantes</td>
+                        <td>1605</td>
+                        <td>Aventura</td>
+                    </tr>
+                    <tr>
+                        <td>O Apanhador no Campo de Centeio</td>
+                        <td>J.D. Salinger</td>
+                        <td>1951</td>
+                        <td>Ficção</td>
+                    </tr>
+                    <tr>
+                        <td>Orgulho e Preconceito</td>
+                        <td>Jane Austen</td>
+                        <td>1813</td>
+                        <td>Romance</td>
+                    </tr>
+                    <tr>
+                        <td>O Grande Gatsby</td>
+                        <td>F. Scott Fitzgerald</td>
+                        <td>1925</td>
+                        <td>Ficção</td>
+                    </tr>
+                    <tr>
+                        <td>Moby Dick</td>
+                        <td>Herman Melville</td>
+                        <td>1851</td>
+                        <td>Aventura</td>
+                    </tr>
+                    <tr>
+                        <td>Cem Anos de Solidão</td>
+                        <td>Gabriel Garcia Marquez</td>
+                        <td>1967</td>
+                        <td>Realismo Mágico</td>
+                    </tr>
+                    <tr>
+                        <td>Guerra e Paz</td>
+                        <td>Leo Tolstoy</td>
+                        <td>1869</td>
+                        <td>Histórico</td>
+                    </tr>
+                    <tr>
+                        <td>O Senhor dos Anéis: A Sociedade do Anel</td>
+                        <td>J.R.R. Tolkien</td>
+                        <td>1954</td>
+                        <td>Fantasia</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 12 - Tabela de Registro de Participantes de um Evento</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Participante</th>
+                        <th>Idade</th>
+                        <th>Profissão</th>
+                        <th>Localidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ana Paula</td>
+                        <td>30</td>
+                        <td>Engenheira</td>
+                        <td>São Paulo</td>
+                    </tr>
+                    <tr>
+                        <td>Calos Eduardo</td>
+                        <td>25</td>
+                        <td>Designer</td>
+                        <td>Rio de Janeiro</td>
+                    </tr>
+                    <tr>
+                        <td>Beatriz Silva</td>
+                        <td>35</td>
+                        <td>Médica</td>
+                        <td>Brasília</td>
+                    </tr>
+                    <tr>
+                        <td>Roberto Lima</td>
+                        <td>28</td>
+                        <td>Programador</td>
+                        <td>Curitiba</td>
+                    </tr>
+                    <tr>
+                        <td>Mariana Costa</td>
+                        <td>32</td>
+                        <td>Advogada</td>
+                        <td>Belo Horizonte</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 13 - Tabela de Resultados de Competições Esportivas</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Atleta</th>
+                        <th>Modalidade</th>
+                        <th>Posição</th>
+                        <th>Tempo/Pontuação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Pereira</td>
+                        <td>100m Rasos</td>
+                        <td>1°</td>
+                        <td>10.2s</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Santos</td>
+                        <td>Salto em Distância</td>
+                        <td>2°</td>
+                        <td>6.5m</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Silva</td>
+                        <td>Natação 50m</td>
+                        <td>3°</td>
+                        <td>22.5s</td>
+                    </tr>
+                    <tr>
+                        <td>Beatriz Almeida</td>
+                        <td>Arremesso de Peso</td>
+                        <td>1°</td>
+                        <td>18.3m</td>
+                    </tr>
+                    <tr>
+                        <td>Roberto Costa</td>
+                        <td>200m Rasos</td>
+                        <td>2°</td>
+                        <td>20.1s</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 14 - Tabela de Dados Climáticos</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cidade</th>
+                        <th>Temperatura Máxima</th>
+                        <th>Temperatura Mínima</th>
+                        <th>Precipitação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td>30°C</td>
+                        <td>20°C</td>
+                        <td>5mm</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td>32°C</td>
+                        <td>22°C</td>
+                        <td>10mm</td>
+                    </tr>
+                    <tr>
+                        <td>Belo Horizonte</td>
+                        <td>28°C</td>
+                        <td>18°C</td>
+                        <td>8mm</td>
+                    </tr>
+                    <tr>
+                        <td>Curitiba</td>
+                        <td>25°C</td>
+                        <td>15°C</td>
+                        <td>12mm</td>
+                    </tr>
+                    <tr>
+                        <td>Brasília</td>
+                        <td>27°C</td>
+                        <td>17°C</td>
+                        <td>7mm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h1>Exercício 15 - Tabela de Registro de Funcionários</h1>
+            <table>
+                <thead>
+                    <th>Nome do Funcionário</th>
+                    <th>Departamento</th>
+                    <th>Cargo</th>
+                    <th>Data de COntratação</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pedro Souza</td>
+                        <td>RH</td>
+                        <td>Assistente</td>
+                        <td>01/02/2020</td>
+                    </tr>
+                    <tr>
+                        <td>Fernanda Lima</td>
+                        <td>TI</td>
+                        <td>Analista</td>
+                        <td>15/03/2019</td>
+                    </tr>
+                    <tr>
+                        <td>Lucas Oliveira</td>
+                        <td>Marketing</td>
+                        <td>Coordenador</td>
+                        <td>10/05/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Sofia Almeida</td>
+                        <td>Financeiro</td>
+                        <td>Gerente</td>
+                        <td>20/08/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Rafael Costa</td>
+                        <td>Comercial</td>
+                        <td>Vendedor</td>
+                        <td>01/11/2021</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
-    <footer>Desenvolvido por <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="external">Brian Muniz Silveira</a> em 01/06/2024</footer>
+    <footer>Desenvolvido por <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="external">Brian Muniz Silveira</a></footer>
 </body>
 
 </html>
