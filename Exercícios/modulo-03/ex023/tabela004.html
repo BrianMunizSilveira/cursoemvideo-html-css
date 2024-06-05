@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="B.M.S">
+    <meta name="description" content="Capítulo 21 Aula 10 – Exemplo de tabela completa do Cursoemvideo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <link rel="shortcut icon" href="../../src/favicon.ico" type="image/x-icon">
+    <style>
+        main {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            margin: auto;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        th, td {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Exercício de Tabelas</h1>
+        </header>
+
+        <section>
+            <table>
+                <caption>Filmes Favoritos</caption>
+                <thead>
+                    <th>Grupo</th>
+                    <th>Nomes</th>
+                    <th colspan="3">Filmes</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th rowspan="3">Mulheres</th>
+                        <td>Ana Maria Santos</td>
+                        <td>Alien</td>
+                        <td>Rambo</td>
+                        <td>Vingadores</td>
+                    </tr>
+                    <tr>
+                        <td>Beatriz Souza</td>
+                        <td>Hulk</td>
+                        <td>Inception</td>
+                        <td>Batman</td>
+                    </tr>
+                    <tr>
+                        <td>Cláudia Melo</td>
+                        <td>Oblivion</td>
+                        <td>Matrix</td>
+                        <td>Big Hero</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Homens</th>
+                        <td>Bruno Mendonça</td>
+                        <td>Intocáveis</td>
+                        <td>Amnésia</td>
+                        <td>Gladiador</td>
+                    </tr>
+                    <tr>
+                        <td>Daniel Lourenço</td>
+                        <td>Wall-E</td>
+                        <td>Oldboy</td>
+                        <td>Dangal</td>
+                    </tr>
+                    <tr>
+                        <td>Fabio Mota</td>
+                        <td>Star Wars 5</td>
+                        <td>Taxi Driver</td>
+                        <td>Toy Story</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
