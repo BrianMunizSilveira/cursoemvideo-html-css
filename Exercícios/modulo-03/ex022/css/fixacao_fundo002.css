@@ -1,0 +1,62 @@
+/*
+        body {
+            background-image: url('https://imgs.search.brave.com/I3-kJm7A6HVSUSygQn7NkiiRfvE0jngKrVVagANqUig/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMucW9idXouY29t/L2ltYWdlcy9jb3Zl/cnMvcmIveWsvcDY5/M3U0b25veWtyYl82/MDAuanBn');
+            background-size: 100px 100px;
+            background-repeat: repeat-y;
+        }
+        */
+
+        header {
+            text-align: center;
+        }
+
+        section {
+            min-width: 400px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        div.quadrado {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            border: 3px solid black;
+            display: inline-block;
+
+        }
+
+        #q1 {
+            background-image: url('https://imgs.search.brave.com/zwa3jgXEiHaO3QF5KZ29XxAvjf-as0iCZ1fNNWyxN5A/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9seXJp/Y3N0cmFuc2xhdGUu/Y29tL2ZpbGVzL3N0/eWxlcy9hcnRpc3Qv/cHVibGljLzg5Njkx/MzA5XzYzMTA5Nzc1/NzQzNjcwMV81MjE3/NDcxMjk3MDYyNzM5/Mzg4X24uanBn');
+
+            /*  SEM BACKGROUND-SIZE POIS A IMAGEM JÁ TEM UM TAMANHO BOM PARA O CONTAINER QUE ELA ESTA*/
+            /*  SEM BACKGROUND-REPEAT PELO MESMO MOTIVO ANTERIOR*/
+        }
+        
+        #q2 {
+            background-image: url('https://imgs.search.brave.com/y5NDcEnVui9nKaP-Hp8cPmHMocTmfl4DS7iDKu3z_BA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zMi5n/bGJpbWcuY29tL3Vk/eGNMV3BFbWdxVmE0/MkRzYTVKZHRWUlRD/ST0vNjIweDQ1NS9l/LmdsYmltZy5jb20v/b2cvZWQvZi9vcmln/aW5hbC8yMDIyLzA0/LzA4L21vbGNoYXQt/ZG9tYS1hbGJ1bS1h/cnF1aXRldHVyYS1t/dXNpY2FzLmpwZw');
+            background-size: 80px 80px;
+            background-repeat: repeat-x;
+        }
+
+        #q3 {
+            background-image: url('https://imgs.search.brave.com/I3-kJm7A6HVSUSygQn7NkiiRfvE0jngKrVVagANqUig/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMucW9idXouY29t/L2ltYWdlcy9jb3Zl/cnMvcmIveWsvcDY5/M3U0b25veWtyYl82/MDAuanBn');
+            background-size: 50px 50px;
+            background-repeat: repeat-y;
+        }
+
+        #q4 {
+            background-image: url('https://imgs.search.brave.com/qiyz8CbWcpvSezDUpWTR69iWZwgkAqbOeJGI55ZEmAM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLW5zZTVU/a3A4TkJBYjJqbkIt/SzlBRlpRLXQ1MDB4/NTAwLmpwZw');
+            background-size: 100%;
+            /*  SEM BACKGROUND-REPEAT PELO MESMO MOTIVO ANTERIOR*/
+        }
+
+        #q5 {
+            background-image: url('https://akamai.sscdn.co/letras/192x174/fotos/8/6/8/4/8684d11bbf523ab73925b6678518c3cf.jpg');
+            /*  SEM BACKGROUND-SIZE USANDO TAMANHO PADRÃO DA IMAGEM*/
+            /*  BACKGROUND-REPEAT POR PADRÃO*/
+        }
+
+        #q6 {
+            background-image: url('https://viberatecdn.blob.core.windows.net/entity/artist/7xvn-t3hnM');
+            background-size: 30px 30px;
+        }

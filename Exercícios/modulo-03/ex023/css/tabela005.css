@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table{
+     width: 500px;
+     border-collapse: collapse;
+}
+
+caption {
+    font-size: 1.3em;
+    font-weight: bolder;
+    padding: 8px;
+}
+
+table, h1 {
+    text-align: center;
+    margin: auto;
+}
+
+tr, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.destaque {
+    background-color: chartreuse;
+}
+
+col.c-nome {
+    background-color: cadetblue;
+}
+
+col.c-sexo {
+    background-color: rgb(0, 174, 255);
+}
+
+col.c-group {
+    background-color: rgb(0, 255, 0);
+}

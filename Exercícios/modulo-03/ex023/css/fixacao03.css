@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+caption {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 8px;
+}
+
+table {
+    margin: 25px auto;
+    text-align: center;
+    width: 500px;
+    border-collapse: collapse;
+}
+
+tr,
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+col.c-aluno {
+    background-color: #696D7D;
+}
+
+col.c-disciplina {
+    background-color: #6F9283;
+}
+
+col.c-media {
+    background-color: #F0DCCA;
+}
+
+col.c-descricao {
+    background-color: #A4D4B4;
+}
+
+col.c-produto {
+    background-color: #E2B1B1;
+}
+
+col.c-desconto {
+    background-color: #F8E1A6;
+}
+
+col.c-po {
+    background-color: #e63030;
+}
+
+col.c-pf {
+    background-color: #1B998B;
+}
+
+col.c-parada {
+    background-color: tomato;
+}
+
+col.c-horarios {
+    background-color: #f5deb3;
+}
+
+col.c-jogo {
+    background-color: #D4DCFF;
+}
+
+col.c-time-a {
+    background-color: #007FFF;
+}
+
+col.c-time-b {
+    background-color: #7D83FF;
+}
+
+col.c-resultado {
+    background-color: #1AFFD5;
+}
+
+col.c-data {
+    background-color: #FFC1E3;
+}
+
+
+col.c-vendas {
+    background-color: #B0E298;
+}
+
+col.c-custo {
+    background: #8f1414;
+}
+
+col.c-lucro {
+    background-color: #B0E298;
+}
+
+tfoot {
+    font-weight: bold;
+    background-color: #E0E0E0;
+}

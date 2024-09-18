@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+}
+
+th,td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.ocupada {
+    background-color: #f82e2e;
+    font-weight: bold;
+    color: red;
+}
+
+.livre {
+    background-color: #50fa50;
+}

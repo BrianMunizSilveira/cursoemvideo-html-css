@@ -1,0 +1,5 @@
+body {
+    background-image: url('../imagens/pattern001.png');
+    background-size: 100px 100px;
+    background-repeat: repeat-y;
+}
