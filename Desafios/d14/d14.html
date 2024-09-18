@@ -8,78 +8,29 @@
     <meta name="description" content="Desafio 14 do curso de HTML5 e CSS3 do Cursoemvideo, com Prof°Guanabara">
     <title>Desafios | D14</title>
     <link rel="shortcut icon" href="../../src/favicon.ico" type="image/x-icon">
-    <style>
-        main {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        caption {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            font-size: 1.5em;
-            padding: 10px;
-            background-color: #7c7c7c8c;
-            color: rgb(87, 69, 248);
-            margin-top: 10px;
-        }
-
-        table {
-            margin: auto;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 2px solid black;
-            padding: 15px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .fixo {
-            position: sticky;
-            top: -1px;
-        }
-
-        .espaco {
-            margin-top: 25px;
-        }
-
-        a {
-            color: #ffa500;
-            text-decoration: none;
-        }
-
-        a:hover {
-            transition: 0.5s;
-            color: #00ffff;
-            background-image: linear-gradient(#ffff00, #fff, #0000ff, #008000, #ff0000, #ffa500);
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="./d14.css">
 </head>
 
 <body>
-    <main>  
+    <main>
         <section>
             <table>
                 <caption>Boletim Escolar</caption>
                 <thead>
-                    <th scope="rowgroup" rowspan="2">Área</th>
-                    <th scope="rowgroup" rowspan="2">Disciplinas</th>
-                    <th scope="rowgroup" colspan="2">Notas</th>
-                    <th scope="row" rowspan="2">Média</th>
                     <tr>
-                        <th scope="row">Nota 1</th>
-                        <th scope="row">Nota 2</th>
+                        <th scope="col" rowspan="2">Área</th>
+                        <th scope="col" rowspan="2">Disciplinas</th>
+                        <th scope="col" colspan="2">Notas</th>
+                        <th scope="col" rowspan="2">Média</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Nota 1</th>
+                        <th scope="col">Nota 2</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th style="background-color: #fff; color: #000;" scope="col" rowspan="4">Exatas</th>
+                        <th style="background-color: #fff; color: #000;" scope="row" rowspan="4">Exatas</th>
                         <td>Matemática</td>
                         <td>0.0</td>
                         <td>0.0</td>
@@ -108,7 +59,7 @@
                         <td>0.0</td>
                     </tr>
                     <tr>
-                        <th scope="rowgroup" rowspan="2">Humanas</th>
+                        <th scope="row" rowspan="2">Humanas</th>
                         <td>História</td>
                         <td>0.0</td>
                         <td>0.0</td>
@@ -131,7 +82,7 @@
         <section>
             <table class="espaco">
                 <caption style="color: #2b6829fa;">Lista de Tempos no Cubo Mágico(Solves)</caption>
-                <thead> 
+                <thead>
                     <th scope="rowgroup" rowspan="3">Solves</th>
                     <th scope="colgroup" colspan="4">Médias</th>
                     <th scope="colgroup" colspan="2">Singles</th>
@@ -322,367 +273,7 @@
                         <td>23.66</td>
                         <td colspan="5">F L2 F2 R2 U2 F2 U2 F' D2 F' D B2 L D B2 F2 L2 B' F'</td>
                     </tr>
-                    <tr>
-                        <td>31</td>
-                        <td>19.98</td>
-                        <td colspan="5">L U F' D R2 F2 U' R' U L2 U2 L2 F2 R2 F2 D' B2 D' R2 B</td>
-                    </tr>
-                    <tr>
-                        <td>32</td>
-                        <td>30.02</td>
-                        <td colspan="5">U' R2 B2 D B2 U R2 U' R2 D2 F2 L B2 D2 R B' U L' R'</td>
-                    </tr>
-                    <tr>
-                        <td>33</td>
-                        <td>26.30</td>
-                        <td colspan="5">U B R2 D2 L2 U2 B2 L' F2 L' B2 F2 R' U' F U F2 L' R2 D'</td>
-                    </tr>
-                    <tr>
-                        <td>34</td>
-                        <td>27.20</td>
-                        <td colspan="5">U' B2 D2 L2 F D2 B' L2 B' D2 F L2 F D' R' D B2 F L2 U'</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>24.12</td>
-                        <td colspan="5">L' D' L D2 R D2 L2 D2 F2 R' D2 L' F2 U2 L' D' R' B2 D' B L</td>
-                    </tr>
-                    <tr>
-                        <td>36</td>
-                        <td>25.28</td>
-                        <td colspan="5">F' D' F' L2 F2 U R2 B' D2 B R2 F2 U' B2 D L2 D2 U B</td>
-                    </tr>
-                    <tr>
-                        <td>37</td>
-                        <td>29.97</td>
-                        <td colspan="5">U F R' F2 L U' L2 F' L2 D L2 R2 U F2 D' L' D U2 B R' B'</td>
-                    </tr>
-                    <tr>
-                        <td>38</td>
-                        <td>25.32</td>
-                        <td colspan="5">U' B' U L2 B' U L B R2 D2 R2 F D2 F' D2 F R2 D2 B R</td>
-                    </tr>
-                    <tr>
-                        <td>39</td>
-                        <td>27.83</td>
-                        <td colspan="5">B2 F2 D B2 F2 L2 B2 D' B' R' F D' F2 R' F' L D U B2</td>
-                    </tr>
-                    <tr>
-                        <td>40</td>
-                        <td>26.50</td>
-                        <td colspan="5">R2 F2 D2 U' L2 U L2 F2 U2 R2 F2 L' F R2 F2 R F L' F D'</td>
-                    </tr>
-                    <tr>
-                        <td>41</td>
-                        <td>27.87</td>
-                        <td colspan="5">L2 F2 U L2 D2 B2 R2 B2 U' R2 D L2 F R' B' D' B R' D' F' L2</td>
-                    </tr>
-                    <tr>
-                        <td>42</td>
-                        <td>21.74</td>
-                        <td colspan="5">R B2 L' D2 L' U2 R F2 L2 B2 D' L' F D' L F2 U' L' U' B2 L</td>
-                    </tr>
-                    <tr>
-                        <td>43</td>
-                        <td>24.87</td>
-                        <td colspan="5">D2 L2 B2 L' F' U' L' U2 L' B2 U' R' D2 F2 R2 U F' R2 U' L'</td>
-                    </tr>
-                    <tr>
-                        <td>44</td>
-                        <td>22.02</td>
-                        <td colspan="5">F' L F2 U' L D2 R' B2 R U2 F2 R' U2 B D2 R U' F' L U2</td>
-                    </tr>
-                    <tr>
-                        <td>45</td>
-                        <td>29.04</td>
-                        <td colspan="5">U' F2 D2 L2 B' U2 R' U2 B2 D2 F U2 R F' R' U' B' D R2 U</td>
-                    </tr>
-                    <tr>
-                        <td>46</td>
-                        <td>22.38</td>
-                        <td colspan="5">D R2 D R2 U2 B2 L2 D' L2 D R2 B' R2 D F' D' L F' D2 R' F2</td>
-                    </tr>
-                    <tr>
-                        <td>47</td>
-                        <td>24.95</td>
-                        <td colspan="5">U F2 D' F2 L2 D' R2 U2 F2 D' L2 F2 R' U' B2 U' B2 R D L' B</td>
-                    </tr>
-                    <tr>
-                        <td>48</td>
-                        <td>27.68</td>
-                        <td colspan="5">L2 B2 D F2 L2 B2 D F' U B' L' B2 L2 D' L B R D F' L'</td>
-                    </tr>
-                    <tr>
-                        <td>49</td>
-                        <td>22.57</td>
-                        <td colspan="5">D B2 D2 F' L2 F D2 B2 D2 B2 R U2 R D L F' L' B2 D2 L U</td>
-                    </tr>
-                    <tr>
-                        <td>50</td>
-                        <td>22.11</td>
-                        <td colspan="5">L2 B' U' L2 B2 D' L2 F2 U' R2 F2 L' F R' B' D2 R' U' L F'</td>
-                    </tr>
-
-                    <tr>
-                        <td>51</td>
-                        <td>22.27</td>
-                        <td colspan="5">R B2 U' B2 U' L2 F2 U L2 F2 U R' U2 B F2 L2 F D2</td>
-                    </tr>
-                    <tr>
-                        <td>52</td>
-                        <td>21.32</td>
-                        <td colspan="5">F2 L2 U2 F2 L' B' D R F' D2 B' D2 B R2 L2 B' L2 D2 R2 F L</td>
-                    </tr>
-                    <tr>
-                        <td>53</td>
-                        <td>23.99</td>
-                        <td colspan="5">L' B R' U2 F U' R' B' D' R U2 R B2 L' B2 D2 R F2 B2 R2 F2</td>
-                    </tr>
-                    <tr>
-                        <td>54</td>
-                        <td>23.63</td>
-                        <td colspan="5">R2 D' R B2 U D2 F' B2 D2 B2 L2 U' B2 U R2 F2 L2 U' F D2</td>
-                    </tr>
-                    <tr>
-                        <td>55</td>
-                        <td>26.53</td>
-                        <td colspan="5">L' B' D2 F' R2 B2 D2 L2 D2 F R B' R' D U R B' F2 R'</td>
-                    </tr>
-                    <tr>
-                        <td>56</td>
-                        <td>27.07</td>
-                        <td colspan="5">F L U2 B U2 F' R2 U F' L2 U2 R2 L2 B' D2 B' R2 F2 R2 D2</td>
-                    </tr>
-                    <tr>
-                        <td>57</td>
-                        <td>26.24</td>
-                        <td colspan="5">D' F D' L2 U2 B2 F2 L2 R2 U' F2 L2 U2 R2 F' L D B2 U R' D</td>
-                    </tr>
-                    <tr>
-                        <td>58</td>
-                        <td>27.99</td>
-                        <td colspan="5">D2 B2 L B D F2 R U2 F U2 R2 D2 F D2 F' U2 L2 D F</td>
-                    </tr>
-                    <tr>
-                        <td>59</td>
-                        <td>28.63</td>
-                        <td colspan="5">R L U2 L2 U2 B2 D R' U2 F2 B D2 L2 D2 F D2 B' U2 R2</td>
-                    </tr>
-                    <tr>
-                        <td>60</td>
-                        <td>31.40</td>
-                        <td colspan="5">R' B' R' F R2 U B2 D' U2 F R2 F' R2 B2 U2 F' D2 B D2 B2 D</td>
-                    </tr>
-                    <tr>
-                        <td>61</td>
-                        <td>28.09</td>
-                        <td colspan="5">D' U' L2 F2 L2 F2 D2 F2 D' L2 D L' D2 L U' B' F2 D F R'</td>
-                    </tr>
-                    <tr>
-                        <td>62</td>
-                        <td>29.51</td>
-                        <td colspan="5">B D' U2 F L2 F' D2 F D2 F' U2 F D2 F U' B' L B' D' B' D'</td>
-                    </tr>
-                    <tr>
-                        <td>63</td>
-                        <td>19.56</td>
-                        <td colspan="5">R2 D2 B2 D R2 U' F2 D R2 D R2 F D R' U' R F' D2 R2 D B'</td>
-                    </tr>
-                    <tr>
-                        <td>64</td>
-                        <td>31.85</td>
-                        <td colspan="5">U' F D2 B2 D2 B' U2 F' L2 B' D2 U2 F2 U R B' U2 R U R</td>
-                    </tr>
-                    <tr>
-                        <td>65</td>
-                        <td>31.69</td>
-                        <td colspan="5">F2 R2 U2 L U2 L F2 R' B2 R2 F2 B D L B' F' R' B L</td>
-                    </tr>
-                    <tr>
-                        <td>66</td>
-                        <td>26.96</td>
-                        <td colspan="5">B D2 F2 D2 R2 B' L2 B U2 R2 D2 L D2 F' D' U' B L D F2 L2</td>
-                    </tr>
-                    <tr>
-                        <td>67</td>
-                        <td>24.22</td>
-                        <td colspan="5">D2 R F L2 U L2 B2 D2 U F2 D' B2 U' B' U2 L D L' D L2</td>
-                    </tr>
-                    <tr>
-                        <td>68</td>
-                        <td>25.67</td>
-                        <td colspan="5">L' U B' L2 F2 U2 F' U2 B' U2 L2 F' R2 F' D' L R' F' L' B R2</td>
-                    </tr>
-                    <tr>
-                        <td>69</td>
-                        <td>26.00</td>
-                        <td colspan="5">U F2 L2 U' F2 U2 R2 D' R2 U B2 F U2 L' D' U2 L B2 D2 B U</td>
-                    </tr>
-                    <tr>
-                        <td>70</td>
-                        <td>23.09</td>
-                        <td colspan="5">B2 D B2 D2 U R2 D2 U' F2 B' L2 D' R' B2 U F' R' B' F'</td>
-                    </tr>
-                    <tr>
-                        <td>71</td>
-                        <td>26.69</td>
-                        <td colspan="5">F R' L2 U2 R2 U2 B D2 B2 L2 D2 B' R2 U2 R' U L' U2 B F2 L2</td>
-                    </tr>
-                    <tr>
-                        <td>72</td>
-                        <td>27.79</td>
-                        <td colspan="5">F2 B' L2 U R U L' U' B U2 F2 U' D2 L2 U2 R2 B2 R2 B2 R2 D</td>
-                    </tr>
-                    <tr>
-                        <td>73</td>
-                        <td>32.91</td>
-                        <td colspan="5">L2 R F2 U2 L2 B2 D2 L2 R' B2 U2 B R' B' F' U R D' L R2 F'</td>
-                    </tr>
-                    <tr>
-                        <td>74</td>
-                        <td>22.75</td>
-                        <td colspan="5">L' B' U2 F2 L2 F2 R2 U' L2 U2 F2 L2 R F2 D F2 L D B R</td>
-                    </tr>
-                    <tr>
-                        <td>75</td>
-                        <td>24.73</td>
-                        <td colspan="5">L2 B' L2 B F' L2 D2 L2 B' L2 U' L' D B2 F R B' D' B' D'</td>
-                    </tr>
-                    <tr>
-                        <td>76</td>
-                        <td>27.59</td>
-                        <td colspan="5">R2 U L2 U B2 U' B2 D' B2 U2 L2 U2 R B L' B' F2 L U B2 F'</td>
-                    </tr>
-                    <tr>
-                        <td>77</td>
-                        <td>26.92</td>
-                        <td colspan="5">L2 B2 D' L2 B2 U R2 U B2 U B2 U' R B' R F' U' F L' B' U2</td>
-                    </tr>
-                    <tr>
-                        <td>78</td>
-                        <td>26.12</td>
-                        <td colspan="5">L' D2 R2 U2 B D2 B R2 B2 L2 R2 D L' R' U F' D' F' L' D'</td>
-                    </tr>
-                    <tr>
-                        <td>79</td>
-                        <td>28.00</td>
-                        <td colspan="5">L2 F2 D2 F U2 F' U2 F' L2 R2 B R2 L B D U2 B2 L2 R F' L</td>
-                    </tr>
-                    <tr>
-                        <td>80</td>
-                        <td>24.76</td>
-                        <td colspan="5">R2 U F2 U B2 D F2 R2 U2 L2 D' F R' U2 B' L2 U' L2 D R</td>
-                    </tr>
-                    <tr>
-                        <td>81</td>
-                        <td>27.01</td>
-                        <td colspan="5">L D' F R2 F L2 U2 B' U2 L2 U2 B' U2 D L D B U' B' D R'</td>
-                    </tr>
-                    <tr>
-                        <td>82</td>
-                        <td>19.45</td>
-                        <td colspan="5">B2 R2 F' U2 R2 F' R2 U2 R2 D2 F' R D L' B D U B' U' B2</td>
-                    </tr>
-                    <tr>
-                        <td>83</td>
-                        <td>22.65</td>
-                        <td colspan="5">R2 F U2 D2 F L D B' R U2 L' D2 L' U2 D2 F2 L' B2</td>
-                    </tr>
-                    <tr>
-                        <td>84</td>
-                        <td>24.75</td>
-                        <td colspan="5">L2 F2 R U2 R' B2 L B2 L2 D2 F2 D R' U2 L' B' L' U2 F'</td>
-                    </tr>
-                    <tr>
-                        <td>85</td>
-                        <td>26.82</td>
-                        <td colspan="5">L' R2 U2 F' R2 B2 D2 F2 D2 F' U2 D B2 R D B F U F'</td>
-                    </tr>
-                    <tr>
-                        <td>86</td>
-                        <td>23.02</td>
-                        <td colspan="5">B2 R2 B U2 B' L2 F' L2 F2 L2 F D2 U F U L R' U L2 R' F'</td>
-                    </tr>
-                    <tr>
-                        <td>87</td>
-                        <td>26.12</td>
-                        <td colspan="5">L' F L' U2 B2 F2 L' R2 F2 R B2 F2 L2 F' R' U R' D' F' L'</td>
-                    </tr>
-                    <tr>
-                        <td>88</td>
-                        <td>DNF (39.44)</td>
-                        <td colspan="5">B2 U B2 U2 L' F2 D2 L D2 R' U2 L' R D' B' R2 F D2 F2 D</td>
-                    </tr>
-                    <tr>
-                        <td>89</td>
-                        <td>34.46</td>
-                        <td colspan="5">D' B2 U2 F R2 D2 L2 D2 F R2 F L2 F2 L' D' R2 F D2 B2 L F'</td>
-                    </tr>
-                    <tr>
-                        <td>90</td>
-                        <td>21.67</td>
-                        <td colspan="5">D' F U2 B2 D' B2 D' R2 B2 U F2 D L' B' L2 F2 D L' D2</td>
-                    </tr>
-                    <tr>
-                        <td>91</td>
-                        <td>22.38</td>
-                        <td colspan="5">B U F' L' F2 D2 U2 L' U2 L' F2 L' D2 U' R2 F L' B' D L2</td>
-                    </tr>
-                    <tr>
-                        <td>92</td>
-                        <td>24.78</td>
-                        <td colspan="5">B2 L2 F D2 B L2 F L2 F U2 B' U L' D2 F2 U' R F' D R'</td>
-                    </tr>
-                    <tr>
-                        <td>93</td>
-                        <td>DNF (31.29)</td>
-                        <td colspan="5">L D2 B2 U' L' F' L' F' B R2 D L2 D' F2 D' R2 F2 D F2 D2</td>
-                    </tr>
-                    <tr>
-                        <td>94</td>
-                        <td>21.81</td>
-                        <td colspan="5">U B L2 B2 D R2 B2 D' F2 D' B2 D L D' B U' R F' U B2</td>
-                    </tr>
-                    <tr>
-                        <td>95</td>
-                        <td>32.18</td>
-                        <td colspan="5">L' D2 B2 R2 L2 D' B L U2 R2 D B2 D2 L2 B2 L2 U' F2 U2 R'</td>
-                    </tr>
-                    <tr>
-                        <td>96</td>
-                        <td>25.60</td>
-                        <td colspan="5">L2 U2 B2 D' B2 D F2 D2 F2 U L2 U' F' U' L2 F U' F2 R' U' F'</td>
-                    </tr>
-                    <tr>
-                        <td>97</td>
-                        <td>26.38</td>
-                        <td colspan="5">U2 F2 D' B2 D L2 B2 D' L2 U L2 U2 B D F2 R' F L D2 U R'</td>
-                    </tr>
-                    <tr>
-                        <td>98</td>
-                        <td>21.02</td>
-                        <td colspan="5">B' R2 F B' R D' F R2 F2 R2 U F2 U2 L2 U2 L2 B L'</td>
-                    </tr>
-                    <tr>
-                        <td>99</td>
-                        <td>20.60</td>
-                        <td colspan="5">U2 L B2 U2 L' U2 R' F2 L R F2 U' F U2 L' B' F2 D F2 D2 L'</td>
-                    </tr>
-                    <tr>
-                        <td>100</td>
-                        <td>24.08</td>
-                        <td colspan="5">B L F L U' F' L' B L F2 D2 B2 L D2 B2 R' L D2 R F</td>
-                    </tr>
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <th scope="row" colspan="6">Solves/Total</th>
-                        <td>98/100</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" colspan="7">Gerado pelo <a href="https://cstimer.net/" target="_blank" rel="next" title="Timer de treino para Cuber's" alt="Site para Cuber's treinarem suas solves">csTimer</a> em 05/06/2024</th>
-                    </tr>
-                </tfoot>
             </table>
         </section>
     </main>
