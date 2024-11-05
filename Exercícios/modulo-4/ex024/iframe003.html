@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Iframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;    
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque repellat doloribus delectus recusandae eum. Magni a accusantium dignissimos at possimus fuga voluptatum dolores consequatur ipsa consequuntur ab, quasi quo sapiente?</p>
+
+    <ul>
+        <li><a href="./paginas-extras/pag001.html" target="frame">Primeira página</a></li>
+        <li><a href="./paginas-extras/pag002.html" target="frame">Segunda página</a></li>
+        <li><a href="./paginas-extras/pag003.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam accusamus voluptatem recusandae sit molestiae labore vero incidunt voluptates et rem, quod, tempore dolorum neque, hic reiciendis illum delectus at assumenda! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum numquam nemo ex unde, repudiandae libero laborum esse porro eius voluptas architecto, autem animi sint, dolores quaerat iste quo voluptatibus temporibus.</p>
+
+    <iframe src="" id="tela" name="frame">
+        <p class="erro">Infelizmente seu navegador não é compatiível com este recurso! Por favor, atualize seu navegador ou tente acessar através de outro.</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aliquid eum autem illum dicta natus voluptate fugit adipisci rerum commodi. Dolor, velit. Neque, facilis qui? Quis eaque saepe doloribus laudantium? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat soluta ab doloremque alias sequi? Repellat aliquam commodi distinctio natus sed fugit enim debitis ipsam ea. Corporis ipsum a architecto est?</p>
+</body>
+
+</html>
+
+<!-- 
+
+    Na utiliização de um iframe, podemos colocar outra página que esta no mesmo local pórem com caminho diferente usando o atributo 'name' e basta colocar o mesmo caminho no atributo 'href' de um link que redirecione para esta nova página dentro do frame assim como mostrado no código feito durante a aula.
+
+-->
