@@ -1,0 +1,9 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+iframe#tela {
+    width: 95vw;
+    height: 400px;
+    border: 2px solid black;    
+}
