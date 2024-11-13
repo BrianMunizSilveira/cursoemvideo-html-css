@@ -1,0 +1,35 @@
+body {
+    font-family: monospace;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+main iframe:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+}
+
+main iframe>h2 {
+    text-align: center;
+}
+
+.relogio {
+    text-align: center;
+}

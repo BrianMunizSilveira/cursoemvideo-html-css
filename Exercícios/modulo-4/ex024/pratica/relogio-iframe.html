@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relógio Atual</title>
+    <link rel="stylesheet" href="relogio.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Praticando Iframe</h1>
+    </header>
+    <main>
+      <section class="relogio">
+        <iframe
+          srcdoc="
+            <html>
+                <body>
+                    <h2>Relógio Atual:</h2>
+                    <p id='relogio'></p>
+                    <script>
+                        function atualizarRelogio() {
+                            var agora = new Date();
+                            var horas = agora.getHours().toString().padStart(2, '0');
+                            var minutos = agora.getMinutes().toString().padStart(2, '0');
+                            var segundos = agora.getSeconds().toString().padStart(2, '0');
+                            document.getElementById('relogio').innerText = horas + ':' + minutos + ':' + segundos;
+                        }
+                        setInterval(atualizarRelogio, 1000);
+                        atualizarRelogio();
+                    </script>
+                </body>
+            </html>"
+        width="100%" height="200"></iframe>
+      </section>
+    </main>
+  </body>
+</html>
