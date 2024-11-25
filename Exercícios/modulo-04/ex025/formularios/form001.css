@@ -55,9 +55,18 @@ input[type="submit"] {
   border-radius: 5px;
   padding: 20px 30px;
   cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 input[type="submit"]:hover {
   background-color: rgb(37, 37, 37);
   transition: 0.5s;
+}
+
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+    padding: 10px;
+  }
 }
