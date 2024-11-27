@@ -1,0 +1,106 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Título */
+form h1 {
+  font-size: 1.5rem;
+  color: #2a7ae4;
+  margin-bottom: 20px;
+}
+
+/* Inputs e labels */
+form p {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+}
+
+/* Placeholder e foco */
+input::placeholder {
+  color: #999;
+}
+
+input:focus {
+  border-color: #2a7ae4;
+  outline: none;
+  box-shadow: 0 0 5px rgba(42, 122, 228, 0.5);
+}
+
+/* Botões */
+input[type="submit"],
+input[type="reset"] {
+  width: 45%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"] {
+  background-color: #2a7ae4;
+  color: #ffffff;
+}
+
+input[type="reset"] {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+input[type="submit"]:hover {
+  background-color: #1e5bbf;
+}
+
+input[type="reset"]:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
