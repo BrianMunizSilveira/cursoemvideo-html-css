@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link rel="stylesheet" href="./form002.css" />
+  </head>
+  <body>
+    <form action="cadastro.php" method="post" autocomplete="on">
+      <h1>Caixa de texto e senha</h1>
+      <p>
+        <label for="iusu">Usuário: </label>
+        <input
+          type="text"
+          name="usu"
+          id="iusu"
+          required
+          minlength="5"
+          maxlength="15"
+          size="15"
+          placeholder="Digite seu usuário"
+          autocomplete="username"
+        />
+      </p>
+      <p>
+        <label for="isen">Senha: </label>
+        <input
+          type="password"
+          name="sen"
+          id="isen"
+          required
+          minlength="8"
+          maxlength="20"
+          placeholder="Minimo de 8 caracteres"
+          autocomplete="current-password"
+        />
+      </p>
+      <p>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </p>
+    </form>
+  </body>
+</html>
