@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form004</title>
+    <link rel="stylesheet" href="./form004.css">
+    <link rel="shortcut icon" href="../../../src/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <form action="cadastro.php" method="get" autocomplete="on">
+      <h1>Formulário com E-mail e telefone</h1>
+      <fieldset>
+        <legend>Dados pessoais</legend>
+          <p>
+            <label for="inome">Nome: </label>
+            <input
+              type="text"
+              name="nome"
+              id="inome"
+              required
+              autofocus
+              minlength="3"
+              maxlength="30"
+              size="22"
+              placeholder="Nome completo"
+              autocomplete="name"
+              title="Digite seu nome completo"
+            />
+          </p>
+          <p>
+            <label for="imail">E-mail: </label>
+            <input
+              type="email"
+              name="email"
+              id="imail"
+              required
+              placeholder="Digite seu e-mail"
+              autocomplete="email"
+              title="Digite um e-mail válido"
+            />
+          </p>
+          <p>
+            <label for="itel">Telefone: </label>
+            <input
+              type="tel"
+              name="tel"
+              id="itel"
+              autocomplete="tel"
+              required
+              placeholder="(xx) xxxxx-xxxx"
+              pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
+              title="Digite um telefone com DDD"
+            />
+          </p>
+      </fieldset>
+      <!-- Estudar mais sobre RegEx -->
+      <p>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </p>
+    </form>
+  </body>
+</html>

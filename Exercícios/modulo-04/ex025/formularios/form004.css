@@ -1,0 +1,127 @@
+/* Codificação */
+@charset "UTF-8";
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Cabeçalho */
+form h1 {
+    font-size: 1.8rem;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2a7ae4;
+    padding: 0 10px;
+}
+
+/* Inputs e labels*/
+p {
+    margin-bottom: 15px;
+    margin: 5pt;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-color: #2a7ae4;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(42, 122, 228, 0.2);
+}
+
+/* Placeholder */
+input::placeholder {
+    color: #aaa;
+}
+
+/* Botões */
+input[type="submit"],
+input[type="reset"] {
+    width: 48%;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"] {
+    background-color: #2a7ae4;
+    color: #fff;
+    margin-right: 2%;
+}
+
+input[type="reset"] {
+    background-color: #f44336;
+    color: #fff;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    body { 
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
