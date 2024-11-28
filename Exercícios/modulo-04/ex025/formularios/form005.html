@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form005</title>
+    <link rel="stylesheet" href="./form005.css" />
+    <link
+      rel="shortcut icon"
+      href="../../../src/favicon.ico"
+      type="image/x-icon"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <form action="cadastro.php" method="get" autocomplete="on">
+      <h1>Formulário Esportivo</h1>
+      <filedset>
+        <legend>Sexo</legend>
+        <input type="radio" name="sexo" id="isxmas" value="M" />
+        <label for="isxmas">Masculino</label>
+        <input type="radio" name="sexo" id="isxfem" checked value="F" />
+        <label for="isxfem">Feminino</label>
+      </filedset>
+      <fieldset>
+        <legend>Esportes Favoritos</legend>
+        <input type="checkbox" name="esvolei" id="iesvol" />
+        <label for="iesvol">Vôlei</label><br />
+        <input type="checkbox" name="esfut" id="iesbas" />
+        <label for="iesbas">Basquete</label><br />
+        <input type="checkbox" name="esbas" id="iesfut" />
+        <label for="iesfut">Futebol</label><br />
+        <input type="checkbox" name="esnat" id="iesnat" />
+        <label for="iesnat">Natação</label><br />
+        <input type="checkbox" name="esten" id="iesten" />
+        <label for="iesten">Tenis</label><br />
+      </fieldset>
+
+      <p>
+        <button type="submit">
+            <span class="material-icons">send</span> Enviar
+        </button>
+        <button type="reset">
+            <span class="material-icons">delete</span> Limpar
+        </button>
+      </p>
+    </form>
+  </body>
+</html>

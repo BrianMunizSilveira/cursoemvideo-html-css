@@ -1,0 +1,143 @@
+/* Codificação em UTF-8 */
+@charset "UTF-8";
+
+/* Fonte */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+  --cor-primaria: #4caf50;
+  --cor-secundaria: #8bc34a;
+  --cor-texto: #000;
+  --fundo-pagina: #000000;
+  --fundo-form: #ffffff;
+  --border-radius: 5px;
+  --espaco-elementos: 15px;
+  --fonte-principal: "Figtree", sans-serif;
+}
+
+/* Corpo */
+body {
+    font-family: var(--fonte-principal);
+    background: url(https://cdn.pixabay.com/photo/2014/11/07/00/00/volleyball-520093_1280.jpg) no-repeat center bottom fixed; /* https://pixabay.com/pt/photos/v%C3%B4lei-bola-jogador-equipe-esporte-520093/ */
+    background-size: cover;
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Formulário */
+form {
+    background-color: var(--fundo-form);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 2px solid var(--cor-primaria);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-bottom: var(--espaco-elementos);
+}
+
+legend {
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+/* Inputs e labels */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+/* Botões */
+button[type="submit"],
+button[type="reset"] {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button .material-icons {
+    font-size: 18px;
+    margin-right: 8px; 
+    vertical-align: middle; 
+}
+
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    button [type="submit"],
+    button [type="reset"] {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 30px;
+        margin: 30px;
+    }
+
+    button [type="submit"],
+    button [type="reset"] {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    form {
+        padding: 30px;
+        margin: 30px;
+    }
+}
+
+/* Tema Escuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cor-primaria: #8BC34A;
+        --cor-secundaria: #4CAF50;
+        --cor-texto: #f4f4f4;
+        --fundo-pagina: #121212;
+        --fundo-form: #1E1E1E;
+    }
+}
