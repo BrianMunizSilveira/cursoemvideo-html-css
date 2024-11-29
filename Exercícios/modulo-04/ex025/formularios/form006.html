@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form006</title>
+    <link rel="stylesheet" href="./form006.css" />
+    <link
+      rel="shortcut icon"
+      href="../../../src/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <form action="cadastro.php" method="post" autocomplete="on">
+      <h1>Formulário 06</h1>
+      <p>
+        <label for="icolor">Cor: </label>
+        <input type="color" name="cor" id="icor" value="#2DA2EB" />
+      </p>
+
+      <p>
+        <label for="inivel">Nivel de satisfação: </label>
+        <input
+          type="range"
+          name="nivel"
+          id="inivel"
+          min="1"
+          max="5"
+          value="2"
+        />
+      </p>
+
+      <p>
+        <label for="ifoto">Foto de perfil: </label>
+        <input type="file" name="foto" id="ifoto" />
+      </p>
+
+      <p>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </p>
+    </form>
+  </body>
+</html>

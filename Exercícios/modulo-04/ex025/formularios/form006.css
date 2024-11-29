@@ -1,0 +1,162 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("./bg-form-006.webp") no-repeat top center/cover;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f6;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Estilo do formulário */
+form {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Elementos do formulário */
+form p {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="color"],
+input[type="range"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Campo de cor */
+input[type="color"] {
+  height: 40px;
+  padding: 0;
+  border: none;
+}
+
+/* Campo de range (satisfação) */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #2a7ae4;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #2a7ae4;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]:focus {
+  background: #bbb;
+}
+
+/* Botões */
+input[type="submit"],
+input[type="reset"] {
+  width: 48%;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"] {
+  background-color: #2a7ae4;
+  color: #fff;
+}
+
+input[type="reset"] {
+  background-color: #f44336;
+  color: #fff;
+}
+
+input[type="submit"]:hover {
+  background-color: #1e5bbf;
+  transform: scale(1.05);
+}
+
+input[type="reset"]:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Alinhamento dos botões */
+form p:last-of-type {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  form p:last-of-type {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
