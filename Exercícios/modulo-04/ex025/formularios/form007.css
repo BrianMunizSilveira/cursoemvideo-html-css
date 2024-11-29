@@ -1,0 +1,143 @@
+/* Estilos gerais para o corpo da página */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('https://cdn.pixabay.com/photo/2017/10/10/21/47/laptop-2838921_1280.jpg') no-repeat center center/cover;
+}
+
+/* Estilos para o formulário */
+form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  max-width: 500px;
+  width: 100%;
+  text-align: left;
+}
+
+/* Título */
+form h1 {
+  font-size: 1.5rem;
+  color: #2a7ae4;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos para as entradas de texto, selects e textareas */
+form p {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+input[type="color"],
+input[type="range"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
+
+/* Foco nas entradas */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #2a7ae4;
+  outline: none;
+  box-shadow: 0 0 5px rgba(42, 122, 228, 0.5);
+}
+
+/* Placeholder e aparência das listas */
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+/* Botões */
+input[type="submit"],
+input[type="reset"] {
+  width: 48%;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"] {
+  background-color: #2a7ae4;
+  color: #fff;
+}
+
+input[type="reset"] {
+  background-color: #f44336;
+  color: #fff;
+}
+
+input[type="submit"]:hover {
+  background-color: #1e5bbf;
+  transform: scale(1.05);
+}
+
+input[type="reset"]:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Estilo para o select e datalist */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select option {
+  padding: 5px;
+}
+
+/* Estilo do textarea */
+textarea {
+  resize: vertical;
+  font-family: "Arial", sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  input[type="reset"] {
+    margin-right: 0;
+  }
+}
