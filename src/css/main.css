@@ -1,102 +1,81 @@
-/* Estilos Globais */
+/* Codificação UTF-8 */
+@charset "UTF-8";
+
+/* Fonte */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral */
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-/* Estilos do conteúdo principal */
 main {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: 0 10 25px rbga(0, 0, 0, 0.1);
-    border-radius: 20px;
-    transition: transform 0.3s ease, box shadow 0.3s ease;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
 }
 
-main:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10 30px rbga(0, 0, 0, 0.2);
+header h1 {
+  font-family: "Merriweather", serif;
+  color: #1a5f7a;
+  text-align: center;
+  border-bottom: 2px solid #1a5f7a;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Estilo do cabeçalho */
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-/* Seções e Títulos */
 section {
-    margin-bottom: 40px;
+  margin-bottom: 1.5rem;
+}
+
+section header h2 {
+  font-family: "Merriweather", serif;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+section header h2 a {
+  text-decoration: none;
+  color: #2980b9;
+  transition: color 0.3s ease;
+}
+
+section header h2 a:hover {
+  color: #3498db;
+}
+
+section header p {
+  color: #7f8c8d;
+  font-style: italic;
 }
 
 hr {
-    border: 1px solid #bdc3c7;
-    margin-bottom: 20px;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 1.5rem 0;
 }
 
-h2 {
-    color: #2950b9;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
+@media screen and (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
 
-/* Links */
-a {
-    text-decoration: none;
-    color: #e74c3c;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-a:hover {
-    color: #c0382b;
-}
-
-/* Links Visitados */
-a:visited {
-    color: #8e44ad;
-}
-
-/* Links em Paragráfos */
-p a {
-    border-bottom: 2px solid #e74c3c;
-}
-
-p a:hover {
-    border-bottom: 2px solid #c0382b;
-}
-
-/* Texto */
-p {
-    color: #7f8c8d;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    main {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
+  main {
+    padding: 1rem;
+  }
 }

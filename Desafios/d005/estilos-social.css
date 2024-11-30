@@ -1,0 +1,126 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #2c3e50;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", serif;
+  color: #1a5f7a;
+  text-align: center;
+  border-bottom: 1px solid #1a5f7a;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-color: #2980b9;
+  color: #2980b9;
+}
+
+i {
+  display: block;
+  font-size: 2.2rem;
+  max-width: 309px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+i:hover {
+  transform: scale(1.05);
+}
+
+p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  text-align: justify;
+  color: #34495e;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+li img {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  margin-left: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+a {
+  text-decoration: none;
+  color: #2980b9;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+a:hover {
+  color: #3498db;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  li {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  li img {
+    margin-bottom: 0.5rem;
+  }
+}
+
+b {
+  color: #1a5f7a;
+  font-weight: 700;
+}

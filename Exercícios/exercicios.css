@@ -1,42 +1,68 @@
-body {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.2rem;
+:root {
+    --color-primary: #1a5f7a;
+    --color-secondary: #2c3e50;
+    --color-accent: #2980b9;
+    --color-text-dark: #333;
+    --color-text-light: #555;
+    --font-family-heading: 'Merriweather', serif;
+    --font-family-body: 'Source Sans Pro', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #cdcdcd;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: var(--color-text-dark);
 }
 
 main {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 18px 20px 18px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
 }
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-primary);
 }
 
 h1 {
-    color: #333;
+    font-family: var(--font-family-heading);
+    color: var(--color-primary);
+    font-size: 2rem;
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
-    color: #007bff;
-    margin-bottom: 10px;
+    font-family: var(--font-family-heading);
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 a {
     text-decoration: none;
-    color: #007bff;
-    transition: color 0.3s ease-in-out;
+    color: var(--color-accent);
+    transition: color var(--transition-speed) ease-in-out;
 }
 
 a:hover {
@@ -45,11 +71,23 @@ a:hover {
 }
 
 p {
-    color: #555;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 600px) {
-    main {
-        padding: 25px;
+    body {
+        font-size: 1rem;
     }
+
+    main {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+/* Acessibilidade */
+*:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }

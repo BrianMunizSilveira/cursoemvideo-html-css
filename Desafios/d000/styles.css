@@ -1,113 +1,157 @@
-/* Estilo Global */
+/* Codificação UTF-8 */
+@charset "UTF-8";
+
+/* Fonte */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-/* Título principal */
+/* Título */
 h1 {
-    text-align: center;
-    color: #4caf50;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    margin-top: 40px;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+  font-family: "Merriweather", serif;
+  text-align: center;
+  color: #1a5f7a;
+  margin-bottom: 2rem solid #1a5f7a;
+  padding-bottom: 0.5rem;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
 }
 
-/* Linha horizontal estilizada */
+/* Linha horizontal */
 hr {
-    border: none;
-    height: 2px;
-    background: linear-gradient(to right, #4caf50, #1a1a1a, #4caf50);
-    margin: 20px 0;
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 1.5rem 0;
 }
 
 /* Estilo da lista */
 ul {
-    list-style-type: none;
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Estilo dos itens da lista */
 li {
-    margin: 15px 0;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #2a2a2a;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
-/* Efeito de hover nos itens */
 li:hover {
-    background-color: #3a3a3a;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
 }
 
 /* Estilo dos links */
 a {
-    text-decoration: none;
-    color: #4caf50;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #2980b9;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
-/* Efeito de hover nos links */
 a:hover {
-    color: #8aff7c;
+  color: #36a3eb;
 }
 
-/* Itens completados */
+/* Itens comletados */
 li.completed {
-    color: #8aff7c;
+  color: #2c3e50;
+  opacity: 0.7;
 }
 
-/* Estilo do rodapé */
+/* Rodapé */
 footer {
-    background-color: #111111;
-    padding: 20px 0;
-    text-align: center;
-    color: #8aff7c;
-    font-size: 0.9rem;
-    border-top: 2px solid #4caf50;
-    margin-top: 40px;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-top: 2rem;
 }
 
-/* Efeito de hover no texto do rodapé */
 footer p {
-    margin: 0;
-    padding: 0;
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 footer p:hover {
-    color: #4caf50;
+  color: #2c3e50;
 }
 
-/* Ajuste da responsividade */
+/* Responsividade */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-        margin-top: 30px;
-    }
+  body {
+    padding: 1rem;
+  }
 
-    li {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem 0;
+  }
 
-    ul {
-        padding: 0 15px;
-    }
+  li {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  ul {
+    padding: 0.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    padding: 1rem;
+  }
+
+  ul {
+    padding: 0.5rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem 0;
+  }
+
+  footer p {
+    margin: 0.5rem 0;
+  }
 }
