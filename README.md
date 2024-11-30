@@ -1,18 +1,80 @@
-# 🖥️Exercícios do Curso de HTML e CSS do Curso em Vídeo🖥️
+# **CURSOEMVIDEO-HTML-CSS** 🖥️🎨
 
-### 📚 Estudando 📚
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" width="60px" hight="60px" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" width="60px" hight="60px" />
-          
-          
-          
+Repositório contendo os exercícios, desafios e materiais desenvolvidos ao longo do curso de HTML e CSS oferecido pelo **([cursoemvideo.com](https://www.cursoemvideo.com/))**, por **([GustavoGuanabara](https://github.com/gustavoguanabara))**
 
+## 📸 Screenshot
 
-Este repositório é dedicado aos exercícios e desafios praticados durante as aulas do Curso de HTML e CSS do **Curso em Vídeo**. Todo o material aqui presente está sujeito aos direitos do [@CursoemVídeo](https://github.com/cursoemvideo). No entanto, como um aluno ativo, continuo aprimorando este repositório conforme avanço nos meus estudos e coloco em prática os conceitos aprendidos.
+![Template](https://i.imgur.com/fViaiGi.png)
 
-Agradeço sinceramente ao [Prof° Guanabara](https://github.com/gustavoguanabara) por proporcionar um ambiente de aprendizado tão valioso.
+## 🗂️ Estrutura do Repositório
 
-🚀 **Acesse os materiais [aqui](https://brianmunizsilveira.github.io/cursoemvideo-html-css/).** 
----
-<img src="https://raw.githubusercontent.com/DevDecfalter/Curso-de-HTML-e-CSS/main/src/template.png" alt="home exercícios">
+O repositório está organizado em duas principais seções: **Exercícios** e **Desafios**, além de arquivos de suporte, como estilos e imagens.
 
-Fique à vontade para explorar os exercícios e acompanhar meu progresso neste meu percurso de aprendizado em HTML5 e CSS3! 📖💻
+### 1️⃣ Exercícios
+
+Os exercícios estão **divididos por módulos do curso**, organizados em subpastas para facilitar o acesso. Cada subpasta contém os exercícios relacionados ao respectivo módulo.
+
+Estrutura:
+```
+Exercícios/
+├── modulo-01/
+├── modulo-02/
+├── modulo-03/
+├── modulo-04/
+└── src/
+    ├── favicon.ico
+    └── template.png
+```
+
+- **modulo-01, modulo-02, modulo-03, modulo-04:** Contêm exercícios específicos de cada módulo do curso.
+- **src:** Inclui arquivos compartilhados, como o ícone (`favicon.ico`) e imagens de suporte (`template.png`).
+
+### 2️⃣ Desafios
+
+Esta pasta contém desafios propostos ao longo do curso, organizados em subpastas numeradas (`d001`, `d002`, etc.). Cada subpasta representa um desafio individual com arquivos relacionados a ele.
+
+Estrutura:
+```
+Desafios/
+├── d001/
+├── d002/
+├── d003/
+├── -----
+└── d014/
+```
+
+### 3️⃣ Arquivos Principais
+
+Além das pastas mencionadas acima, o repositório possui:
+
+- `index.html`: Página inicial que lista os exercícios. 🌐
+- `exercicios.css`: Arquivo CSS para estilização das páginas HTML. 🎨
+
+## ⚙️ Pré-requisitos
+
+Para explorar os arquivos deste repositório, você precisará de:
+
+- Um navegador web atualizado para visualizar as páginas HTML. 🌍
+- Um editor de texto ou [IDE](https://www.redhat.com/pt-br/topics/middleware/what-is-ide#ide-integrated-development-environment) (como [VSCode](https://code.visualstudio.com/)) para edição dos arquivos. 🛠️
+
+## 🛠️ Como usar
+
+1. Clone o repositório: 📥
+```bash
+git clone https://github.com/seu-usuario/CURSOEMVIDEO-HTML-CSS.git
+```
+
+2. Navegue até o repositório: 📁
+```bash
+cd CURSOEMVIDEO-HTML-CSS
+```
+
+3. Abra o arquivo `index.html` no navegador para acessar os exercícios organizados por módulo. 🌐
+
+## ✍️ Autor
+
+Este repositório foi desenvolvido por **Brian Muniz Silveira**, como parte das atividades realizadas no curso de HTML e CSS do **Curso em Vídeo**. 🎓💻
+
+## 📜 Licença
+
+Este repositório foi criado com fins educacionais. Fique à vontade para explorar, utilizar e personalizar os arquivos conforme necessário, desde que seja feita a devida atribuição à fonte original. 😊
