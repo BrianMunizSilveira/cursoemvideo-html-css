@@ -1,0 +1,118 @@
+/* Estilo geral do corpo */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5; /* Cor de fundo neutra e leve */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Estilo do formulário */
+form {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 25px 35px;
+  max-width: 450px;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* Título do formulário */
+form h1 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo das perguntas (labels e inputs) */
+form p {
+  margin-bottom: 20px;
+}
+
+/* Estilo dos labels */
+label {
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Estilo do input range */
+input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ddd;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo ao passar o mouse sobre o range */
+input[type="range"]:hover {
+  background-color: #b0b0b0;
+}
+
+/* Estilo do valor exibido (output) */
+output {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2a7ae4; /* Cor de destaque */
+}
+
+/* Estilo dos botões */
+input[type="submit"],
+input[type="reset"] {
+  width: 48%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  background-color: #2a7ae4;
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background-color: #1e5bbf;
+}
+
+input[type="reset"] {
+  background-color: #f44336;
+  color: white;
+}
+
+input[type="reset"]:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  input[type="reset"] {
+    margin-top: 10px;
+  }
+}

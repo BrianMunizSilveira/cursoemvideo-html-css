@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form010</title>
+    <link rel="stylesheet" href="./form010.css" />
+  </head>
+  <body>
+    <form action="cadastro.php" method="get" autocomplete="on">
+      <h1>Form010</h1>
+
+      <p>
+        <label for="iano">Em que ano voce nasceu? </label>
+        <input
+          type="number"
+          name="ano"
+          id="iano"
+          min="1900"
+          max="2020"
+          oninput="calcIdade()"
+        />
+      </p>
+
+      <p>
+        <label for="idade">Sua idade: </label>
+        <output name="idade" id="iidade">0</output>
+      </p>
+
+      <p>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </p>
+    </form>
+    <script src="./form010.js"></script>
+  </body>
+</html>
