@@ -1,3 +1,25 @@
 @charset "UTF-8";
 
 /* Geral */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #234eff;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 2px 2px 0px #193abe;
+  padding: 10px;
+}
