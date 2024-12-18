@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Descoberta Incrível na Antártica</title>
     <link rel="stylesheet" href="./estilos/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <h1>Notícias do Mundo</h1>
-      <menu>
+      <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()"
+        >menu</i
+      >
+      <menu id="itens">
         <ul>
           <li><a href="#">Início</a></li>
           <li><a href="#">Ciência</a></li>
@@ -24,6 +31,7 @@
         <h1>
           Cientistas Encontram Lago Subterrâneo na Antártica com Vida Microbiana
         </h1>
+        <sub><p>Notícia Fictía apenas para fins educacionais!!!</p></sub>
         <p>
           Uma equipe internacional de cientistas fez uma descoberta
           surpreendente na Antártica: um lago subterrâneo a mais de 1.200 metros
@@ -59,5 +67,73 @@
         </p>
       </article>
     </main>
+    <footer>
+      <section class="footer-content">
+        <div class="footer-info">
+          <h2><i class="material-symbols-outlined">info</i> Sobre Nós</h2>
+          <p>
+            Notícias do Mundo é um portal dedicado a trazer as informações mais
+            relevantes e atualizadas sobre ciência, tecnologia, natureza e muito
+            mais.
+          </p>
+        </div>
+        <div class="footer-contact">
+          <h2><i class="material-symbols-outlined">contacts</i> Contato</h2>
+          <ul>
+            <li>
+              <i class="material-symbols-outlined">email</i> Email:
+              contato@noticiasdomundo.com
+            </li>
+            <li>
+              <i class="material-symbols-outlined">phone</i> Telefone: +55 (11)
+              1234-5678
+            </li>
+            <li>
+              <i class="material-symbols-outlined">location_on</i> Endereço: Rua
+              Fictícia, 123 - São Paulo, SP
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h2><i class="material-symbols-outlined">share</i> Nos Siga</h2>
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="material-symbols-outlined">public</i> Facebook</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="material-symbols-outlined">chat_bubble</i> Twitter</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="material-symbols-outlined">camera_alt</i>
+                Instagram</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="material-symbols-outlined">play_circle</i> YouTube</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="footer-bottom">
+        <p>&copy; 2024 Notícias do Mundo. Todos os direitos reservados.</p>
+      </section>
+    </footer>
+
+    <script>
+      function clickMenu() {
+        if (itens.style.display == "block") {
+          itens.style.display = "none";
+        } else {
+          itens.style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>

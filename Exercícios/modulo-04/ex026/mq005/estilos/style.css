@@ -1,79 +1,177 @@
 @charset "UTF-8";
 
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    background-color: #121212; 
-    color: #E0E0E0; 
+html,
+body {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 header {
-    background-color: #1F1F1F;
-    border-bottom: 2px solid #37474F; 
-    color: #E0E0E0;
+  background-color: #1f1f1f;
+  border-bottom: 2px solid #37474f;
+  color: #e0e0e0;
 }
 
 header > h1 {
-    padding: 15px;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #FFD700;
+  padding: 15px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+sub {
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #c52e23;
+  border-bottom: 2px solid #37474f;
+}
+
+sub p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #c52e23;
+  border-bottom: 2px solid #37474f;
+  margin-bottom: 10px;
+}
+
+i#burguer {
+  display: block;
+  background-color: rgb(44, 44, 44);
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+i#burguer:hover {
+  background-color: #37474f;
 }
 
 menu {
-    display: block;
-    background-color: #1F1F1F;
-    border-bottom: 2px solid #37474F;
+  display: none;
+  background-color: #1f1f1f;
+  border-bottom: 2px solid #37474f;
 }
 
 menu > ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 menu > ul > li > a {
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    text-align: center;
-    background-color: #263238; 
-    color: #E0E0E0;
-    border-top: 1px solid #37474F;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #263238;
+  color: #e0e0e0;
+  border-top: 1px solid #37474f;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 menu > ul > li > a:hover {
-    background-color: #37474F; 
-    color: #FFD700;
+  background-color: #37474f;
+  color: #ffd700;
 }
 
 main {
-    width: 90vw;
-    background-color: #1E1E1E;
-    margin: auto;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    color: #E0E0E0; 
+  width: 90vw;
+  background-color: #1e1e1e;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
 }
 
-article > h2 {
-    padding-bottom: 15px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #FFD700; 
-    border-bottom: 1px solid #37474F; 
+article > h1 {
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffd700;
+  border-bottom: 1px solid #37474f;
 }
 
 article > p {
-    text-align: justify;
-    margin-bottom: 20px;
-    text-indent: 20px;
-    line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+  text-indent: 20px;
+  line-height: 1.7;
+}
+
+footer {
+  background-color: #1f1f1f; /* Fundo escuro do rodapé */
+  color: #e0e0e0; /* Texto claro */
+  padding: 20px 0;
+  margin-top: 20px;
+  border-top: 2px solid #37474f;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: auto;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.footer-content > div {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.footer-content i {
+  vertical-align: middle;
+}
+
+i {
+  color: #ffd700;
+}
+
+.footer-content h2 {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.footer-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-content ul li {
+  margin-bottom: 5px;
+}
+
+.footer-content ul li a {
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.footer-content ul li a:hover {
+  color: #ffd700;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #b0b0b0;
 }
