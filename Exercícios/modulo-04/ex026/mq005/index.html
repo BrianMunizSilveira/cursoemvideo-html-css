@@ -16,11 +16,10 @@
     <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
     <menu id="itens">
       <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Ciência</a></li>
-        <li><a href="#">Tecnologia</a></li>
-        <li><a href="#">Natureza</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="./index.html" role="button" onclick="executarAcao()">Home</a></li>
+        <li><a href="#sobre-nos" role="button" onclick="executarAcao()">Sobre</a></li>
+        <li><a href="#contato" role="button" onclick="executarAcao()">Contato</a></li>
+        <li><a href="#nos-siga" role="button" onclick="executarAcao()">Nos Siga</a></li>
       </ul>
     </menu>
   </header>
@@ -29,9 +28,7 @@
       <h1>
         Cientistas Encontram Lago Subterrâneo na Antártica com Vida Microbiana
       </h1>
-      <sub>
-        <p>Notícia Fictía apenas para fins educacionais!!!</p>
-      </sub>
+      <h2>Notícia Fictía apenas para fins educacionais!!!</h2>
       <p>
         Uma equipe internacional de cientistas fez uma descoberta
         surpreendente na Antártica: um lago subterrâneo a mais de 1.200 metros
@@ -70,7 +67,7 @@
   <footer>
     <section class="footer-content">
       <div class="footer-info">
-        <h2><i class="material-symbols-outlined">info</i> Sobre Nós</h2>
+        <h2 id="sobre-nos"><i class="material-symbols-outlined">info</i> Sobre Nós</h2>
         <p>
           Notícias do Mundo é um portal dedicado a trazer as informações mais
           relevantes e atualizadas sobre ciência, tecnologia, natureza e muito
@@ -78,7 +75,7 @@
         </p>
       </div>
       <div class="footer-contact">
-        <h2><i class="material-symbols-outlined">contacts</i> Contato</h2>
+        <h2 id="contato"><i class="material-symbols-outlined">contacts</i> Contato</h2>
         <ul>
           <li>
             <i class="material-symbols-outlined">email</i> Email:
@@ -95,7 +92,7 @@
         </ul>
       </div>
       <div class="footer-social">
-        <h2><i class="material-symbols-outlined">share</i> Nos Siga</h2>
+        <h2 id="nos-siga"><i class="material-symbols-outlined">share</i> Nos Siga</h2>
         <ul>
           <li>
             <a href="#"><i class="material-symbols-outlined">public</i> Facebook</a>
@@ -132,6 +129,12 @@
         itens.style.display = "none";
       } else {
         itens.style.display = "block";
+      }
+    }
+
+    function executarAcao() {
+      if (event.key === 'Enter') {
+        executarAcao();
       }
     }
   </script>

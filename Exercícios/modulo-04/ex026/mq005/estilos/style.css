@@ -9,6 +9,7 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   background-color: #121212;
   color: #e0e0e0;
 }
@@ -27,22 +28,12 @@ header>h1 {
   color: #ffd700;
 }
 
-sub {
+h2 {
   text-align: center;
   font-size: 1.2rem;
   font-style: italic;
   font-weight: bold;
   color: #c52e23;
-  border-bottom: 2px solid #37474f;
-}
-
-sub p {
-  text-align: center;
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: bold;
-  color: #c52e23;
-  border-bottom: 2px solid #37474f;
   margin-bottom: 10px;
 }
 
@@ -108,7 +99,7 @@ article>h1 {
 }
 
 article>p {
-  text-align: justify;
+  text-align: left;
   margin-bottom: 20px;
   text-indent: 20px;
   line-height: 1.7;
