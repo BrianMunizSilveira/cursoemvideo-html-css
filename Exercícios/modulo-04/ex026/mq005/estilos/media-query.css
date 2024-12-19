@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* Typical Devices breakpoints ( 27/05/2024 )
+--------------------------------------------
+  Mobile devices – 320px — 480px.
+  iPads, Tablets – 481px — 768px.
+  Small screens, laptops – 769px — 1024px.
+  Desktops, large screens – 1025px — 1200px.
+  Extra large screens, TV – 1201px, and more. */
+
+@media screen and (min-width: 768px) {
+    i#burguer {
+        display: none;
+    }
+
+    menu#itens {
+        display: block;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+        padding: 10px;
+        width: 120px;
+    }
+
+    main {
+        width: 768px;
+    }
+}

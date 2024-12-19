@@ -1,139 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Descoberta Incrível na Antártica</title>
-    <link rel="stylesheet" href="./estilos/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <h1>Notícias do Mundo</h1>
-      <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()"
-        >menu</i
-      >
-      <menu id="itens">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descoberta Incrível na Antártica</title>
+  <link rel="stylesheet" href="./estilos/style.css" />
+  <link rel="stylesheet" href="./estilos/media-query.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body onresize="mudouTamanho()">
+  <header>
+    <h1>Notícias do Mundo</h1>
+    <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+    <menu id="itens">
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Ciência</a></li>
+        <li><a href="#">Tecnologia</a></li>
+        <li><a href="#">Natureza</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </menu>
+  </header>
+  <main>
+    <article>
+      <h1>
+        Cientistas Encontram Lago Subterrâneo na Antártica com Vida Microbiana
+      </h1>
+      <sub>
+        <p>Notícia Fictía apenas para fins educacionais!!!</p>
+      </sub>
+      <p>
+        Uma equipe internacional de cientistas fez uma descoberta
+        surpreendente na Antártica: um lago subterrâneo a mais de 1.200 metros
+        de profundidade, contendo sinais de vida microbiana. O achado pode
+        fornecer pistas sobre como a vida poderia sobreviver em condições
+        extremas, tanto na Terra quanto em outros planetas.
+      </p>
+
+      <p>
+        O lago, batizado de “Lago Aurora”, foi identificado utilizando
+        tecnologias avançadas de radar e perfuração. Segundo os pesquisadores,
+        a temperatura no local está bem abaixo de zero, mas a pressão exercida
+        pelas camadas de gelo acima impede que a água congele completamente.
+        “Esta descoberta é um marco na exploração da Antártica”, afirmou a
+        Dra. Laura Mendes, líder do projeto. “As condições aqui são análogas
+        às encontradas em luas geladas como Europa, de Júpiter, e Encélado, de
+        Saturno. Se microrganismos podem sobreviver aqui, talvez possamos
+        encontrá-los em outros corpos celestes.”
+      </p>
+      <p>
+        Amostras da água do lago foram coletadas cuidadosamente para evitar
+        contaminação e já estão sendo analisadas em laboratórios de diversos
+        países.
+      </p>
+      <p>
+        Os resultados preliminares indicam a presença de microrganismos
+        adaptados a ambientes extremos, uma descoberta que pode revolucionar
+        nossa compreensão da vida no planeta. As próximas etapas incluem
+        estudos detalhados sobre o metabolismo desses organismos e sua
+        possível aplicação em biotecnologia. Além disso, cientistas planejam
+        explorar outros lagos subterrâneos na Antártica em busca de mais
+        surpresas escondidas sob o gelo.
+      </p>
+    </article>
+  </main>
+  <footer>
+    <section class="footer-content">
+      <div class="footer-info">
+        <h2><i class="material-symbols-outlined">info</i> Sobre Nós</h2>
+        <p>
+          Notícias do Mundo é um portal dedicado a trazer as informações mais
+          relevantes e atualizadas sobre ciência, tecnologia, natureza e muito
+          mais.
+        </p>
+      </div>
+      <div class="footer-contact">
+        <h2><i class="material-symbols-outlined">contacts</i> Contato</h2>
         <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Ciência</a></li>
-          <li><a href="#">Tecnologia</a></li>
-          <li><a href="#">Natureza</a></li>
-          <li><a href="#">Contato</a></li>
+          <li>
+            <i class="material-symbols-outlined">email</i> Email:
+            contato@noticiasdomundo.com
+          </li>
+          <li>
+            <i class="material-symbols-outlined">phone</i> Telefone: +55 (11)
+            1234-5678
+          </li>
+          <li>
+            <i class="material-symbols-outlined">location_on</i> Endereço: Rua
+            Fictícia, 123 - São Paulo, SP
+          </li>
         </ul>
-      </menu>
-    </header>
-    <main>
-      <article>
-        <h1>
-          Cientistas Encontram Lago Subterrâneo na Antártica com Vida Microbiana
-        </h1>
-        <sub><p>Notícia Fictía apenas para fins educacionais!!!</p></sub>
-        <p>
-          Uma equipe internacional de cientistas fez uma descoberta
-          surpreendente na Antártica: um lago subterrâneo a mais de 1.200 metros
-          de profundidade, contendo sinais de vida microbiana. O achado pode
-          fornecer pistas sobre como a vida poderia sobreviver em condições
-          extremas, tanto na Terra quanto em outros planetas.
-        </p>
+      </div>
+      <div class="footer-social">
+        <h2><i class="material-symbols-outlined">share</i> Nos Siga</h2>
+        <ul>
+          <li>
+            <a href="#"><i class="material-symbols-outlined">public</i> Facebook</a>
+          </li>
+          <li>
+            <a href="#"><i class="material-symbols-outlined">chat_bubble</i> Twitter</a>
+          </li>
+          <li>
+            <a href="#"><i class="material-symbols-outlined">camera_alt</i>
+              Instagram</a>
+          </li>
+          <li>
+            <a href="#"><i class="material-symbols-outlined">play_circle</i> YouTube</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer-bottom">
+      <p>&copy; 2024 Notícias do Mundo. Todos os direitos reservados.</p>
+    </section>
+  </footer>
 
-        <p>
-          O lago, batizado de “Lago Aurora”, foi identificado utilizando
-          tecnologias avançadas de radar e perfuração. Segundo os pesquisadores,
-          a temperatura no local está bem abaixo de zero, mas a pressão exercida
-          pelas camadas de gelo acima impede que a água congele completamente.
-          “Esta descoberta é um marco na exploração da Antártica”, afirmou a
-          Dra. Laura Mendes, líder do projeto. “As condições aqui são análogas
-          às encontradas em luas geladas como Europa, de Júpiter, e Encélado, de
-          Saturno. Se microrganismos podem sobreviver aqui, talvez possamos
-          encontrá-los em outros corpos celestes.”
-        </p>
-        <p>
-          Amostras da água do lago foram coletadas cuidadosamente para evitar
-          contaminação e já estão sendo analisadas em laboratórios de diversos
-          países.
-        </p>
-        <p>
-          Os resultados preliminares indicam a presença de microrganismos
-          adaptados a ambientes extremos, uma descoberta que pode revolucionar
-          nossa compreensão da vida no planeta. As próximas etapas incluem
-          estudos detalhados sobre o metabolismo desses organismos e sua
-          possível aplicação em biotecnologia. Além disso, cientistas planejam
-          explorar outros lagos subterrâneos na Antártica em busca de mais
-          surpresas escondidas sob o gelo.
-        </p>
-      </article>
-    </main>
-    <footer>
-      <section class="footer-content">
-        <div class="footer-info">
-          <h2><i class="material-symbols-outlined">info</i> Sobre Nós</h2>
-          <p>
-            Notícias do Mundo é um portal dedicado a trazer as informações mais
-            relevantes e atualizadas sobre ciência, tecnologia, natureza e muito
-            mais.
-          </p>
-        </div>
-        <div class="footer-contact">
-          <h2><i class="material-symbols-outlined">contacts</i> Contato</h2>
-          <ul>
-            <li>
-              <i class="material-symbols-outlined">email</i> Email:
-              contato@noticiasdomundo.com
-            </li>
-            <li>
-              <i class="material-symbols-outlined">phone</i> Telefone: +55 (11)
-              1234-5678
-            </li>
-            <li>
-              <i class="material-symbols-outlined">location_on</i> Endereço: Rua
-              Fictícia, 123 - São Paulo, SP
-            </li>
-          </ul>
-        </div>
-        <div class="footer-social">
-          <h2><i class="material-symbols-outlined">share</i> Nos Siga</h2>
-          <ul>
-            <li>
-              <a href="#"
-                ><i class="material-symbols-outlined">public</i> Facebook</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><i class="material-symbols-outlined">chat_bubble</i> Twitter</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><i class="material-symbols-outlined">camera_alt</i>
-                Instagram</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><i class="material-symbols-outlined">play_circle</i> YouTube</a
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="footer-bottom">
-        <p>&copy; 2024 Notícias do Mundo. Todos os direitos reservados.</p>
-      </section>
-    </footer>
-
-    <script>
-      function clickMenu() {
-        if (itens.style.display == "block") {
-          itens.style.display = "none";
-        } else {
-          itens.style.display = "block";
-        }
+  <script>
+    function mudouTamanho() {
+      if (window.innerWidth >= 768) {
+        itens.style.display = "block";
+      } else {
+        itens.style.display = "none";
       }
-    </script>
-  </body>
+    }
+
+    function clickMenu() {
+      if (itens.style.display == "block") {
+        itens.style.display = "none";
+      } else {
+        itens.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
 </html>
