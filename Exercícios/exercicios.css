@@ -1,81 +1,170 @@
+/* Importando fonte */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+/* Variáveis */
 :root {
     --color-primary: #1a5f7a;
     --color-secondary: #2c3e50;
     --color-accent: #2980b9;
     --color-text-dark: #333;
     --color-text-light: #555;
+    --color-white: #ffffff;
     --font-family-heading: 'Merriweather', serif;
     --font-family-body: 'Source Sans Pro', sans-serif;
     --transition-speed: 0.3s;
+    --border-radius: 8px;
+    --spacing: 2rem;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap');
-
+/* Estilos base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos base */
 body {
-    font-family: var(--font-family-body);
-    font-size: 1.1rem;
-    line-height: 1.6;
     background-color: #f4f4f4;
     color: var(--color-text-dark);
+    font-family: var(--font-family-body);
+    line-height: 1.6;
+    font-size: 1.1rem;
 }
 
 main {
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #ffffff;
+    margin: var(--spacing) auto;
+    padding: var(--spacing);
+    background-color: var(--color-white);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     border: 3px solid #b5b5b5;
 }
 
-header {
-    text-align: center;
+/* Título */
+h1 {
+    font-family: var(--font-family-heading);
+    font-size: 2rem;
     margin-bottom: 2rem;
+    color: var(--color-primary);
+    text-align: center;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--color-primary);
 }
 
-h1 {
-    font-family: var(--font-family-heading);
-    color: var(--color-primary);
-    font-size: 2rem;
-}
-
+/* Módulos */
 section {
     margin-bottom: 1.5rem;
 }
 
-h2 {
-    font-family: var(--font-family-heading);
-    color: var(--color-accent);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+.module-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-a {
+/* (M01, M02, etc...) */
+.module-code {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color var(--transition-speed) ease-in-out;
+}
+
+.module-link {
+    background-color: var(--color-secondary);
+    padding: 0.75rem 2rem;
+    border-radius: var(--border-radius);
+    color: var(--color-white);
     text-decoration: none;
-    color: var(--color-accent);
-    transition: color var(--transition-speed) ease-in-out;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    flex-grow: 1;
+    transition: all var(--transition-speed) ease-in-out;
 }
 
-a:hover {
-    text-decoration: underline;
-    color: #0056b3;
-}
-
-p {
+/* descrição do módulo */
+.module-description {
     color: var(--color-text-light);
-    margin-bottom: 1rem;
+    margin-left: calc(48px + 2rem);
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-@media screen and (max-width: 600px) {
+/* Efeito hover */
+.module-link:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #121212;
+        --color-primary: #4fc3f7;
+        --color-secondary: #1e293b;
+        --color-accent: #0288d1;
+        --color-text-dark: #e0e0e0;
+        --color-text-light: #b0bec5;
+        --color-white: #1c1c1c;
+        --color-border: #3a3a3a;
+    }
+
+    body {
+        background-color: var(--color-background);
+        color: var(--color-text-dark);
+    }
+
+    main {
+        background-color: var(--color-white);
+        color: var(--color-text-light);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        border: 3px solid var(--color-border);
+    }
+
+    h1 {
+        color: var(--color-primary);
+        border-bottom: 2px solid var(--color-primary);
+    }
+
+    .module-code {
+        background-color: var(--color-primary);
+    }
+
+    .module-link {
+        background-color: var(--color-secondary);
+        color: var(--color-text-dark);
+    }
+
+    .module-link:hover {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+    }
+
+    .module-description {
+        color: var(--color-text-light);
+    }
+}
+
+/* Acessibilidade */
+*:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
     body {
         font-size: 1rem;
     }
@@ -84,10 +173,34 @@ p {
         margin: 1rem;
         padding: 1.5rem;
     }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .module-link {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .module-description {
+        margin-left: calc(48px + 1rem);
+        font-size: 0.9rem;
+    }
 }
 
-/* Acessibilidade */
-*:focus {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
+@media (max-width: 480px) {
+    .module-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .module-link {
+        width: 100%;
+    }
+
+    .module-description {
+        margin-left: 0;
+    }
 }
