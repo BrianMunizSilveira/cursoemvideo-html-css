@@ -60,3 +60,28 @@ a:hover {
         padding: 10px;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #121212;
+        --color-primary: #4fc3f7;
+        --color-secondary: #1e293b;
+        --color-accent: #0288d1;
+        --color-text-dark: #e0e0e0;
+        --color-text-light: #b0bec5;
+        --color-white: #1c1c1c;
+        --color-border: #3a3a3a;
+    }
+
+    body {
+        background-color: var(--color-background);
+        color: var(--color-text-dark);
+    }
+
+    main {
+        background-color: var(--color-white);
+        color: var(--color-text-light);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        border: 3px solid var(--color-border);
+    }
+}

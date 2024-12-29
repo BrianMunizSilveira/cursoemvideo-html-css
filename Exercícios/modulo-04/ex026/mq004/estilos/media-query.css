@@ -11,6 +11,7 @@
   Extra large screens, TV – 1201px, and more. */
 
 @media print {
+
   /* Impressão */
   * {
     font-family: "Courier New", Courier, monospace;
@@ -20,7 +21,7 @@
     content: "Versão: Impressão";
   }
 
-  main > h1 {
+  main>h1 {
     color: #000;
     text-shadow: none;
   }
@@ -32,21 +33,26 @@
   img#phone {
     display: none;
   }
+
   img#tablet {
     display: none;
   }
+
   img#print {
     display: block;
   }
+
   img#pc {
     display: none;
   }
+
   img#tv {
     display: none;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+
   /* Smartphone */
   h1:after {
     content: "Versão: Smartphone";
@@ -55,6 +61,7 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 769px) {
+
   /* Tablet */
   body {
     background-image: url("../imagens/back-tablet.jpg");
@@ -77,6 +84,7 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
+
   /* Desktop */
   body {
     background-image: url("../imagens/back-pc.jpg");
@@ -99,6 +107,7 @@
 }
 
 @media screen and (min-width: 1200px) {
+
   /* Grandes telas */
   body {
     background-image: url("../imagens/back-tv.jpg");
