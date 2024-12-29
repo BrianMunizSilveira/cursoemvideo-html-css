@@ -1,81 +1,284 @@
-/* Codificação UTF-8 */
+/* ==========================================================================
+   1. Configurações Básicas
+   ========================================================================== */
+
 @charset "UTF-8";
 
-/* Fonte */
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap");
+/* Variáveis Globais */
 
-/* Reset */
-* {
+:root {
+  /* Cores Base */
+  --color-primary: #1a5f7a;
+  --color-secondary: #2c3e50;
+  --color-text: #333;
+  --color-text-light: #7f8c8d;
+  --color-background: #f4f4f4;
+  --color-border: #b5b5b5;
+  --color-white: #fff;
+
+  /* Cores de links */
+  --link-color: #2980b9;
+  --link-hover: #3498db;
+  --link-active: #1a5f7a;
+  --link-visited: #8e44ad;
+  --link-focus: #2c3e50;
+
+  /* Espaçamento */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Bordas e efeitos */
+  --border-radius: 8px;
+  --border-width: 3px;
+  --link-underline-thickness: 2px;
+  --link-transition: 0.3s ease;
+}
+
+/* =============== Fontes ===============*/
+@font-face {
+  font-family: 'Merriweather';
+  font-display: swap;
+  src: url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-display: swap;
+  src: url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
+}
+
+/* =============== Reset ===============*/
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo geral */
+/* ==========================================================================
+   2. Layout Base
+   ========================================================================== */
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  max-width: min(800px, 90vw);
+  margin-inline: auto;
+  padding: var(--spacing-xl);
 }
 
 main {
-  background-color: #ffffff;
-  border: 3px solid #b5b5b5;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
+  background-color: var(--color-white);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0 0 0 / 0.05);
+  padding: var(--spacing-xl);
+  isolation: isolate;
 }
 
+/* ==========================================================================
+   3. Componentes
+   ========================================================================== */
+
+/* =============== Cabeçalhos =============== */
 header h1 {
-  font-family: "Merriweather", serif;
-  color: #1a5f7a;
+  font-family: 'Merriweather', Georgia, serif;
+  color: var(--color-primary);
   text-align: center;
-  border-bottom: 2px solid #1a5f7a;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--color-primary);
+  padding-block-end: var(--spacing-sm);
+  margin-block-end: var(--spacing-lg);
 }
 
+/* =============== Seções =============== */
 section {
-  margin-bottom: 1.5rem;
+  margin-block-end: var(--spacing-lg);
 }
 
 section header h2 {
-  font-family: "Merriweather", serif;
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-}
-
-section header h2 a {
-  text-decoration: none;
-  color: #2980b9;
-  transition: color 0.3s ease;
-}
-
-section header h2 a:hover {
-  color: #3498db;
+  font-family: 'Merriweather', Georgia, serif;
+  color: var(--color-primary);
+  margin-block-end: var(--spacing-sm);
 }
 
 section header p {
-  color: #7f8c8d;
+  color: var(--color-text-light);
   font-style: italic;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid #e0e0e0;
-  margin: 1.5rem 0;
+/* =============== Lista =============== */
+ul {
+  padding-inline-start: var(--spacing-md);
 }
 
+li {
+  margin-block-end: var(--spacing-sm);
+}
+
+li::marker {
+  color: var(--color-primary);
+}
+
+/* =============== Links =============== */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  position: relative;
+  padding: 2px 4px;
+  transition: var(--link-transition, background-color var(--link-transition, 0.3s ease));
+}
+
+/* Efeitos de links */
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: var(--link-underline-thickness);
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--link-transition, 0.3s ease);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+a:active {
+  color: var(--link-active);
+  transform: translateY(1px);
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+a:focus {
+  outline: none;
+  color: var(--link-focus);
+  background-color: rbg(41 128 185 / 0.1);
+  border-radius: 4px;
+}
+
+a:focus:not(:focus-visible) {
+  background-color: transparent;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Links específicos */
+nav a {
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+section a {
+  display: inline-block;
+  padding: 4px 8px;
+}
+
+p a {
+  text-decoration-thickness: var(--link-underline-thickness);
+  text-decoration-color: transparent;
+  text-underline-offset: 2px;
+  transition: text-decoration-color var(--link-transition);
+}
+
+/* Links externos */
+a[rel="external"] {
+  padding-right: 1.25em;
+}
+
+a[rel="external"]::after {
+  content: '↗';
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: none;
+  background: none;
+  height: auto;
+}
+
+/* =============== Divisores =============== */
+.divider {
+  border: none;
+  border-block-start: 1px solid rgb(224 224 224 / 0.8);
+  margin-block: var(--spacing-lg);
+}
+
+/* ==========================================================================
+   4. Utilitários e Media Queries
+   ========================================================================== */
+/* Acessibilidade */
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Container Queries */
+@container (max-width: 600px) {
+  main {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Responsividade */
 @media screen and (max-width: 600px) {
+  :root {
+    --spacing-xl: 1rem;
+  }
+
   body {
-    padding: 1rem;
+    padding: var(--spacing-md);
+  }
+}
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1a1a1a;
+    --color-text: #e0e0e0;
+    --color-text-light: #a0a0a0;
+    --color-white: #2a2a2a;
+    --color-border: #404040;
+    --color-link: #63b3ed;
+    --color-link-hover: #90cdf4;
+    --link-color: #63b3ed;
+    --link-hover: #90cdf4;
+    --link-active: #4299e1;
+    --link-visited: #b794f4;
+    --link-focus: #bee3f8;
   }
 
   main {
-    padding: 1rem;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 0.2);
+  }
+  
+  a:focus {
+    background-color: rgb(99 179 237 / 0.2);
+  }
+
+  nav a:hover {
+    background-color: rgb(9 179 237 / 0.2);
   }
 }

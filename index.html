@@ -13,43 +13,43 @@
   <meta name="language" content="Portuguese" />
   <meta name="generator" content="Visual Studio Code" />
   <meta name="distribution" content="Global" />
+  <meta property="og:title" content="Curso HTML5 + CSS3 - Material Prático">
+  <meta property="og:description"
+    content="Página inicial contendo todo o material praticado durante o curso de HTML5 e CSS3.">
+  <meta property="og:type" content="website">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <title>Curso HTML5 + CSS3 - Material Prático</title>
-  <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon" />
+  <link rel="preload" href="./src/css/main.css" as="style">
   <link rel="stylesheet" href="./src/css/main.css" />
+  <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
-  <main>
-    <header>
+  <main role="main">
+    <header role="banner">
       <h1>Curso em Vídeo HTML5 + CSS3</h1>
     </header>
 
-    <nav>
-      <section>
-        <header>
+    <nav role="navigation">
+      <ul>
+        <li>
           <h2>
-            <a href="./Exercícios/exercicios.html" rel="next">Exercícios</a>
+            <a href="./Exercícios/exercicios.html" rel="next" aria-label="Acessar seção de exercícios práticos">
+              Exercícios
+            </a>
           </h2>
-          <p>
-            Encontre aqui todos os exercícios práticos realizados ao longo das
-            aulas do curso.
-          </p>
-        </header>
-      </section>
-
-      <hr />
-
-      <section>
-        <header>
+          <p>Encontre aqui todos os exercícios práticados. Divididos por módulos, cada módulo possui descrições relevantes sobre os temas abordados nas aulas.</p>
+        </li>
+        <li class="divider">
           <h2>
-            <a href="./Desafios/d000/index.html" rel="next">Desafios</a>
+            <a href="./Desafios/d000/index.html" rel="next" aria-label="Acessar seção de desafios práticos">
+              Desafios
+            </a>
           </h2>
-          <p>
-            Encontre aqui todos os desafios práticos realizados ao longo das
-            aulas do curso.
-          </p>
-        </header>
-      </section>
+          <p>Encontre aqui todos os desafios realizados durante o curso.</p>
+        </li>
+      </ul>
     </nav>
   </main>
 </body>
