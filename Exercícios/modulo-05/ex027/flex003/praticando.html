@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando FlexBox</title>
+
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+
+            .exercise {
+                margin-bottom: 40px;
+                border: 1px solid #ccc;
+                padding: 20px;
+                border-radius: 8px;
+            }
+
+            /* Exercício 1 */
+            .container-1 {
+                display: flex;
+                flex-direction: row;
+                background-color: #f0f0f0;
+                margin: 20px 0;
+                min-height: 100px;
+            }
+
+            .item-1 {
+                width: 100px;
+                height: 100px;
+                background-color: #4CAF50;
+                margin: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+
+            /* Exercício 2 */
+            .container-2 {
+                display: flex;
+                flex-wrap: wrap-reverse;
+                background-color: #f0f0f0;
+                margin: 20px 0;
+                min-height: 200px;
+            }
+
+            .item-2 {
+                width: 150px;
+                height: 100px;
+                background-color: #2196F3;
+                margin: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+
+            /* Exercício 3 */
+            .container-3 {
+                display: flex;
+                flex-direction: column-reverse;
+                background-color: #f0f0f0;
+                margin: 20px 0;
+                min-height: 300px;
+            }
+
+            .item-3 {
+                width: 100%;
+                height: 80px;
+                background-color: #9C27B0;
+                margin: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="exercise">
+        <h2>Exercício 1: Direção Row e Row-reverse</h2>
+        <p>Altere a direção dos itens usando flex-direction: row e row-reverse</p>
+        <div class="container-1">
+            <div class="item-1">1</div>
+            <div class="item-1">2</div>
+            <div class="item-1">3</div>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercício 2: Flex-wrap</h2>
+        <p>Experimente diferentes valores de flex-wrap (wrap, nowrap, wrap-reverse)</p>
+        <div class="container-2">
+            <div class="item-2">1</div>
+            <div class="item-2">2</div>
+            <div class="item-2">3</div>
+            <div class="item-2">4</div>
+            <div class="item-2">5</div>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h2>Exercício 3: Flex-direction Column</h2>
+        <p>Pratique usando flex-direction: column e column-reverse</p>
+        <div class="container-3">
+            <div class="item-3">1</div>
+            <div class="item-3">2</div>
+            <div class="item-3">3</div>
+        </div>
+    </div>
+</body>
+
+</html>
