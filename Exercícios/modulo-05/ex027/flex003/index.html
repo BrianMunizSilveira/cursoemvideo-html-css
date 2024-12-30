@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        .container-pai {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap-reverse;
+        }
+
+        .container-filho {
+            background-color: lightskyblue;
+            border: 2px solid black;
+            text-align: center;
+            flex: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container-pai">
+            <div class="container-filho">Exemplo de bloco 1</div>
+            <div class="container-filho">Exemplo de bloco 2</div>
+            <div class="container-filho">Exemplo de bloco 3</div>
+            <div class="container-filho">Exemplo de bloco 4</div>
+            <div class="container-filho">Exemplo de bloco 5</div>
+            <div class="container-filho">Exemplo de bloco 6</div>
+            <div class="container-filho">Exemplo de bloco 7</div>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<!-- 
+
+ 📚 aula: Mód.5 Cáp.27 - Empacotamento e fluxo no Flexbox 
+
+- Direções e Eixos Flexbox 
+- O que aprendemos até aqui
+- Entendendo o flex-wrap
+- O valor nowrap do flex-wrap
+- O valor wrap do flex-wrap
+- O valor wrap-reverse do flex-wrap 
+- Um resumo muito importante! Anote!
+- Exemplo prático com flex-wrap
+- Simplificando tudo com flex-flow
+- Usando o flex-flow na prática
+- Usando o flex: auto 
+
+-->
