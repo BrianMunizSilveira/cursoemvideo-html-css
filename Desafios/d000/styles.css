@@ -155,3 +155,38 @@ footer p:hover {
     margin: 0.5rem 0;
   }
 }
+
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1a1a1a;
+    --color-text: #e0e0e0;
+    --color-text-light: #a0a0a0;
+    --color-white: #2a2a2a;
+    --color-border: #404040;
+    --color-link: #63b3ed;
+    --color-link-hover: #90cdf4;
+    --link-color: #63b3ed;
+    --link-hover: #90cdf4;
+    --link-active: #4299e1;
+    --link-visited: #b794f4;
+    --link-focus: #bee3f8;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+
+  main {
+    background-color: var(--color-white);
+    color: var(--color-text-light);
+    box-shadow: 0 4px 6px rgb(0 0 0 / 0.2);
+  }
+
+  footer {
+    background-color: var(--color-background);
+    border-top: 1px solid var(--color-border);
+  }
+}
