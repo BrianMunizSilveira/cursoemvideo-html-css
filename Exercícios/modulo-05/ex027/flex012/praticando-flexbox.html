@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Moderno com FlexBox</title>
+
+    <!-- Mantendo o CSS no HTML para simplicidade -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: rgb(0, 145, 150);
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem;
+
+            & .header-content {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            & .logo {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            & nav ul {
+                display: flex;
+                gap: 1.5rem;
+                list-style: none;
+
+                & li a {
+                    color: #fff;
+                    padding: 0.5rem;
+                }
+            }
+        }
+
+        .main-container {
+            flex: 1;
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            gap: 1rem;
+
+            & aside {
+                flex: 0 0 250px;
+                background-color: #f5f6fa;
+                padding: 1rem;
+                border-radius: 8px;
+
+                & .sidebar-nav {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    & a {
+                        color: #2c3e50;
+                        padding: 0.5rem;
+                        border-radius: 4px;
+
+                        &:hover {
+                            background-color: #2c3e50;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            & main {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                & .card-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+
+                    & .card {
+                        flex: 1 1 300px;
+                        background-color: #fff;
+                        border-radius: 8px;
+                        padding: 1rem;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+                        & img {
+                            width: 100%;
+                            height: 200px;
+                            object-fit: cover;
+                            border-radius: 4px;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem;
+            margin-top: auto;
+
+            & .opensource {
+                text-align: center;
+                margin-bottom: 0.5rem;
+
+                & a {  
+                    color: #3CA638;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: #fff;
+                    }
+                }
+            }
+
+            & .footer-content {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            & .footer-nav {
+                text-align: right;
+
+                & ul {
+                    display: flex;
+                    gap: 1.5rem;
+                    list-style: none;
+
+                    & li a {
+                        color: #fff;
+                        padding: 0.5rem;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            aside {
+                flex: 0 0 auto;
+            }
+
+            .card {
+                flex: 1 1 100%;
+            }
+
+            footer {
+                font-size: 0.8rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">MeuSite</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside>
+            <nav class="sidebar-nav">
+                <a href="#">Dashboard</a>
+                <a href="#">Relatórios</a>
+                <a href="#">Configurações</a>
+                <a href="#">Usuários</a>
+                <a href="#">Análises</a>
+            </nav>
+        </aside>
+        <main>
+            <h1>Painel Principal</h1>
+            <div class="card-container">
+                <div class="card">
+                    <h2>Card 01</h2>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD_Q9Rxdny-joa-xfwToO7I8akN0tZDa5c8cXuB9mktkXM_dz1tcVs3FdbjIaOpskuv5Q&usqp=CAU" alt="Placeholder">
+                    <p>Conteúdo do card com informações importantes.</p>
+                </div>
+                <div class="card">
+                    <h2>Card 02</h2>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD_Q9Rxdny-joa-xfwToO7I8akN0tZDa5c8cXuB9mktkXM_dz1tcVs3FdbjIaOpskuv5Q&usqp=CAU" alt="Placeholder">
+                    <p>Conteúdo do card com informações importantes.</p>
+                </div>
+                <div class="card">
+                    <h2>Card 03</h2>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD_Q9Rxdny-joa-xfwToO7I8akN0tZDa5c8cXuB9mktkXM_dz1tcVs3FdbjIaOpskuv5Q&usqp=CAU" alt="Placeholder">
+                    <p>Conteúdo do card com informações importantes.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p class="opensource">OpenSource <a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer">MIT</a></p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">Termos</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
