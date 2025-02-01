@@ -15,16 +15,42 @@ body {
 }
 
 header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
     background-color: gray;
     color: white;
     padding: 10px;
 
     & h1 {
         border: 2px dotted black;
+        flex: 0 0 200px;
     }
 
     & nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: end;
+
         border: 2px dotted black;
+
+        & a {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+
+            &:hover {
+                background-color: #fff;
+                color: #000;
+                transition: background-color 0.5s;
+            }
+        }
     }
 }
 
