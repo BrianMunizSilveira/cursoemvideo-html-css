@@ -1,15 +1,26 @@
 @charset "UTF-8";
 
-header, header nav {
+header,
+header menu {
     flex-flow: column nowrap;
 }
 
-header {    
+header {
     & h1 {
         flex-basis: 50px;
     }
 
-    & nav a {
-        width: 90vw;
+    & menu {
+        display: none;
+        width: 100%;
+
+        & a {
+            width: 100%;
+            margin: 5px 0;
+        }
     }
-}   
+
+    & i#burguer {
+        display: block;
+    }
+}

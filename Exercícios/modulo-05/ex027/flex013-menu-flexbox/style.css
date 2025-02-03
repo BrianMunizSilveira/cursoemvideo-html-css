@@ -26,16 +26,18 @@ header {
 
     & h1 {
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.349);
-        /* border: 2px dotted black; */
         flex: 0 0 200px;
     }
 
-    & nav {
+    & i#burguer {
+        display: none;
+        cursor: pointer;
+    }
+
+    & menu {
         display: flex;
         flex-flow: row wrap;
         justify-content: end;
-
-        /* border: 2px dotted black; */
 
         & a {
             background-color: #000;
@@ -62,4 +64,3 @@ main {
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
-

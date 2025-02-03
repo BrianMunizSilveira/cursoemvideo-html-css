@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Flexbox</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./mobile.css" media="screen and (max-width: 620px)">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body>
+
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
-        <nav>
-            <a href="#">Opção 01</a>
-            <a href="#">Opção 02</a>
-            <a href="#">Opção 03</a>
-            <a href="#">Opção 04</a>
-            <a href="#">Opção 05</a>
-            <a href="#">Opção 06</a>
-        </nav>
+        <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+        <menu id="itens">
+            <a href="#" role="button" onclick="executarAcao()">Opção 01</a>
+            <a href="#" role="button" onclick="executarAcao()">Opção 02</a>
+            <a href="#" role="button" onclick="executarAcao()">Opção 03</a>
+            <a href="#" role="button" onclick="executarAcao()">Opção 04</a>
+            <a href="#" role="button" onclick="executarAcao()">Opção 05</a>
+            <a href="#" role="button" onclick="executarAcao()">Opção 06</a>
+        </menu>
     </header>
     <main>
         <h2>Teste de Flexbox</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam minus corporis porro culpa enim, sapiente nam deleniti dicta vitae dolores? Placeat cumque adipisci, iste nesciunt similique nulla temporibus beatae obcaecati.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut soluta nesciunt harum quam quasi accusamus praesentium voluptatem ad minus amet, laboriosam dolores tenetur dignissimos magni earum laudantium totam tempore excepturi?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam minus corporis porro culpa enim, sapiente nam
+            deleniti dicta vitae dolores? Placeat cumque adipisci, iste nesciunt similique nulla temporibus beatae
+            obcaecati.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut soluta nesciunt harum quam quasi accusamus
+            praesentium voluptatem ad minus amet, laboriosam dolores tenetur dignissimos magni earum laudantium totam
+            tempore excepturi?</p>
     </main>
+    <script src="./script.js"></script>
 </body>
+
 </html>
