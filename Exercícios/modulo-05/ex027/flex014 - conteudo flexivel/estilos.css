@@ -13,9 +13,15 @@ body {
     line-height: 1.8em;
 }
 
-p, h1, h2 {
+p {
     margin-bottom: 10px;
     text-align: justify;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    line-height: 1.2em;
+    text-align: left;
 }
 
 header, section.normal {
@@ -25,4 +31,91 @@ header, section.normal {
 section.flex-content {
     padding: 20px;
     background-color: rgb(177, 177, 177);
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+article.text-media {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+article.media-text {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+}
+
+article>div.text {
+    flex: 1 1 500px;
+}
+
+article>div.media {
+    flex: 1 0 500px;
+}
+
+div.media>img {
+    display: block;
+    margin: auto;
+    width: 300px;
+    padding: 10px;
+}
+
+div.media>iframe {
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+
+/* Responsividade para até 425px */
+@media (max-width: 425px) {
+    article.text-media,
+    article.media-text {
+        flex-direction: column !important;
+    }
+    article > div.text,
+    article > div.media {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+    div.media > img,
+    div.media > iframe {
+        width: 100%;
+        max-width: 100%;
+        padding: 5px;
+    }
+    header, section.normal, section.flex-content {
+        padding: 10px;
+    }
+    h1, h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* Responsividade para até 375px */
+@media (max-width: 375px) {
+    h1, h2 {
+        font-size: 1.1em;
+    }
+    body {
+        font-size: 0.95em;
+    }
+    section.flex-content {
+        padding: 6px;
+    }
+}
+
+/* Responsividade para até 320px */
+@media (max-width: 320px) {
+    h1, h2 {
+        font-size: 1em;
+    }
+    body {
+        font-size: 0.9em;
+    }
+    section.flex-content {
+        padding: 3px;
+    }
 }
