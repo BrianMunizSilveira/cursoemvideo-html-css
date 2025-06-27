@@ -1,87 +1,226 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Brian Muniz Silveira" />
-  <meta name="description" content="Módulos do curso de HTML5 e CSS3, incluindo conceitos básicos, design, prototipação e tecnologias avançadas." />
+  <meta name="description"
+    content="Módulos do curso de HTML5 e CSS3, incluindo conceitos básicos, design, prototipação e tecnologias avançadas." />
+  <meta name="keywords" content="HTML5, CSS3, Curso em Vídeo, Aprendizado, Desenvolvimento Web" />
+  <meta name="robots" content="index, follow" />
   <title>Módulos do Curso HTML5 + CSS3</title>
-  <link rel="icon" href="../src/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./exercicios.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Merriweather:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <link rel="stylesheet" href="../src/css/main.css">
+  <link rel="shortcut icon" href="../src/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
-  <main>
-    <header>
-      <h1>Módulos do curso</h1>
-    </header>
-
-    <!-- Módulo 01 -->
-    <section aria-labelledby="m01">
-      <header>
-        <h2 id="m01" class="module-title">
-          <span class="module-code">M01</span> Acesse:
-          <a href="./modulo-01/ex000/index.html" class="module-link">Primeiros passos HTML+CSS</a>
-        </h2>
-        <p class="module-description">
-          Conceitos básicos, preparação do ambiente, semântica do HTML5, textos, títulos, ligações, multimídia, estilos.
-        </p>
+  <div class="container">
+    <main role="main">
+      <!-- Cabeçalho -->
+      <header class="profile-header" role="banner">
+        <div class="profile-content">
+          <h1 class="profile-title">Módulos do Curso</h1>
+          <p class="profile-subtitle">HTML5 e CSS3 - Curso em Vídeo</p>
+          <p class="profile-description">
+            Documentação completa dos módulos concluídos, demonstrando a evolução
+            do conhecimento básico até implementações avançadas.
+          </p>
+        </div>
       </header>
-    </section>
 
-    <!-- Módulo 02 -->
-    <section aria-labelledby="m02">
-      <header>
-        <h2 id="m02" class="module-title"> 
-          <span class="module-code">M02</span> Acesse:
-          <a href="./modulo-02/exercicios.html" class="module-link">Deixando as coisas mais bonitas</a>
-        </h2>
-        <p class="module-description">
-          Fundamentos do design, psicologia das cores, tipografia, elementos CSS, modelo de caixas, wireframe, responsividade.
-        </p>
-      </header>
-    </section>
+      <!-- Lista de Módulos -->
+      <section class="evolution-timeline" aria-label="Módulos do curso">
+        <div class="timeline-header">
+          <h2 class="timeline-title">Progresso do Aprendizado</h2>
+          <p class="timeline-description">
+            Cada módulo representa uma etapa na jornada de desenvolvimento,
+            desde fundamentos até técnicas modernas de front-end.
+          </p>
+        </div>
 
-    <!-- Módulo 03 -->
-    <section aria-labelledby="m03">
-      <header>
-        <h2 id="m03" class="module-title"> 
-          <span class="module-code">M03</span> Acesse:
-          <a href="./modulo-03/modulo-3.html" class="module-link">Colocando um protótipo no ar</a>
-        </h2>
-        <p class="module-description">
-          Versionamento de software, hospedagem de sites estáticos, tabelas.
-        </p>
-      </header>
-    </section>
+        <div class="timeline-grid">
+          <!-- Módulo 01 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">📌</div>
+              <div class="card-content">
+                <h3 class="card-title">Primeiros passos HTML+CSS</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Fundamentos</span>
+                  <span class="meta-tag">Semântica</span>
+                  <span class="meta-tag">M01</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Conceitos básicos, preparação do ambiente, semântica do HTML5,
+              textos, títulos, ligações e elementos multimídia.
+            </p>
+            <div class="card-highlights">
+              <h4 class="highlights-title">Tópicos Abordados</h4>
+              <ul class="highlights-list">
+                <li>Estrutura básica HTML</li>
+                <li>Tags semânticas</li>
+                <li>Formatação de texto</li>
+                <li>Links e imagens</li>
+              </ul>
+            </div>
+            <a href="./modulo-01/ex000/index.html" class="card-link" rel="next" aria-label="Acessar Módulo 01">
+              Explorar Módulo
+            </a>
+          </article>
 
-    <!-- Módulo 04 -->
-    <section aria-labelledby="m04">
-      <header>
-        <h2 id="m04" class="module-title"> 
-          <span class="module-code">M04</span> Acesse:
-          <a href="./modulo-04/m04.html" class="module-link">Aprofundando os conhecimentos</a>
-        </h2>
-        <p class="module-description">
-          Quadros em linha, formulários, media queries, mobile first.
-        </p>
-      </header>
-    </section>
+          <!-- Módulo 02 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🎨</div>
+              <div class="card-content">
+                <h3 class="card-title">Deixando as coisas mais bonitas</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Design</span>
+                  <span class="meta-tag">CSS</span>
+                  <span class="meta-tag">M02</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Fundamentos do design, psicologia das cores, tipografia,
+              elementos CSS e introdução ao modelo de caixas.
+            </p>
+            <div class="card-highlights">
+              <h4 class="highlights-title">Tópicos Abordados</h4>
+              <ul class="highlights-list">
+                <li>Psicologia das cores</li>
+                <li>Tipografia web</li>
+                <li>Seletores CSS</li>
+                <li>Modelo de caixas</li>
+              </ul>
+            </div>
+            <a href="./modulo-02/exercicios.html" class="card-link" rel="next" aria-label="Acessar Módulo 02">
+              Explorar Módulo
+            </a>
+          </article>
 
-    <!-- Módulo 05 -->
-    <section aria-labelledby="m05">
-      <header>
-        <h2 id="m05" class="module-title">
-          <span class="module-code">M05</span> Acesse:
-          <a href="./modulo-05/index.html" class="module-link">Novas tecnologias</a>
-        </h2>
-        <p class="module-description">
-          Flexbox, Grid Layout, Projeto Final.
-        </p>
-      </header>
-    </section>
-  </main>
+          <!-- Módulo 03 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🚀</div>
+              <div class="card-content">
+                <h3 class="card-title">Colocando um protótipo no ar</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Hospedagem</span>
+                  <span class="meta-tag">Tabelas</span>
+                  <span class="meta-tag">M03</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Versionamento de software, hospedagem de sites estáticos e
+              trabalho com tabelas complexas.
+            </p>
+            <div class="card-highlights">
+              <h4 class="highlights-title">Tópicos Abordados</h4>
+              <ul class="highlights-list">
+                <li>Git e GitHub</li>
+                <li>Hospedagem gratuita</li>
+                <li>Tabelas HTML</li>
+                <li>Formulários básicos</li>
+              </ul>
+            </div>
+            <a href="./modulo-03/modulo-3.html" class="card-link" rel="next" aria-label="Acessar Módulo 03">
+              Explorar Módulo
+            </a>
+          </article>
+
+          <!-- Módulo 04 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">📱</div>
+              <div class="card-content">
+                <h3 class="card-title">Aprofundando os conhecimentos</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Responsivo</span>
+                  <span class="meta-tag">Mobile First</span>
+                  <span class="meta-tag">M04</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Quadros em linha, formulários avançados, media queries e
+              abordagem mobile first para desenvolvimento web.
+            </p>
+            <div class="card-highlights">
+              <h4 class="highlights-title">Tópicos Abordados</h4>
+              <ul class="highlights-list">
+                <li>Iframes e embeds</li>
+                <li>Formulários avançados</li>
+                <li>Media Queries</li>
+                <li>Mobile First</li>
+              </ul>
+            </div>
+            <a href="./modulo-04/m04.html" class="card-link" rel="next" aria-label="Acessar Módulo 04">
+              Explorar Módulo
+            </a>
+          </article>
+
+          <!-- Módulo 05 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">✨</div>
+              <div class="card-content">
+                <h3 class="card-title">Novas tecnologias</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Flexbox</span>
+                  <span class="meta-tag">Grid</span>
+                  <span class="meta-tag">M05</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Layouts modernos com Flexbox e CSS Grid, animações CSS e
+              projeto final integrando todos os conceitos aprendidos.
+            </p>
+            <div class="card-highlights">
+              <h4 class="highlights-title">Tópicos Abordados</h4>
+              <ul class="highlights-list">
+                <li>Flexbox</li>
+                <li>CSS Grid</li>
+                <li>Animações CSS</li>
+                <li>Projeto Final</li>
+              </ul>
+            </div>
+            <a href="./modulo-05/index.html" class="card-link" rel="next" aria-label="Acessar Módulo 05">
+              Explorar Módulo
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Rodapé -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+          <h3 class="footer-title">Evolução Contínua</h3>
+          <p class="footer-description">
+            Este portfólio documenta minha jornada de aprendizado em desenvolvimento web,
+            demonstrando progresso constante e aplicação prática do conhecimento.
+          </p>
+          <div class="footer-meta">
+            <p><i class="fas fa-code-branch"></i> Open Source License - Desenvolvido por Brian Muniz Silveira</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
 </body>
 
 </html>
