@@ -394,6 +394,10 @@ main {
   color: white;
   padding: var(--spacing-xl);
   text-align: center;
+
+  @media (prefers-color-scheme: dark) {
+    background: var(--color-primary);
+  }
 }
 
 .footer-content {

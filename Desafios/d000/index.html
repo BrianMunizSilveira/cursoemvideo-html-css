@@ -1,95 +1,372 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Brian Muniz Silveira" />
   <meta name="description" content="Desafios do curso de HTML5 e CSS3 do Curso em Vídeo." />
   <meta name="keywords" content="HTML5, CSS3, Desafios, Curso em Vídeo" />
   <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="revisit-after" content="1 day" />
   <meta name="language" content="Portuguese" />
   <meta name="generator" content="Visual Studio Code" />
   <meta name="distribution" content="Global" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Desafios HTML5 + CSS3</title>
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Merriweather:wght@300;400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <link rel="stylesheet" href="../../src/css/main.css" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
-  <main>
-    <header>
-      <h1>Desafios Concluídos</h1>
-    </header>
+  <div class="container">
+    <main role="main">
+      <!-- Cabeçalho -->
+      <header class="profile-header" role="banner">
+        <div class="profile-content">
+          <h1 class="profile-title">Desafios Concluídos</h1>
+          <p class="profile-subtitle">Curso de HTML5 e CSS3 - Curso em Vídeo</p>
+          <p class="profile-description">
+            Todos os desafios concluídos durante o curso, demonstrando evolução técnica
+            e aplicação prática dos conceitos aprendidos.
+          </p>
+        </div>
+      </header>
 
-    <hr />
+      <!-- Lista de Desafios -->
+      <section class="evolution-timeline" aria-label="Lista de desafios concluídos">
+        <div class="timeline-header">
+          <h2 class="timeline-title">Progresso dos Desafios</h2>
+          <p class="timeline-description">
+            Cada desafio representa uma etapa de aprendizado, desde conceitos básicos
+            até implementações mais complexas.
+          </p>
+        </div>
 
-    <section>
-      <ul>
-        <li class="completed">
-          <a href="../d001/index.html" rel="next">Desafio 001</a> Concluído
-        </li>
-        <li class="completed">
-          <a href="../d002/index.html" rel="next">Desafio 002</a> Concluído
-        </li>
-        <li class="completed">
-          <a href="../d003/index.html" rel="next">Desafio 003</a> Concluído
-        </li>
-        <li class="completed">
-          <a href="../d004/index.html" rel="next">Desafio 004</a> Concluído
-        </li>
-        <li class="completed">
-          <a href="../d005/index.html" rel="next">Desafio 005</a> Concluído
-        </li>
-        <li class="completed">
-          <a href="../d006/index.html" rel="next">Desafio 006</a> Concluído
-        </li>
-        <li class="completed">
-          <a href="../d007/index.html" rel="next">Desafio 007</a> Concluído
-        </li>
-        <li class="completed">
-          <a href="../d008/index.html" rel="next">Desafio 008</a> Concluído
-        </li>
-        <li class="completed">
-          <a href="../d009/index.html" rel="next">Desafio 009</a> Concluído
-        </li>
-        <li class="completed">
-          <a href="../d010/android.html" rel="next">Desafio 010</a> Concluído
-        </li>
-        <li class="completed">
-          <a href="../d011/astronauta.html" rel="next">Desafio 011</a>
-          Concluído
-        </li>
-        <li class="completed">
-          <a href="../d012/index.html" rel="next">Desafio 012</a> Concluído
-        </li>
-        <li class="completed">
-          <a href="../d13/d13pt1.html" rel="next">Desafio 013-Pt.1</a>
-          Concluído
-        </li>
-        <li class="completed">
-          <a href="../d13/d13pt2.html" rel="next">Desafio 013-Pt.2</a>
-          Concluído
-        </li>
-        <li class="completed">
-          <a href="../d14/d14.html" rel="next">Desafio 014</a> Concluído
-        </li>
-      </ul>
-    </section>
-  </main>
+        <div class="timeline-grid">
+          <!-- Desafios serão listados aqui -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 001</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Iniciante</span>
+                  <span class="meta-tag">Primeiros Passos</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Primeiro desafio concluído, introdução aos conceitos básicos de HTML.
+            </p>
+            <a href="../d001/index.html" class="card-link" rel="next" aria-label="Acessar Desafio 001">
+              Ver Desafio
+            </a>
+          </article>
 
-  <footer>
-    <p>
-      <i class="fas fa-code-branch"></i> Open Source License - 12/09/2024.
-    </p>
-    <p>
-      Carinhosamente desenvolvido por
-      <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer">Brian Muniz Silveira</a>
-    </p>
-  </footer>
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 002</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Fundamentos</span>
+                  <span class="meta-tag">Imagens</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Trabalhando com imagens e estruturação básica de páginas.
+            </p>
+            <a href="../d002/index.html" class="card-link" rel="next" aria-label="Acessar Desafio 002">
+              Ver Desafio
+            </a>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 003</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Fundamentos</span>
+                  <span class="meta-tag">Mapas</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Implementação de mapas interativos e conteúdo externo.
+            </p>
+            <a href="../d003/index.html" class="card-link" rel="next" aria-label="Acessar Desafio 003">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Continue com os outros desafios seguindo o mesmo padrão -->
+          <!-- Desafio 004 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 004</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Emojis</span>
+                  <span class="meta-tag">Símbolos</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Trabalhando com emojis e caracteres especiais em HTML.
+            </p>
+            <a href="../d004/index.html" class="card-link" rel="next" aria-label="Acessar Desafio 004">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Desafio 005 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 005</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Perfil Social</span>
+                  <span class="meta-tag">Links</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Criação de um perfil social com links e informações pessoais.
+            </p>
+            <a href="../d005/index.html" class="card-link" rel="next" aria-label="Acessar Desafio 005">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Desafio 006 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 006</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Tags HTML</span>
+                  <span class="meta-tag">Multimídia</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Explorando tags HTML para conteúdo multimídia.
+            </p>
+            <a href="../d006/index.html" class="card-link" rel="next" aria-label="Acessar Desafio 006">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Desafio 007 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 007</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Imagens</span>
+                  <span class="meta-tag">Responsivo</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Trabalhando com imagens responsivas e adaptáveis.
+            </p>
+            <a href="../d007/index.html" class="card-link" rel="next" aria-label="Acessar Desafio 007">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Desafio 008 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 008</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Navegação</span>
+                  <span class="meta-tag">Links</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Criando navegação entre páginas com links coloridos.
+            </p>
+            <a href="../d008/index.html" class="card-link" rel="next" aria-label="Acessar Desafio 008">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Desafio 009 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 009</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Vídeos</span>
+                  <span class="meta-tag">Playlist</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Implementação de uma página com vídeos em playlist.
+            </p>
+            <a href="../d009/index.html" class="card-link" rel="next" aria-label="Acessar Desafio 009">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Desafio 010 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 010</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">História</span>
+                  <span class="meta-tag">Android</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Página sobre a história do Android com elementos avançados.
+            </p>
+            <a href="../d010/android.html" class="card-link" rel="next" aria-label="Acessar Desafio 010">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Desafio 011 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 011</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Imagens</span>
+                  <span class="meta-tag">Posicionamento</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Trabalhando com posicionamento de imagens e efeitos.
+            </p>
+            <a href="../d011/astronauta.html" class="card-link" rel="next" aria-label="Acessar Desafio 011">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Desafio 012 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 012</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Cordel</span>
+                  <span class="meta-tag">Efeito Parallax</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Implementação de um cordel moderno com efeito parallax.
+            </p>
+            <a href="../d012/index.html" class="card-link" rel="next" aria-label="Acessar Desafio 012">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Desafio 013 Parte 1 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 013 - Parte 1</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Tabelas</span>
+                  <span class="meta-tag">Estilização</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Trabalhando com rowspan e colspan em tabelas.
+            </p>
+            <a href="../d13/d13pt1.html" class="card-link" rel="next" aria-label="Acessar Desafio 013 Parte 1">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Desafio 013 Parte 2 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 013 - Parte 2</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Tabelas</span>
+                  <span class="meta-tag">Responsivas</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Aprimorando o conceito de rowspan e colspan em tabelas.
+            </p>
+            <a href="../d13/d13pt2.html" class="card-link" rel="next" aria-label="Acessar Desafio 013 Parte 2">
+              Ver Desafio
+            </a>
+          </article>
+
+          <!-- Desafio 014 -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🏆</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafio 014</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Login</span>
+                  <span class="meta-tag">Formulário</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-description">
+              Aplicando conceitos de tabelas extensas e estruturações complexas de exibição de tabelas.
+            </p>
+            <a href="../d14/d14.html" class="card-link" rel="next" aria-label="Acessar Desafio 014">
+              Ver Desafio
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Rodapé -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+          <h3 class="footer-title">Jornada de Aprendizado</h3>
+          <p class="footer-description">
+            Cada desafio concluído representa um passo na minha evolução como desenvolvedor front-end.
+          </p>
+          <div class="footer-meta">
+            <p><i class="fas fa-code-branch"></i> Open Source License - Desenvolvido por Brian Muniz Silveira</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
 </body>
 
 </html>
