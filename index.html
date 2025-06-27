@@ -6,52 +6,181 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Brian Muniz Silveira" />
   <meta name="description"
-    content="Página inicial contendo todo o material praticado durante o curso de HTML5 e CSS3." />
-  <meta name="keywords" content="HTML5, CSS3, Material Prático, Curso" />
+    content="Portfólio técnico documentando a evolução e aprendizado em HTML5 e CSS3 - Do curso inicial às implementações avançadas." />
+  <meta name="keywords" content="HTML5, CSS3, Portfólio Técnico, Evolução, Aprendizado, Brian Muniz" />
   <meta name="robots" content="index, follow" />
   <meta name="revisit-after" content="1 days" />
   <meta name="language" content="Portuguese" />
   <meta name="generator" content="Visual Studio Code" />
   <meta name="distribution" content="Global" />
-  <meta property="og:title" content="Curso HTML5 + CSS3 - Material Prático">
+  <meta property="og:title" content="Brian Muniz - Evolução Técnica HTML5 & CSS3">
   <meta property="og:description"
-    content="Página inicial contendo todo o material praticado durante o curso de HTML5 e CSS3.">
+    content="Documentação técnica da evolução em HTML5 e CSS3 - Do aprendizado inicial às implementações avançadas.">
   <meta property="og:type" content="website">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <title>Curso HTML5 + CSS3 - Material Prático</title>
-  <link rel="preload" href="./src/css/main.css" as="style">
-  <link rel="stylesheet" href="./src/css/main.css" />
-  <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon" />
+  <title>Brian Muniz - Evolução Técnica HTML5 & CSS3</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Merriweather:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/css/main.css">
 </head>
 
 <body>
-  <main role="main">
-    <header role="banner">
-      <h1>Curso em Vídeo HTML5 + CSS3</h1>
-    </header>
+  <div class="container">
+    <main role="main">
+      <!-- Cabeçalho do Portfólio -->
+      <header class="profile-header" role="banner">
+        <div class="profile-content">
+          <h1 class="profile-title">Brian Muniz Silveira</h1>
+          <p class="profile-subtitle">Documentação da Evolução Técnica</p>
+          <p class="profile-description">
+            Este portfólio documenta minha jornada de aprendizado em HTML5 e CSS3,
+            desde os fundamentos do Curso em Vídeo até implementações avançadas e
+            técnicas modernas desenvolvidas ao longo do tempo.
+          </p>
+        </div>
+      </header>
 
-    <nav role="navigation">
-      <ul>
-        <li>
-          <h2>Acesse os:
-            <a href="./Exercícios/exercicios.html" rel="next" aria-label="Acessar seção de exercícios práticos">
-              Exercícios
+      <!-- Timeline de Evolução -->
+      <section class="evolution-timeline" aria-label="Evolução técnica documentada">
+        <div class="timeline-header">
+          <h2 class="timeline-title">Jornada de Desenvolvimento</h2>
+          <p class="timeline-description">
+            Cada seção representa um marco na evolução técnica, demonstrando a progressão
+            do conhecimento básico para implementações avançadas e boas práticas.
+          </p>
+        </div>
+
+        <div class="timeline-grid">
+          <!-- Card 1: Exercícios Fundamentais -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">📚</div>
+              <div class="card-content">
+                <h3 class="card-title">Exercícios Fundamentais</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Base Sólida</span>
+                  <span class="meta-tag">Fundamentos</span>
+                  <span class="meta-tag">Curso em Vídeo</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="card-description">
+              Documentação completa dos exercícios realizados durante o curso, organizados
+              por módulos com anotações e evoluções aplicadas. Demonstra domínio progressivo
+              dos conceitos fundamentais.
+            </p>
+
+            <div class="card-highlights">
+              <h4 class="highlights-title">Competências Demonstradas</h4>
+              <ul class="highlights-list">
+                <li>Estruturação semântica HTML5</li>
+                <li>Estilização CSS3 responsiva</li>
+                <li>Organização modular de código</li>
+                <li>Aplicação de boas práticas</li>
+              </ul>
+            </div>
+
+            <a href="./Exercícios/exercicios.html" class="card-link" rel="next"
+              aria-label="Visualizar exercícios fundamentais realizados">
+              Explorar Exercícios
             </a>
-          </h2>
-          <p>Encontre aqui todos os exercícios práticados. Divididos por módulos, cada módulo possui descrições relevantes sobre os temas abordados nas aulas.</p>
-        </li>
-        <li class="divider">
-          <h2>Acesse os: 
-            <a href="./Desafios/d000/index.html" rel="next" aria-label="Acessar seção de desafios práticos">
-              Desafios
+          </article>
+
+          <!-- Card 2: Desafios Práticos -->
+          <article class="portfolio-card">
+            <div class="card-header">
+              <div class="card-icon" aria-hidden="true">🎯</div>
+              <div class="card-content">
+                <h3 class="card-title">Desafios & Implementações</h3>
+                <div class="card-meta">
+                  <span class="meta-tag">Problem Solving</span>
+                  <span class="meta-tag">Criatividade</span>
+                  <span class="meta-tag">Evolução</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="card-description">
+              Soluções originais para desafios propostos, com melhorias e otimizações
+              implementadas ao longo do tempo. Evidencia capacidade de resolução de
+              problemas e evolução técnica contínua.
+            </p>
+
+            <div class="card-highlights">
+              <h4 class="highlights-title">Diferenciações Aplicadas</h4>
+              <ul class="highlights-list">
+                <li>Soluções criativas e funcionais</li>
+                <li>Código otimizado e limpo</li>
+                <li>Implementações responsivas</li>
+                <li>Melhorias de acessibilidade</li>
+              </ul>
+            </div>
+
+            <a href="./Desafios/d000/index.html" class="card-link" rel="next"
+              aria-label="Visualizar desafios e implementações realizadas">
+              Ver Implementações
             </a>
-          </h2>
-          <p>Encontre aqui todos os desafios realizados durante o curso.</p>
-        </li>
-      </ul>
-    </nav>
-  </main>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seção de Competências Desenvolvidas -->
+      <section class="skills-section" aria-label="Competências técnicas desenvolvidas">
+        <div class="skills-content">
+          <h2 class="skills-title">Competências Desenvolvidas</h2>
+          <p class="skills-description">
+            Habilidades técnicas adquiridas e aprimoradas durante a jornada de aprendizado,
+            demonstrando evolução do conhecimento básico para implementações avançadas.
+          </p>
+
+          <div class="skills-grid">
+            <div class="skill-item">
+              <span class="skill-icon" aria-hidden="true">🏗️</span>
+              <h3 class="skill-title">HTML5 Semântico</h3>
+              <p class="skill-level">Estruturação avançada</p>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon" aria-hidden="true">🎨</span>
+              <h3 class="skill-title">CSS3 Moderno</h3>
+              <p class="skill-level">Grid, Flexbox, Variáveis</p>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon" aria-hidden="true">📱</span>
+              <h3 class="skill-title">Design Responsivo</h3>
+              <p class="skill-level">Mobile-first approach</p>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon" aria-hidden="true">♿</span>
+              <h3 class="skill-title">Acessibilidade</h3>
+              <p class="skill-level">WCAG Guidelines</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+          <h3 class="footer-title">Evolução Contínua</h3>
+          <p class="footer-description">
+            Este portfólio é um documento vivo da minha evolução técnica,
+            demonstrando não apenas o que aprendi, mas como aplico e aprimoro
+            continuamente essas competências.
+          </p>
+          <div class="footer-meta">
+            <p>&copy; 2025 Brian Muniz Silveira - Portfólio de Evolução Técnica</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
 </body>
 
 </html>

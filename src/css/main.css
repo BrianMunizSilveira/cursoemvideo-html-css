@@ -4,53 +4,42 @@
 
 @charset "UTF-8";
 
-/* Variáveis Globais */
-
 :root {
-  /* Cores Base */
-  --color-primary: #1a5f7a;
-  --color-secondary: #2c3e50;
-  --color-text: #333;
-  --color-text-light: #7f8c8d;
-  --color-background: #f4f4f4;
-  --color-border: #b5b5b5;
-  --color-white: #fff;
-
-  /* Cores de links */
-  --link-color: #2980b9;
-  --link-hover: #3498db;
-  --link-active: #1a5f7a;
-  --link-visited: #8e44ad;
-  --link-focus: #2c3e50;
+  /* Cores Base - Tema Profissional */
+  --color-primary: #0f172a;
+  --color-primary-light: #1e293b;
+  --color-accent: #3b82f6;
+  --color-accent-light: #60a5fa;
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-text: #0f172a;
+  --color-text-light: #64748b;
+  --color-text-muted: #94a3b8;
+  --color-background: #f8fafc;
+  --color-card: #ffffff;
+  --color-border: #e2e8f0;
+  --color-code-bg: #f1f5f9;
 
   /* Espaçamento */
+  --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
 
   /* Bordas e efeitos */
   --border-radius: 8px;
-  --border-width: 3px;
-  --link-underline-thickness: 2px;
-  --link-transition: 0.3s ease;
+  --border-radius-lg: 12px;
+  --border-width: 1px;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* =============== Fontes ===============*/
-@font-face {
-  font-family: 'Merriweather';
-  font-display: swap;
-  src: url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
-}
-
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-display: swap;
-  src: url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
-}
-
-/* =============== Reset ===============*/
-
+/* Reset */
 *,
 *::before,
 *::after {
@@ -63,170 +52,418 @@
    2. Layout Base
    ========================================================================== */
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.6;
-  background-color: var(--color-background);
+  background: var(--color-background);
   color: var(--color-text);
-  max-width: min(800px, 90vw);
-  margin-inline: auto;
-  padding: var(--spacing-xl);
+  min-height: 100vh;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
 }
 
 main {
-  background-color: var(--color-white);
+  background: var(--color-card);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
   border: var(--border-width) solid var(--color-border);
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 6px rgba(0 0 0 / 0.05);
-  padding: var(--spacing-xl);
-  isolation: isolate;
 }
 
 /* ==========================================================================
-   3. Componentes
+   3. Header - Apresentação Profissional
    ========================================================================== */
-
-/* =============== Cabeçalhos =============== */
-header h1 {
-  font-family: 'Merriweather', Georgia, serif;
-  color: var(--color-primary);
-  text-align: center;
-  border-bottom: 2px solid var(--color-primary);
-  padding-block-end: var(--spacing-sm);
-  margin-block-end: var(--spacing-lg);
-}
-
-/* =============== Seções =============== */
-section {
-  margin-block-end: var(--spacing-lg);
-}
-
-section header h2 {
-  font-family: 'Merriweather', Georgia, serif;
-  color: var(--color-primary);
-  margin-block-end: var(--spacing-sm);
-}
-
-section header p {
-  color: var(--color-text-light);
-  font-style: italic;
-}
-
-/* =============== Lista =============== */
-ul {
-  padding-inline-start: var(--spacing-md);
-}
-
-li {
-  margin-block-end: var(--spacing-sm);
-}
-
-li::marker {
-  color: var(--color-primary);
-}
-
-/* =============== Links =============== */
-a {
-  color: var(--link-color);
-  text-decoration: none;
+.profile-header {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: white;
+  padding: var(--spacing-3xl) var(--spacing-xl);
   position: relative;
-  padding: 2px 4px;
-  transition: var(--link-transition, background-color var(--link-transition, 0.3s ease));
+  overflow: hidden;
 }
 
-/* Efeitos de links */
-a::after {
+.profile-header::before {
   content: '';
   position: absolute;
-  width: 100%;
-  height: var(--link-underline-thickness);
-  bottom: 0;
-  left: 0;
-  background-color: currentColor;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform var(--link-transition, 0.3s ease);
-}
-
-a:hover {
-  color: var(--link-hover);
-}
-
-a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-a:active {
-  color: var(--link-active);
-  transform: translateY(1px);
-}
-
-a:visited {
-  color: var(--link-visited);
-}
-
-a:focus {
-  outline: none;
-  color: var(--link-focus);
-  background-color: rbg(41 128 185 / 0.1);
-  border-radius: 4px;
-}
-
-a:focus:not(:focus-visible) {
-  background-color: transparent;
-}
-
-a:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
-}
-
-/* Links específicos */
-nav a {
-  font-weight: 600;
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-section a {
-  display: inline-block;
-  padding: 4px 8px;
-}
-
-p a {
-  text-decoration-thickness: var(--link-underline-thickness);
-  text-decoration-color: transparent;
-  text-underline-offset: 2px;
-  transition: text-decoration-color var(--link-transition);
-}
-
-/* Links externos */
-a[rel="external"] {
-  padding-right: 1.25em;
-}
-
-a[rel="external"]::after {
-  content: '↗';
-  position: absolute;
   top: 0;
+  left: 0;
   right: 0;
-  transform: none;
-  background: none;
-  height: auto;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E") repeat;
 }
 
-/* =============== Divisores =============== */
-.divider {
-  border: none;
-  border-block-start: 1px solid rgb(224 224 224 / 0.8);
-  margin-block: var(--spacing-lg);
+.profile-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.2;
+}
+
+.profile-subtitle {
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.4;
+}
+
+.profile-description {
+  font-size: 1.125rem;
+  opacity: 0.8;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* ==========================================================================
-   4. Utilitários e Media Queries
+   4. Timeline de Evolução
    ========================================================================== */
-/* Acessibilidade */
-@media screen and (prefers-reduced-motion: reduce) {
+.evolution-timeline {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: linear-gradient(to bottom, var(--color-background), var(--color-card));
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.timeline-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+}
+
+.timeline-description {
+  color: var(--color-text-light);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+}
+
+/* ==========================================================================
+   5. Cards de Portfólio
+   ========================================================================== */
+.portfolio-card {
+  background: var(--color-card);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.portfolio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
+}
+
+.portfolio-card:hover::before {
+  transform: scaleX(1);
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.3;
+}
+
+.card-meta {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.meta-tag {
+  background: var(--color-code-bg);
+  color: var(--color-text-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.card-description {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.7;
+}
+
+.card-highlights {
+  background: var(--color-background);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.highlights-title {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.highlights-list {
+  list-style: none;
+  padding: 0;
+}
+
+.highlights-list li {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+  position: relative;
+  font-size: 0.875rem;
+}
+
+.highlights-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  background: rgba(59, 130, 246, 0.1);
+  border: var(--border-width) solid transparent;
+  transition: var(--transition);
+  font-size: 0.875rem;
+}
+
+.card-link::after {
+  content: '→';
+  transition: var(--transition);
+}
+
+.card-link:hover {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+  transform: translateX(2px);
+}
+
+.card-link:hover::after {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   6. Seção de Competências
+   ========================================================================== */
+.skills-section {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+}
+
+.skills-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skills-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin-bottom: var(--spacing-md);
+}
+
+.skills-description {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin-bottom: var(--spacing-2xl);
+  line-height: 1.6;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.skill-item {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-lg);
+  backdrop-filter: blur(10px);
+  border: var(--border-width) solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  display: block;
+}
+
+.skill-title {
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  font-size: 1.125rem;
+}
+
+.skill-level {
+  opacity: 0.8;
+  font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   7. Footer
+   ========================================================================== */
+.footer {
+  background: var(--color-text);
+  color: white;
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.125rem;
+}
+
+.footer-description {
+  opacity: 0.8;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.footer-meta {
+  opacity: 0.6;
+  font-size: 0.875rem;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   8. Responsividade
+   ========================================================================== */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-md);
+  }
+
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-header {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .evolution-timeline {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .skills-section {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-card {
+    padding: var(--spacing-lg);
+  }
+
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-meta {
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   9. Acessibilidade e Animações
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -235,50 +472,52 @@ a[rel="external"]::after {
   }
 }
 
-/* Container Queries */
-@container (max-width: 600px) {
-  main {
-    padding: var(--spacing-md);
-  }
-}
-
-/* Responsividade */
-@media screen and (max-width: 600px) {
-  :root {
-    --spacing-xl: 1rem;
-  }
-
-  body {
-    padding: var(--spacing-md);
-  }
-}
-
 /* Modo escuro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #1a1a1a;
-    --color-text: #e0e0e0;
-    --color-text-light: #a0a0a0;
-    --color-white: #2a2a2a;
-    --color-border: #404040;
-    --color-link: #63b3ed;
-    --color-link-hover: #90cdf4;
-    --link-color: #63b3ed;
-    --link-hover: #90cdf4;
-    --link-active: #4299e1;
-    --link-visited: #b794f4;
-    --link-focus: #bee3f8;
+    --color-background: #0f172a;
+    --color-card: #1e293b;
+    --color-text: #f1f5f9;
+    --color-text-light: #94a3b8;
+    --color-text-muted: #64748b;
+    --color-border: #334155;
+    --color-code-bg: #334155;
+  }
+}
+
+/* Estados de foco */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--border-radius);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animações de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
 
-  main {
-    box-shadow: 0 4px 6px rgb(0 0 0 / 0.2);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  a:focus {
-    background-color: rgb(99 179 237 / 0.2);
-  }
+}
 
-  nav a:hover {
-    background-color: rgb(9 179 237 / 0.2);
-  }
+.portfolio-card {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.portfolio-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.portfolio-card:nth-child(3) {
+  animation-delay: 0.2s;
 }
