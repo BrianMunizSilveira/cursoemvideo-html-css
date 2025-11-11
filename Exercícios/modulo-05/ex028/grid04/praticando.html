@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática de Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --bg-color: #f5f7fa;
+            --text-color: #333;
+            --card-bg: #fff;
+            --header-color: #2c3e50;
+            --subheader-color: #34495e;
+            --border-color: #ecf0f1;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --code-bg: #2c3e50;
+            --code-color: #ecf0f1;
+            --highlight-bg: #fff9c4;
+            --control-border: #bdc3c7;
+            --description-color: #7f8c8d;
+            --grid-bg: #ecf0f1;
+            --grid-border: #34495e;
+        }
+        
+        /* Modo escuro usando media query */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #e0e0e0;
+                --card-bg: #2d2d2d;
+                --header-color: #7ba2ff;
+                --subheader-color: #a8c6ff;
+                --border-color: #404040;
+                --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                --code-bg: #1e1e1e;
+                --code-color: #d4d4d4;
+                --highlight-bg: #3c3c3c;
+                --control-border: #555;
+                --description-color: #b0b0b0;
+                --grid-bg: #333;
+                --grid-border: #7ba2ff;
+            }
+        }
+        
+        /* Classe para modo escuro manual */
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --card-bg: #2d2d2d;
+            --header-color: #7ba2ff;
+            --subheader-color: #a8c6ff;
+            --border-color: #404040;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --code-bg: #1e1e1e;
+            --code-color: #d4d4d4;
+            --highlight-bg: #3c3c3c;
+            --control-border: #555;
+            --description-color: #b0b0b0;
+            --grid-bg: #333;
+            --grid-border: #7ba2ff;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: background-color 0.3s;
+        }
+        
+        h1 {
+            color: var(--header-color);
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .description {
+            color: var(--description-color);
+            max-width: 800px;
+            margin: 0 auto;
+            transition: color 0.3s;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .grid-container {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: background-color 0.3s;
+        }
+        
+        .grid-visualization {
+            display: grid;
+            grid-template-rows: repeat(3, 100px);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            margin: 20px 0;
+            border: 2px solid var(--grid-border);
+            padding: 10px;
+            border-radius: 5px;
+            background-color: var(--grid-bg);
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .caixa1 {
+            background-color: #e74c3c;
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+        }
+        
+        .caixa2 {
+            background-color: #2ecc71;
+            grid-row: 2 / -1;
+            grid-column: 1 / 3;
+        }
+        
+        .caixa3 {
+            background-color: #3498db;
+            grid-row: 2 / -1;
+            grid-column: 3 / -1;
+        }
+        
+        .controls {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: background-color 0.3s;
+        }
+        
+        .control-group {
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: var(--header-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        
+        h3 {
+            color: var(--subheader-color);
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .css-code {
+            background-color: var(--code-bg);
+            color: var(--code-color);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .property-control {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--subheader-color);
+            transition: color 0.3s;
+        }
+        
+        select, input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--control-border);
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+        
+        .explanation {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            transition: background-color 0.3s;
+        }
+        
+        .explanation h2 {
+            color: var(--header-color);
+            margin-bottom: 15px;
+        }
+        
+        .explanation p {
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            background-color: var(--highlight-bg);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .reset-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .reset-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--control-border);
+            border-radius: 20px;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-color);
+            transition: all 0.3s;
+        }
+        
+        .theme-toggle:hover {
+            background-color: var(--border-color);
+        }
+        
+        .theme-icon {
+            font-size: 18px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .theme-toggle {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin: 10px auto;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Prática de Grid Layout</h1>
+            <p class="description">Esta página demonstra e permite que você experimente com CSS Grid Layout. Use os controles para modificar as propriedades do grid e veja as mudanças em tempo real.</p>
+            <button class="theme-toggle" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+                <span id="themeText">Modo Escuro</span>
+            </button>
+        </header>
+        
+        <div class="content">
+            <div class="grid-container">
+                <h2>Visualização do Grid</h2>
+                <div class="grid-visualization" id="gridVisualization">
+                    <div class="grid-item caixa1">Caixa 1</div>
+                    <div class="grid-item caixa2">Caixa 2</div>
+                    <div class="grid-item caixa3">Caixa 3</div>
+                </div>
+                
+                <h3>CSS Atual</h3>
+                <div class="css-code" id="cssCode">
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.caixa1 {
+    background-color: red;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+
+.caixa2 {
+    background-color: green;
+    grid-row: 2 / -1;
+    grid-column: 1 / 3;
+}
+
+.caixa3 {
+    background-color: blue;
+    grid-row: 2 / -1;
+    grid-column: 3 / -1;
+}
+                </div>
+                
+                <button class="reset-btn" id="resetBtn">Redefinir para Valores Padrão</button>
+            </div>
+            
+            <div class="controls">
+                <h2>Controles do Grid</h2>
+                
+                <div class="control-group">
+                    <h3>Propriedades do Container</h3>
+                    
+                    <div class="property-control">
+                        <label for="gridTemplateRows">grid-template-rows</label>
+                        <input type="text" id="gridTemplateRows" value="repeat(3, 100px)">
+                    </div>
+                    
+                    <div class="property-control">
+                        <label for="gridTemplateColumns">grid-template-columns</label>
+                        <input type="text" id="gridTemplateColumns" value="repeat(4, 1fr)">
+                    </div>
+                    
+                    <div class="property-control">
+                        <label for="gap">gap</label>
+                        <input type="text" id="gap" value="5px">
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Propriedades dos Itens</h3>
+                    
+                    <div class="property-control">
+                        <label for="caixa1GridRow">Caixa 1 - grid-row</label>
+                        <input type="text" id="caixa1GridRow" value="1 / 2">
+                    </div>
+                    
+                    <div class="property-control">
+                        <label for="caixa1GridColumn">Caixa 1 - grid-column</label>
+                        <input type="text" id="caixa1GridColumn" value="1 / -1">
+                    </div>
+                    
+                    <div class="property-control">
+                        <label for="caixa2GridRow">Caixa 2 - grid-row</label>
+                        <input type="text" id="caixa2GridRow" value="2 / -1">
+                    </div>
+                    
+                    <div class="property-control">
+                        <label for="caixa2GridColumn">Caixa 2 - grid-column</label>
+                        <input type="text" id="caixa2GridColumn" value="1 / 3">
+                    </div>
+                    
+                    <div class="property-control">
+                        <label for="caixa3GridRow">Caixa 3 - grid-row</label>
+                        <input type="text" id="caixa3GridRow" value="2 / -1">
+                    </div>
+                    
+                    <div class="property-control">
+                        <label for="caixa3GridColumn">Caixa 3 - grid-column</label>
+                        <input type="text" id="caixa3GridColumn" value="3 / -1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="explanation">
+            <h2>Explicação do Grid Layout</h2>
+            <p>O CSS Grid Layout é um sistema de layout bidimensional que permite organizar conteúdo em linhas e colunas. Ele oferece controle preciso sobre a posição e o dimensionamento dos elementos.</p>
+            
+            <p>No exemplo acima:</p>
+            <ul>
+                <li><span class="highlight">grid-template-rows: repeat(3, 100px)</span> cria 3 linhas, cada uma com 100px de altura</li>
+                <li><span class="highlight">grid-template-columns: repeat(4, 1fr)</span> cria 4 colunas, cada uma ocupando uma fração igual do espaço disponível</li>
+                <li><span class="highlight">gap: 5px</span> define um espaçamento de 5px entre as células do grid</li>
+                <li><span class="highlight">grid-row</span> e <span class="highlight">grid-column</span> definem a posição dos elementos no grid usando números de linha/coluna</li>
+                <li>O valor <span class="highlight">-1</span> refere-se à última linha/coluna do grid</li>
+            </ul>
+            
+            <p>Experimente modificar os valores nos controles para ver como as propriedades afetam o layout!</p>
+        </div>
+    </div>
+
+    <script>
+        // Elementos do DOM
+        const gridVisualization = document.getElementById('gridVisualization');
+        const cssCode = document.getElementById('cssCode');
+        const resetBtn = document.getElementById('resetBtn');
+        const themeToggle = document.getElementById('themeToggle');
+        const themeText = document.getElementById('themeText');
+        
+        // Controles do container
+        const gridTemplateRows = document.getElementById('gridTemplateRows');
+        const gridTemplateColumns = document.getElementById('gridTemplateColumns');
+        const gap = document.getElementById('gap');
+        
+        // Controles dos itens
+        const caixa1GridRow = document.getElementById('caixa1GridRow');
+        const caixa1GridColumn = document.getElementById('caixa1GridColumn');
+        const caixa2GridRow = document.getElementById('caixa2GridRow');
+        const caixa2GridColumn = document.getElementById('caixa2GridColumn');
+        const caixa3GridRow = document.getElementById('caixa3GridRow');
+        const caixa3GridColumn = document.getElementById('caixa3GridColumn');
+        
+        // Verificar preferência do sistema
+        function checkSystemPreference() {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark-mode');
+                themeText.textContent = 'Modo Claro';
+                themeToggle.querySelector('.theme-icon').textContent = '☀️';
+            }
+        }
+        
+        // Alternar modo escuro/claro
+        function toggleTheme() {
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.classList.remove('dark-mode');
+                themeText.textContent = 'Modo Escuro';
+                themeToggle.querySelector('.theme-icon').textContent = '🌙';
+            } else {
+                document.body.classList.add('dark-mode');
+                themeText.textContent = 'Modo Claro';
+                themeToggle.querySelector('.theme-icon').textContent = '☀️';
+            }
+        }
+        
+        // Função para atualizar o grid
+        function updateGrid() {
+            // Atualizar propriedades do container
+            gridVisualization.style.gridTemplateRows = gridTemplateRows.value;
+            gridVisualization.style.gridTemplateColumns = gridTemplateColumns.value;
+            gridVisualization.style.gap = gap.value;
+            
+            // Atualizar propriedades dos itens
+            document.querySelector('.caixa1').style.gridRow = caixa1GridRow.value;
+            document.querySelector('.caixa1').style.gridColumn = caixa1GridColumn.value;
+            
+            document.querySelector('.caixa2').style.gridRow = caixa2GridRow.value;
+            document.querySelector('.caixa2').style.gridColumn = caixa2GridColumn.value;
+            
+            document.querySelector('.caixa3').style.gridRow = caixa3GridRow.value;
+            document.querySelector('.caixa3').style.gridColumn = caixa3GridColumn.value;
+            
+            // Atualizar o código CSS exibido
+            updateCssCode();
+        }
+        
+        // Função para atualizar o código CSS exibido
+        function updateCssCode() {
+            cssCode.textContent = `.container {
+    display: grid;
+    grid-template-rows: ${gridTemplateRows.value};
+    grid-template-columns: ${gridTemplateColumns.value};
+    gap: ${gap.value};
+}
+
+.caixa1 {
+    background-color: red;
+    grid-row: ${caixa1GridRow.value};
+    grid-column: ${caixa1GridColumn.value};
+}
+
+.caixa2 {
+    background-color: green;
+    grid-row: ${caixa2GridRow.value};
+    grid-column: ${caixa2GridColumn.value};
+}
+
+.caixa3 {
+    background-color: blue;
+    grid-row: ${caixa3GridRow.value};
+    grid-column: ${caixa3GridColumn.value};
+}`;
+        }
+        
+        // Função para redefinir os valores
+        function resetValues() {
+            gridTemplateRows.value = 'repeat(3, 100px)';
+            gridTemplateColumns.value = 'repeat(4, 1fr)';
+            gap.value = '5px';
+            
+            caixa1GridRow.value = '1 / 2';
+            caixa1GridColumn.value = '1 / -1';
+            caixa2GridRow.value = '2 / -1';
+            caixa2GridColumn.value = '1 / 3';
+            caixa3GridRow.value = '2 / -1';
+            caixa3GridColumn.value = '3 / -1';
+            
+            updateGrid();
+        }
+        
+        // Adicionar event listeners
+        gridTemplateRows.addEventListener('input', updateGrid);
+        gridTemplateColumns.addEventListener('input', updateGrid);
+        gap.addEventListener('input', updateGrid);
+        
+        caixa1GridRow.addEventListener('input', updateGrid);
+        caixa1GridColumn.addEventListener('input', updateGrid);
+        caixa2GridRow.addEventListener('input', updateGrid);
+        caixa2GridColumn.addEventListener('input', updateGrid);
+        caixa3GridRow.addEventListener('input', updateGrid);
+        caixa3GridColumn.addEventListener('input', updateGrid);
+        
+        resetBtn.addEventListener('click', resetValues);
+        themeToggle.addEventListener('click', toggleTheme);
+        
+        // Verificar preferência do sistema ao carregar
+        window.addEventListener('DOMContentLoaded', checkSystemPreference);
+        
+        // Ouvir mudanças na preferência do sistema
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', checkSystemPreference);
+        }
+        
+        // Inicializar
+        updateGrid();
+    </script>
+</body>
+</html>
