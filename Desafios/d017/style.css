@@ -1,0 +1,41 @@
+* {
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 80px 40px 1fr 40px; 
+    grid-template-columns: 1fr 150px;
+    gap: 5px;
+}
+
+.caixa {
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+#topo {
+    grid-area: 1 / 1 / 2 / -1; /* linha inicial / coluna inicial / linha final / coluna final*/
+}
+
+#menu {
+    grid-area: 2 / 1 / 3 / -1; /* linha inicial / coluna inicial / linha final / coluna final*/
+}
+
+#principal {
+    grid-area: 3 / 1 / -2 / 2; /* linha inicial / coluna inicial / linha final / coluna final*/
+}
+
+#secundario {
+ grid-area: 3 / -2 / -2 / -1; /* linha inicial / coluna inicial / linha final / coluna final*/
+}
+
+#rodape {
+ grid-area: -2 / 1 / -1 / -1; /* linha inicial / coluna inicial / linha final / coluna final*/
+}
